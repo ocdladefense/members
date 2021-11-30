@@ -1,0 +1,75 @@
+<?php
+
+function edit_menu() {
+	global $user;
+	$items = array();
+	
+	$items['node/%nid/edit'] = array(
+		'name' => 'Content Editing',
+		'page callback' => 'edit_node',
+		'page arguments' => array( 1 ),
+		'title' => 'Edit Content',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'html',
+	);
+	
+	$items['node/%nid/save'] = array(
+		'name' => 'Content Saving',
+		'page callback' => 'node_save',
+		'page arguments' => array( 1 ),
+		'title' => 'Edit Content',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'json',
+	);
+	
+	return $items;
+}
+
+
+function edit_node( &$vars = NULL, $args = NULL ) {
+	global $twig,
+	$pf, $valid_member, $user;
+	$nid = $args[0];
+	
+	$nodes = node_load_multiple( array($nid));//array( $nid ) );
+	$node = $nodes[0];
+	
+	// $node = $stmt->fetch_assoc();
+
+	$content = $twig->render( 'editing-content.html', array( 'nid'=>$node['nid'],'title'=>$node['title'],'content' => $node['body'] ) );
+
+	// print $output;exit;
+	return $content;
+} 
+
+
+function node_save( &$vars = null, $args = null ) {
+	// check data here
+	
+	$data = $_POST;
+	$nid = $args[0];
+
+	// $body = preg_replace('/\\t/mis','',$data['body']);
+	//$body = preg_replace('/\\n/mis','\\\\n',$body);
+	//$body = preg_replace("/'/mis","\\\\'",$body);
+	//$body = str_replace("'","\'",$body);
+	//tail("body is:\n".$body);
+	$body = $data['body'];
+	// save node data here
+	$query = 'UPDATE node SET title=:1, body=:2 WHERE nid=:3';
+	try {
+		$result = db_query( $query, array($data['title'], $body, $nid) );
+		tail( $result->actual_query );
+	} catch(Exception $e) { 
+//		tail( $result->actual_query );
+		tail( $e->getMessage() );
+		return array('status'=>'error','message'=>"Not Saved!");
+	}
+	
+	// if successful
+	
+		return array('status'=>'success','message'=>"Saved!");
+	// if not successful
+} 

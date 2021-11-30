@@ -1,0 +1,22 @@
+/* Jobs*/
+.jobs #wrapper
+{
+	background:transparent none no-repeat;
+}
+
+.interests #column_wrapper,
+.jobs #column_wrapper
+{
+    background-color: #FFFFFF;
+    display: block;
+    width:888px;
+    position:relative;
+    left:9px;
+    min-height:800px;
+}
+
+.interests #left,
+.jobs #left
+{
+	padding-left:0px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="sites/all/modules/ckeditor/ckeditor.js"></script>
+	
+<!--<link href="sites/all/modules/ckeditor/samples/sample.css" rel="stylesheet" />-->
+<meta name="Keywords" content="oregon criminal law,oregon criminal defense lawyer,oregon criminal defense attorney,oregon criminal defense,criminal defense lawyer,criminal defense attorney,attorney,lawyer,law directory,continuing legal education,library of defense" />
+<meta name="Description" content="The Oregon Criminal Defense Lawyers Association serves the defense community through continuing legal education, public education, networking and legislative action." />
+<style type="text/css">
+<!--
+.style12 {color: #333333; }
+.style19 {color: #CDAC38}
+.style20 {color: #0099CC; }
+.style20 a {color: #0099CC !important; font-size:14px; font-weight:700;}
+-->
+</style>
+<!-- InstanceEndEditable -->
+
+<link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/sites/all/libraries/jquery-ui-1.9.2/themes/base/jquery-ui.css" media="all" type="text/css" />
+<link href="/scripts/p7pmm/p7PMMv08.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 5]>
+<style>body {text-align: center;}#wrapper {text-align: left;}.menulist a {float: left; clear: both;}
+#column_wrapper {height: 1%;}</style>
+<![endif]-->
+<!--[if lte IE 7]>
+<style>#wrapper, #footer, #masthead, #column_wrapper {zoom: 1;}</style>
+<![endif]-->
+
+<script type="text/javascript" src="/sites/all/libraries/jquery-1.8.3/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/sites/all/libraries/jquery-ui-1.9.2/jquery-ui-1.9.2.js"></script>
+<!--<script type="text/javascript" src="/scripts/p7pmm/p7PMMscripts.js"></script>-->
+<script type="text/javascript" src="/sites/all/themes/ocdla/scripts/ocdla.js?v=1.0"></script>
+<script type="text/javascript" src="/sites/all/themes/ocdla/scripts/inline-editing.js?v=1.0"></script>
+<script type="text/javascript" src="/includes/ajax_globals.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(function() {
+$( "#menu" ).menu();
+});
+//--><!]]>
+</script>
+<style type="text/css">
+	#menu li a {
+		border:none !important;
+		border-bottom: 1px solid #BF9500 !important;
+		border-bottom-width: 1px !important;
+		border-bottom-color: #BF9500 !important;
+		border-bottom-style: solid !important;
+		margin: 0px !important;
+	}
+	
+	.ui-state-focus {
+		background-color:#f7f0d4 !important;
+		background-image:none !important;
+	}
+	.ui-corner-all {
+		border-radius:0px !important;
+	}
+	.ui-menu {
+		width: 100%;
+	}
+	li .ui-menu {
+		width:157px;
+	}
+	#menu a {
+		background-color: #F7F0D4;
+		border-bottom: 1px solid #BF9500;
+		color: #54558B !important;
+		display: block;
+		padding: 5px 16px;
+		text-align: left;
+		text-decoration: none;
+		padding-left: 10px !important;
+		padding-right: 0 !important;
+	}
+	</style>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	var home;
+	$(document).ready(function(){
+	if(location.pathname=="\/" || location.pathname=="\/index.shtml") {
+		var twitter_id="feed-control-right";
+		var feedlength = 35;
+	}
+	else {
+		var twitter_id="feed-control-left";
+		var feedlength = 42;
+	}
+	//home = document.getElementById( twitter_id );
+	//var url = location.hostname + "/twitter/twitter.php";
+	//var twitter = new AjaxRequest( url, {fl:"feed_length="+feed_length} );
+	//twitter.sendRequest();
+	$.get('twitter/twitter.php', { feed_length : feedlength}, function(data) {
+	  $('#feed-control-right').html(data);
+	});
+	//document.write(feed);
+	
+	//window.alert(home);
+	
+	var headID = document.getElementsByTagName("head")[0];         
+	var cssNode = document.createElement('link');
+	cssNode.type = 'text/css';
+	cssNode.rel = 'stylesheet';
+	cssNode.href = '/twitter/themes/default/style.css';
+	cssNode.media = 'screen';
+	headID.appendChild(cssNode);
+	});
+//--><!]]>
+</script>
+</head>
+
+<body id="p7bod">
+<div id="fb-root"></div>
+
+<div id="wrapper">
+
+			<div id="masthead">
+		<div class="content">
+		</div>
+	</div>
+
+		
+	<div id="topnav">
+		<div class="content" id="navlinks">
+		<div id="login-block" style="display:inline;">
+			<a id="login" href="/index.php?q=login"><strong>Member Login</strong></a>|
+		</div>
+		<a id="lod_link" href="https://libraryofdefense.ocdla.org"><strong>Library of Defense</strong></a>|	
+		<a href="/cart/index_newocdla.cfm"><strong>OCDLA Store</strong></a>|
+		<a href="/cart/viewcart_newocdla.cfm"><strong>View Cart</strong></a>|
+		<a href="/search.shtml"><strong>SEARCH</strong></a>
+		<span id="user-widget"></span>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	var ocdlaLoginRequest = new AjaxRequest(CartLibrary.loginurl);
+	//override the default DOMStringProcessor with the addButton function from the CartLibrary
+	ocdlaLoginRequest.DOMStringProcessor = function(){CartLibrary.getLoginWidget(this)}
+	ocdlaLoginRequest.sendRequest();
+//--><!]]>
+</script>
+		
+  <div id="column_wrapper">
+    <div id="left">
+{# see note at:
+http://twig.sensiolabs.org/doc/tags/include.html
+#}
+	{% include 'menu-include.html' %}
+  
+<p>&nbsp;</p>
+	{% include 'left-blocks.html' %}
+				  <!-- InstanceEndEditable --></div>
+    </div>
+
+    	<div id="center">
+		<div class="content"><!-- InstanceBeginEditable name="MainContent" --> 
+ 			{% block content %}{% endblock %}
+ 		</div>
+    </div>
+    <div id="right">
+    {% include 'right-blocks.html' %}
+			  <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<div id="footer">
+	<div class="content">OCDLA, 96 East Broadway, Suite 5, Eugene, OR 97401
+	  - 541.686-8716 - <a href="mailto:info@ocdla.org" style="color:#fff; font-weight:bold;">info@ocdla.org</a>
+	</div>
+</div>
+
+<!-- BEGIN WebSTAT Activation Code 
+<script type="text/javascript" src="https://secure.webstat.com/cgi-bin/wsv2.cgi?125722"></script>
+
+-->
+
+<!-- END WebSTAT Activation Code -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

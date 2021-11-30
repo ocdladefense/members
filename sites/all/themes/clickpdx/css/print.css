@@ -1,0 +1,64 @@
+/*@media only print
+{
+*/
+
+#title
+{
+	text-align:center;
+	margin:0 auto;
+	width:300px;
+}
+	body {
+		font-size:12pt;
+	}
+	#alternate-version
+	{
+	 	width:150px;position:absolute;
+	 	right:0px;
+	 	top:0px;
+	 	font-size:10px;
+	 	display:block;
+	 }
+	header,footer
+	{
+		display:none;
+	}
+h3.project-heading
+{
+	margin-bottom:5px;
+}
+	.project
+	{
+		max-width:800px;
+		margin-top:25px;
+	}
+	#about {
+		width:650px;
+		height:auto;
+		line-height:20px;
+		background-color:#eee;
+		color:#666;
+		font-size:1.0em;
+		padding:15px;
+		position:static;
+		padding:6px;
+		margin-top:10px;
+	}
+	#about h3 {
+		margin-top:0px;
+	}
+	#about p {
+		margin-bottom:0px;
+	}
+	.auto-page-break {
+		break-before: auto;
+		page-break-before: auto;
+	}
+	.no-page-break-after {
+		page-break-after: avoid;
+	}
+	.page-break {
+		break-before: always;
+		page-break-before: always;
+	}
+/*}*/

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="file:///Library/WebServer/Documents/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" />
+<style type="text/css">
+<!--
+.style5 {color: #333333}
+-->
+</style><!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+ 
+</head>
+
+<body id="p7bod">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <p>&nbsp;</p>
+              <!-- #BeginLibraryItem "/Library/login-joinnow.lbi" --><h6><img src="/images/images-buttons/icon-login.jpg" alt="login" width="40" height="40" /><br />
+        Remember to log in! </h6>
+      <p><a href="/cart/login_newocdla.cfm">LOG IN</a>. If you are NOT a member, <a href="/shop-membr-index.shtml">JOIN NOW</a>.
+        Once OCDLA has processed your membership, you will be able to take advantage of membership discounts online.</p>
+<!-- #EndLibraryItem --><p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+        <h4>CLE Archive - Specialty Credit Downloads</h4>
+        <p>These items are <strong>downloads</strong> and are for members only. You will be provided with a <strong>download link</strong> at the end of the cart checkout process. These files are intended to be used by the purchashing member only. Please do not distribute.</p>
+        <p>&nbsp;</p>
+        <p><a href="/cart/browse_newocdla.cfm?category=Access to Justice">Access to Justice</a></p>
+        <p>&nbsp;</p>
+        <p><a href="/cart/browse_newocdla.cfm?category=Child Abuse Reporting">Child Abuse Reporting</a></p>
+        <p>&nbsp;</p>
+        <p><a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=Ethics">Ethics</a><br />
+          <br />
+        </p>
+        <h6>&nbsp;</h6>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+      <h5 class="style2 style5">CLE Catalog</h5>
+      <p><a href="/pdfs/cle_catalog.pdf">Download a CLE Catalog.</a></p>
+      <p>&nbsp;</p>
+      <h6>CLE Credit Summary</h6>
+      <p><a href="mailto:info@ocdla.org">Email info@ocdla.org</a> to obtain your personal CLE history. </p>
+      <p>&nbsp;</p>
+      <h5>CLE Archive</h5>
+      <p><a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=CLE Archive 2014" target="_blank">2014</a><a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=CLE Archive 2013" target="_blank"><br />
+        2013</a><a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=CLE Archive 2012" target="_blank"><br />
+        2012</a><br />
+        <a href="https://www.ocdla.org/cart/browse_clenewocdla.cfm?category=SeminarArchives">2006–2011</a></p>
+      <p>&nbsp;</p>
+      <h5>CLE Video Clips</h5>
+      <p><a href="/resources-video-archive.shtml">View video clip archive</a>.</p>
+      <p>&nbsp;</p>
+      <h5><strong>Annual Conference Facebook Page</strong></h5>
+      <p><a href="http://www.facebook.com/pages/OCDLA-2012-Annual-Conference/188092147898162?notif_t=page_name_change">Click here.</a></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h6>&nbsp;</h6>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

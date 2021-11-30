@@ -1,0 +1,211 @@
+/**
+ * By default, hide the mobile version of the menu.
+ * The menu must be explicitly shown through a css media query.
+ */
+#menu {
+	display:none;
+}
+
+/* @media only screen and (max-width:480px)*/
+@media only screen 
+and (max-width : 1095px) 
+{
+	* {
+		box-sizing:border-box;
+	}
+	
+	body a, body a:link, body a:visited, body a:active {
+		color:inherit;
+	}
+	
+	#footer a:link {
+		color:inherit;
+	}
+	
+	#wrapper
+	{
+		background-image:none;
+		background-color:transparent;
+		width:auto;
+		overflow-x:hidden;
+	}
+	
+	#column_wrapper
+	{
+		padding-left:6px;
+		padding-right:6px;
+		margin-top:45px;
+	}
+	
+	#center .content
+	{
+		padding:0px;
+	}
+	
+	#menu
+	{
+		display:block;
+    background-color: #bf9500;
+    /*height: 800px;*/
+    left: 0;
+    margin-top: 0px;
+    /*padding-top:25px;*/	
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+    padding-left:25px;
+    padding-right:25px;
+		font: normal normal normal 1.2em/1.8em Helvetica;
+	}
+	
+	#menu ul
+	{
+		height:auto;
+		/*width:48%;*/
+	}
+	
+	#menu li
+	{
+		color:#eee;	
+		line-height:2.0em;
+	}
+	
+	#menu li a
+	{
+		text-decoration:none;
+	}
+
+	#menu ul.mobile-menu-section
+	{
+		margin-top:1.8em;
+	}
+
+	#menu li.mobile-menu-section-header
+	{
+		color:#fff;
+	}
+
+	/*	
+	.nav-collapse li
+	{
+		width:50% !important;
+		float:left;
+	}
+
+	#menu li a {
+		background-color: transparent;
+		border-bottom: 1px solid #BF9500;
+		color: #fff !important;
+		display: block;
+		padding: 5px 16px;
+		text-align: left;
+		text-decoration: none;
+		padding-left: 10px !important;
+		padding-right: 0 !important;
+	}
+	*/
+	
+	#topnav
+	{
+		display:none;
+	}	
+	
+	#left, #right {
+		display:none;
+	}
+	
+	#center {
+		width:auto;
+		float:none;
+		margin-top:75px;
+	}
+	
+	#center .content
+	{
+		padding:0px;
+		padding-left:6px;
+		padding-right:6px;
+	}
+	
+	#footer {
+		width:auto;
+		background-image:none;
+		background-color:#bf9500;
+		line-height:1.6em;
+		color:#fff;
+		font-size:1.0em;
+	}
+	
+	#masthead {
+    background-color: #bf9500;
+    background-image: url("../images/logo.svg");
+    background-position: left 18px top 12px;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    height: 56px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;	
+    padding:6px;
+    padding-left:0px;
+    padding-right:0px;
+	}
+	
+	
+	#masthead .content {
+    padding: 0px;
+  }
+	
+	#topnav {
+		background-image:url('../images/header-bg-mobile.png');
+		background-position:0 0;
+		background-repeat:no-repeat;
+		padding-left:175px;
+	}
+	
+	/* adds our "hamburger" menu icon */
+	.nav-toggle:before {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 24px;
+		background: #eee;
+		left: 8px;
+		top: 13px;
+		box-shadow: 0 6px 0 #eee, 0 12px 0 #eee;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-device-width: 480px) {
+#left {
+	display:none;
+}
+}
+/*
+@media only screen and (max-device-width: 480px) {
+	body { margin: 0 0; font-size:inherit; 
+	#wrapper { background:none no-repeat #fff 0 0; width:auto;}
+	#topnav { height:auto; background-position:-25px; }
+	#topnav .content { text-align:left; }
+	#navlinks { display:block; }
+	#navlinks li { float:none; padding-top:2px; padding-bottom:2px; }
+	#navlinks a { display:block; float:none; }	
+	
+	#left, #right { display:none; }
+	#center { width:auto; }
+	#footer { width:auto; }
+	#masthead {
+		background-image:url('../images/header-bg-mobile.png');
+		background:url('../images/header-bg-mobile.png') no-repeat cover transparent;
+		height:125px;
+		width:auto;
+		
+	}
+}
+
+*/

@@ -1,0 +1,80 @@
+{% extends "OcdlaLoginBundle::ocdla.html.twig" %}
+
+{% block title "Secure Login" %}
+
+
+{% block body %}
+						
+<h2>Member Login</h2>
+<div style="color:red; font-size:16.5px;">
+Please enter your OCDLA Username and Password.
+</div>
+	{{ errors }}			
+	
+<div class="ocdla-login-form-block">	
+<form method="post" id="ocdla_login_form">
+	<div>
+		<input type="hidden" name="form_id" value="ocdla_login_sso_form" />
+	</div>
+	<div>
+		<input type="hidden" name="encoded" value="/index.shtml" />
+	</div>
+	<div>
+		<input type="hidden" name="referrer" value="/index.shtml" />
+	</div>
+	<div>
+		<input type="hidden" name="login_action" value="redirect" />
+	</div>
+	<div>
+		<input type="hidden" name="parent_i" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="productid" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="protocol" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="ref" value="{{ ref }}" />
+	</div>
+	<div>
+		<input type="hidden" name="resource" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="server" value="{{ server }}" />
+	</div>
+	<div>
+		<input type="hidden" name="page" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="showproductdetails" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="status" value="" />
+	</div>
+	<div>
+		<input type="hidden" name="name" value="" />
+	</div>
+	<div>
+		<label>Username</label>
+		<input type="text" name="UserName" value="{{ name }}" />
+	</div>
+	<div>
+		<label>Password</label>
+		<input type="password" name="password" value="" />
+	</div>
+	<div>
+		<input name="submit" type="submit" value="Log In" />  
+		<input name="submit" type="submit" value="No Thanks" />  
+	</div>
+
+	<!-- How to build a spam-free contact form without captchas || http://nfriedly.com/techblog/2009/11/how-to-build-a-spam-free-contact-forms-without-captchas/ -->
+</form>
+</div>
+
+<div class="ocdla-login-form-info">
+	<p style='font-size:12pt; margin-top:5px;'>Can't remember your OCDLA password?  <a href="https://members.ocdla.org/password-reset">Click here</a>.</p>
+	If you cannot remember your OCDLA username, <a href="mailto:info@ocdla.org">email</a> or call OCDLA.<br />
+	If you are not an OCDLA member, <a href="https://www.ocdla.org/shop-membr-index.shtml">JOIN HERE.</a>
+</div>
+{% endblock %}

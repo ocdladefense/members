@@ -1,0 +1,31 @@
+<!--
+<div class='feature'>
+	<h3 class='feature-title'>Feature Title</h3>
+	<span class='feature-summary'>A feature summary here.</span>
+	<p class='feature-description'>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non elit eget felis vulputate dictum. Sed ac ullamcorper velit. Vestibulum non eleifend metus, non ornare nisi. Nunc in nisi at justo condimentum tristique. Nullam ultricies magna eu massa rhoncus, a efficitur dolor efficitur. Vivamus aliquam tincidunt enim at dignissim. Phasellus efficitur turpis nec rhoncus venenatis. Donec et pulvinar nisl. Suspendisse et enim quis erat lobortis iaculis eget ut arcu. Suspendisse id ipsum posuere, blandit sem sed, sagittis purus. Pellentesque auctor feugiat lectus, vel vulputate mauris venenatis tincidunt. Nam vitae risus a turpis elementum rutrum eget eu risus.
+	</p>
+</div>
+-->
+<span class='project-last-udpated'>Last Updated: {{ lastUpdated }}</span>
+<div class="instructions">
+	{{ instructions | raw }}
+</div>
+{% for section in sections %}
+	<div class="section">
+	<span class="title">
+		{{ section.title }}
+	</span>
+	{% for screenshot in section.screenshots %}
+		<div class="screenshot">
+			<h2>{{ screenshot.title }}</h2>
+			<div class="description">
+				{{ screenshot.description | raw }}
+			</div>
+			<a href="/sites/default/files/screenshots/directory/{{ screenshot.url }}">
+				<img style="width:50%;height:50%;" src="/sites/default/files/screenshots/directory/{{ screenshot.url }}" />
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+{% endfor %}

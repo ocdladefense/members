@@ -1,0 +1,61 @@
+#ocdla_login_form label {
+	display:block;
+	margin-top:15px;
+	
+}
+
+#ocdla_login_form input[type|="submit"] {
+	margin-top:10px;
+}
+
+.iform { font-size:10pt; }
+
+.iform p {
+	display:block;
+	font-size:1.2em;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	margin-top:15px;
+	padding-top:0px;
+}
+
+.iform .ital {
+	font-style:italic;
+}
+
+.iform .block {
+	display:block;
+}
+
+.iform .submit { display:block; }
+
+/*.iform fieldset {
+	margin-top:1.5em;
+	padding-left:2.0em;
+	padding-top:1.0em;
+	padding-bottom:1.0em;
+}*/
+
+.iform legend {
+	font-size:1.5em;
+	font-weight:bold;
+	padding-left:1.0em; padding-right:1.0em;
+}
+
+.iform input, .iform textarea {
+	display:block;
+	margin-bottom:8px;
+}
+
+.iform select {
+	margin-bottom:0.2em; padding-top:.2em; padding-bottom:.2em; padding-right:0.5em;
+}
+
+.iform option {
+	padding:.1em .2em;
+}
+
+#dyn-form-status, #emailstatus { display:inline; margin-left:5px; }
+
+.iform .true { color:green; }
+.iform .false { color:red; }

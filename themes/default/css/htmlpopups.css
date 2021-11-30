@@ -1,0 +1,66 @@
+p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+}
+h1 {
+	font-size: 20px;
+	margin: 0 0 0px;
+	font-weight: bold;
+	padding: 0px;
+	line-height: 24px;
+}
+h2 {
+	font-size: 20px;
+	margin: 0px 0;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+	line-height: 24px;
+}
+h3 {
+	font-size: 18px;
+	margin: 0px 0;
+	font-weight: bold;
+	padding: 0px;
+}
+h4 {
+	font-size: 18px;
+	margin: 0px 0 0px;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+}
+h5 {
+	font-size: 14px;
+	margin: 0px 0px 0px;
+	font-weight: bold;
+	padding: 0px;
+}
+h6 {
+	font-size: 14px;
+	margin: 0px 0 5px;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+}
+.imgRight {
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	float: right;
+}
+.imgLeft {
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	float: left;
+}body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 105px 30px 30px;
+	background-image: url(/images/images-stylesheets/masthead-directory-new.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}

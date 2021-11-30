@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page Not Found</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--<meta
+			name="description"
+			content="web design, web development, ecommerce, programming in Portland, OR"	
+		/>
+		<meta
+			name="keywords"
+			content="web, design, programming, ecommerce, programming, Drupal, Magento, business, consulting, HTML, HTML5, CSS, Javascript"
+		/>
+		-->
+		 <meta
+			 name="viewport"
+			 content="width=device-width;
+							 initial-scale=1;
+							 maximum-scale=1;
+							 minimum-scale=1; 
+							 user-scalable=no;"
+			/>
+		<!--[if lt IE 9]>
+		<script type="text/javascript">
+		(function(){
+		var html5elmeents = "address|article|aside|audio|canvas|command|datalist|details|dialog|figure|figcaption|footer|header|hgroup|keygen|mark|meter|menu|nav|progress|ruby|section|time|video".split('|');
+		for(var i = 0; i < html5elmeents.length; i++){
+		document.createElement(html5elmeents[i]);
+		}}
+		)();
+		</script>
+		<![endif]-->
+
+	</head>
+	<body class="">			
+	
+		<div id="page-wrapper">
+
+			<h1>Woops!</h1>
+			<h2>We couldn't find that.</h2>
+			
+
+		</div><!-- end page-wrapper -->	
+			
+	</body>
+</html>

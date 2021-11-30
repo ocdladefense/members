@@ -1,0 +1,99 @@
+#lasso_dynamic_content {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin-top:50px;
+	margin-left:50px;
+}
+
+#lasso_dynamic_content table, #lasso_dynamic_content p {
+	//margin-top: 15px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 15px;
+}
+
+#lasso_dynamic_content th {
+	background-color: #5A7882;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#lasso_dynamic_content table, #lasso_dynamic_content td, #lasso_dynamic_content th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#lasso_dynamic_content table th {
+	text-transform: capitalize;
+}
+
+.inactive {
+	color:#CCCCCC;
+}//inactive
+
+
+
+td.login
+{
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 15px;
+	font-size:8pt;
+}
+
+
+img { margin:0px; padding:0px; }
+
+#lasso_dynamic_content table tr td p {
+	font-size:9pt;
+	color: #333333;
+	//margin-right: 10px;
+	//margin-bottom: 0px;
+	//margin-left: 15px;
+}
+
+
+#lasso_dynamic_content table tr td input { }
+
+#lasso_dynamic_content table tr td {
+	background-color:#FFFFFF;
+	font-size:8pt;
+	color: #333333;
+	//margin-right: 10px;
+	//margin-bottom: 0px;
+	//margin-left: 15px;
+}
+
+#lasso_dynamic_content table tr.deleted {
+	background-color:#CCCCCC;
+}
+
+#lasso_dynamic_content table tr.deleted td,#lasso_dynamic_content table tr.deleted td input {
+	background-color:transparent;
+}
+
+#status {
+	font-family:Verdana, Arial, sans-serif;
+	color:red;
+}//status
+
+.demo {
+
+font-size:8pt; font-style:italic;color:#999999;
+}
+
+.errormsg { color:red; font-weight:700; margin-left:15px; margin-bottom:10px; }
+
+.error { background-color:yellow; }
+
+#submenu a {
+	text-decoration:none;
+}//submenu
+
+#submenu a:hover {
+	text-decoration:underline;
+	background-color:#5A7882;
+}//submenu

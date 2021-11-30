@@ -1,0 +1,126 @@
+/*
+@change - deprecated 2017-01-16 causes issues in Chrome (and perhaps other browsers.)
+#menu-left
+{ 
+	padding-left:0px; 
+	list-style-type:none; 
+	list-style-position:inside;
+}
+*/
+.nav-toggle
+{
+	color: #666;
+	display: block;
+	margin-right: 8px;
+	padding: 20px;
+	position: relative;
+	right: 0;
+	z-index: 1;
+	color:#fff;
+	float:right;
+}
+
+
+
+
+#menu-left li ul
+{
+	display:none;
+}
+#p7TP1
+{
+	z-index:-100;
+}
+#p7PMM_1
+{
+	position:relative;
+	z-index:27;
+}
+#left ul li a
+{
+	z-index:1000 !important;
+}
+
+
+
+#menu-left li a
+{
+	border:none !important;
+	border-bottom: 1px solid #BF9500 !important;
+	border-bottom-width: 1px !important;
+	border-bottom-color: #BF9500 !important;
+	border-bottom-style: solid !important;
+	margin: 0px !important;
+}
+
+.ui-state-focus {
+	background-color:#f7f0d4 !important;
+	background-image:none !important;
+}
+.ui-corner-all {
+	border-radius:0px !important;
+}
+.ui-menu {
+	width: 100%;
+}
+li .ui-menu {
+	width:157px;
+}
+
+
+
+#menu-left a {
+	background-color: #F7F0D4;
+	border-bottom: 1px solid #BF9500;
+	color: #54558B !important;
+	display: block;
+	padding: 5px 16px;
+	text-align: left;
+	text-decoration: none;
+	padding-left: 10px !important;
+	padding-right: 0 !important;
+}
+
+
+.p7uberlink {
+	font-weight: bold !important;
+	letter-spacing: .15em;
+	border-color: #000000 !important;
+}
+
+.p7PMMv08 a {
+	padding-left:10px !important;
+	padding-right:0px !important;
+}
+
+.p7PMMv08 a.smaller {
+	font-weight:normal;
+	padding-left:15px !important;
+}
+
+
+
+
+
+
+
+
+#navlinks li {
+	display:block;
+	float:right;
+}
+#navlinks a {
+	border-right:1px solid #fff;
+}	
+#navlinks a.last {
+	border-right:none;
+	padding-right:0px;
+}
+.menulist {
+	margin: 6px 0 12px 0;
+	padding: 0;
+	list-style-type: none;
+}
+#navlinks a {
+	font-weight:bold; padding-left:8px; padding-right:8px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="file:///Library/WebServer/Documents/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" />
+<!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+ 
+</head>
+
+<body id="p7bod">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+				  <h3>&nbsp;</h3>
+				  <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+				<h3>This OCDLA website is undergoing maintenance.</h3>
+<p><br />
+			  </p>
+<p>We'll be back up soon.  Thanks for your patience.</p>
+<h4><br />
+                </h4>
+		<p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+<p><br />
+                  <br />
+                  <br />
+                          </p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+			    <p>&nbsp;</p>
+			    <h3>&nbsp;</h3>
+	    <h4>&nbsp;</h4>
+			  <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

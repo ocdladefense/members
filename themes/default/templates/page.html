@@ -1,0 +1,8 @@
+{% extends "html.html" %}
+{# a comment here #}
+
+{% block page %}
+<div id='page-wrapper' style='background-color:#eee;height:200px;'>
+	{{ page.content | raw }}
+</div>
+{% endblock %}

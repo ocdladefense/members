@@ -1,0 +1,81 @@
+.section .title {
+	font-size:1.8em;
+	font-weight:bold;
+}	
+
+.instructions {
+	background-color:#eee;
+	border-radius:2px;
+	border:1px solid #ccc;
+	margin-bottom:15px;
+	padding:8px;
+}
+
+.feature
+{
+	width:45%;
+	float:left;
+	border: 1px solid #ccc;
+	padding:8px;
+	margin-right:8px;
+	margin-bottom:8px;
+	min-height:200px;
+	max-height:350px;
+}
+
+.project-last-udpated
+{
+	display:block;
+	clear:both;
+	margin-bottom:15px;
+}
+
+.feature-summary
+{
+	display:block;
+	font-style:italic;
+	margin-top:3px;
+	margin-bottom:12px;
+}
+.feature-description
+{
+	clear:both;
+}
+.feature-icon-container
+{
+	float:left;
+	width: 40px;
+	height:60px;
+	margin-right:10px;
+}
+.feature-icon {}
+
+.ams-system-notice
+{
+	background-image: url('../images/process-warning-icon.png');
+	background-color: #eee;
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	background-size:25px 25px;
+	padding:8px;
+	padding-left:40px;
+	height:30px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	margin-bottom:3px;
+}
+
+
+@media only screen and (max-width:480px)
+{
+	.feature
+	{
+	width:90%;
+	min-height:0;
+	}
+	.feature-description
+	{
+		font-size:12px;
+		min-height:0;
+	}
+}

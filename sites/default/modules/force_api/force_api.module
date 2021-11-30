@@ -1,0 +1,61 @@
+<?php
+
+use Clickpdx\OAuth\OAuthGrantTypes;
+use Clickpdx\SfRestApiRequestTypes;
+use Clickpdx\Http\HttpRequest;
+use Clickpdx\ResourceLoader;
+
+
+function force_api_menu() {
+	$items = array();
+	
+
+	$items['directory/membertest'] = array(
+		'comment' => 'Base router/loader for Saleforce directory.',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'files' => array(
+			'controller' => 'includes/ForceApiController.php'
+		),
+	);
+	
+	$items['directory/membertest/%sfId'] = array(
+		'page callback' => 'displayApiTest',
+		'title' => 'Force API Test',
+		'access' => true,
+		// 'access arguments' => array('admin'),
+		'routeClass' => 'ForceApiController',
+		'routeArguments' => array(2),
+		'theme' => 'ocdla2'
+	);
+	
+	$items['forceapi/online-subscription'] = array(
+		'comment' => 'Base router/loader for Saleforce directory.',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'files' => array(
+			'controller' => 'includes/ForceApiController.php',
+			'utilityClass' => 'includes/ForceApiSubscriptionQuery.php'
+		),
+	);
+	
+	$items['forceapi/online-subscription/%contactId'] = array(
+		'page callback' => 'testAccess',
+		'title' => 'Force API Test',
+		'access' => true,
+		// 'access arguments' => array('admin'),
+		'routeClass' => 'ForceApiController',
+		'routeArguments' => array(2),
+		'theme' => 'ocdla2'
+	);
+
+	return $items;
+}
+
+
+function force_api_init()
+{
+	ResourceLoader::initResources();
+	ResourceLoader::addLoader('oauthService','oauthServiceLoader');
+	ResourceLoader::addLoader('sfRestApi','sfRestApiServiceLoader');
+}

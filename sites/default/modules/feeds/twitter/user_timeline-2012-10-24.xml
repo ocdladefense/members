@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statuses type="array">
+  <status>
+    <created_at>Wed Oct 24 16:53:58 +0000 2012</created_at>
+    <id>261148540506607616</id>
+    <text>I uploaded a @YouTube video http://t.co/nx2kr66w Willamalane Ready Robins Preschool 2012</text>
+    <source>&lt;a href=&quot;http://www.google.com/&quot; rel=&quot;nofollow&quot;&gt;Google&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions>
+        <user_mention start="13" end="21">
+          <screen_name>YouTube</screen_name>
+          <name>YouTube</name>
+          <id>10228272</id>
+        </user_mention>
+      </user_mentions>
+      <urls>
+        <url start="28" end="48">
+          <url>http://t.co/nx2kr66w</url>
+          <expanded_url>http://youtu.be/lk32VLSyAlA?a</expanded_url>
+          <display_url>youtu.be/lk32VLSyAlA?a</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Oct 22 18:27:05 +0000 2012</created_at>
+    <id>260447199459160064</id>
+    <text>VOTE! VOTE! VOTE! VOTE! VOTE!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Oct 22 18:25:36 +0000 2012</created_at>
+    <id>260446825079795712</id>
+    <text>It's a party! Come to our FREE Election Night Results Party at Willamalane Center. 7 p.m. Nov. 6.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Oct 22 18:22:35 +0000 2012</created_at>
+    <id>260446067068387328</id>
+    <text>Splash! at Lively Park is NOW OPEN!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Fri Oct 19 19:07:54 +0000 2012</created_at>
+    <id>259370307368910848</id>
+    <text>I uploaded a @YouTube video http://t.co/TvIOXwen Willamalane's Bond Measure 20-144 on KMTR NewsSource 16</text>
+    <source>&lt;a href=&quot;http://www.google.com/&quot; rel=&quot;nofollow&quot;&gt;Google&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions>
+        <user_mention start="13" end="21">
+          <screen_name>YouTube</screen_name>
+          <name>YouTube</name>
+          <id>10228272</id>
+        </user_mention>
+      </user_mentions>
+      <urls>
+        <url start="28" end="48">
+          <url>http://t.co/TvIOXwen</url>
+          <expanded_url>http://youtu.be/uQOOREdNGag?a</expanded_url>
+          <display_url>youtu.be/uQOOREdNGag?a</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Fri Oct 12 16:29:30 +0000 2012</created_at>
+    <id>256793729111834624</id>
+    <text>See &quot;Ghostbusters&#8221; under the covered shed at old Booth-Kelly Mill Sat. Oct. 27. FREE with two cans of food for FOOD for Lane County.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Oct 01 18:27:33 +0000 2012</created_at>
+    <id>252837171092930560</id>
+    <text>Boo! Haunted Hayride tickets on sale! Get yours today at any Willamalane facility.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>1</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Wed Sep 12 23:29:45 +0000 2012</created_at>
+    <id>246027853047689216</id>
+    <text>Get a FREE personal trainer session when you renew or sign up for a one-year membership at Willamalane Center!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>1</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Wed Sep 12 23:26:40 +0000 2012</created_at>
+    <id>246027076325490688</id>
+    <text>Two50 now open after school for middle school students. FREE membership! Call 541-736-4544.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Wed Sep 12 23:23:52 +0000 2012</created_at>
+    <id>246026372118614016</id>
+    <text>Radio Redux starts its season Oct. 19 at the Wildish with &quot;The Amazing Sherlock Holmes.&quot; Tickets at 541-953-2765.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Thu Aug 02 22:38:35 +0000 2012</created_at>
+    <id>231157073356922880</id>
+    <text>I uploaded a @YouTube video http://t.co/wrieIHZy Camp Two50 2012</text>
+    <source>&lt;a href=&quot;http://www.google.com/&quot; rel=&quot;nofollow&quot;&gt;Google&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions>
+        <user_mention start="13" end="21">
+          <screen_name>YouTube</screen_name>
+          <name>YouTube</name>
+          <id>10228272</id>
+        </user_mention>
+      </user_mentions>
+      <urls>
+        <url start="28" end="48">
+          <url>http://t.co/wrieIHZy</url>
+          <expanded_url>http://youtu.be/Cb0jvWrRN9U?a</expanded_url>
+          <display_url>youtu.be/Cb0jvWrRN9U?a</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Jul 23 16:53:41 +0000 2012</created_at>
+    <id>227446398126260225</id>
+    <text>Fridays are FREE at Willamalane Center this summer. Check it out at http://t.co/hIlsPsvb</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls>
+        <url start="68" end="88">
+          <url>http://t.co/hIlsPsvb</url>
+          <expanded_url>http://www.WillamalaneCenter.com</expanded_url>
+          <display_url>WillamalaneCenter.com</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Jul 23 16:51:08 +0000 2012</created_at>
+    <id>227445754795532288</id>
+    <text>A perfect day to visit Camp Putt! Take the whole family to play one of two cool 18-hole mini golf courses. Info at http://t.co/4pevujAh</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls>
+        <url start="115" end="135">
+          <url>http://t.co/4pevujAh</url>
+          <expanded_url>http://campputt.com</expanded_url>
+          <display_url>campputt.com</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Jul 23 16:49:09 +0000 2012</created_at>
+    <id>227445257393020928</id>
+    <text>Thanks for making SummerFair a HUGE success! See you next year with a BIG national act, new filbert hunts &amp;amp; some surprises to boot!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>1</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Mon Jul 23 16:38:00 +0000 2012</created_at>
+    <id>227442450271191040</id>
+    <text>Enjoy the summer! Enjoy life! Willamalane, Live it!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Sun Jul 22 17:30:38 +0000 2012</created_at>
+    <id>227093307602395136</id>
+    <text>SummerFair is FREE today. Noon-4 at Island Park. Sammy Steel Band, Amy Clawson, kids' fishing, police K9 demos &amp;amp; BroilerFair chicken BBQ.</text>
+    <source>&lt;a href=&quot;http://www.tweetcaster.com&quot; rel=&quot;nofollow&quot;&gt;TweetCaster for Android&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Sat Jul 21 03:32:49 +0000 2012</created_at>
+    <id>226520077384708096</id>
+    <text>Missing you at Summer Fair. http://t.co/nDzBM7us</text>
+    <source>&lt;a href=&quot;http://www.tweetcaster.com&quot; rel=&quot;nofollow&quot;&gt;TweetCaster for Android&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls>
+        <url start="28" end="48">
+          <url>http://t.co/nDzBM7us</url>
+          <expanded_url>http://via.me/-38sw8e4</expanded_url>
+          <display_url>via.me/-38sw8e4</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Fri Jul 20 18:51:27 +0000 2012</created_at>
+    <id>226388872546902016</id>
+    <text>See you at SummerFair tonight! Satin Love Orchestra boogies at 6:30. Gates open at 5:30!</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls/>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Tue Jul 10 21:30:22 +0000 2012</created_at>
+    <id>222804982481682432</id>
+    <text>I uploaded a @YouTube video http://t.co/YkpO1GDX Willamalane's Clearwater Park Under Construction</text>
+    <source>&lt;a href=&quot;http://www.google.com/&quot; rel=&quot;nofollow&quot;&gt;Google&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions>
+        <user_mention start="13" end="21">
+          <screen_name>YouTube</screen_name>
+          <name>YouTube</name>
+          <id>10228272</id>
+        </user_mention>
+      </user_mentions>
+      <urls>
+        <url start="28" end="48">
+          <url>http://t.co/YkpO1GDX</url>
+          <expanded_url>http://youtu.be/j0ERmy9NvoI?a</expanded_url>
+          <display_url>youtu.be/j0ERmy9NvoI?a</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+  <status>
+    <created_at>Thu Jun 21 22:23:07 +0000 2012</created_at>
+    <id>215932890997997568</id>
+    <text>Wow! Have you seen our NEW Nature video? Check it out here: http://t.co/Ora9JeQy</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <in_reply_to_screen_name></in_reply_to_screen_name>
+    <possibly_sensitive>false</possibly_sensitive>
+    <user>
+      <id>44831623</id>
+      <name>Willamalane</name>
+      <screen_name>Willamalane</screen_name>
+      <location>Springfield, Oregon</location>
+      <profile_image_url>http://a0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url>
+      <profile_image_url_https>https://si0.twimg.com/profile_images/1134018416/wprdtwitter0910_normal.jpg</profile_image_url_https>
+      <url>http://www.willamalane.org</url>
+      <description>Willamalane Park and Recreation District | Parks| People | Recreation</description>
+      <protected>false</protected>
+      <followers_count>608</followers_count>
+      <profile_background_color>EBEBEB</profile_background_color>
+      <profile_text_color>333333</profile_text_color>
+      <profile_link_color>72A1C9</profile_link_color>
+      <profile_sidebar_fill_color>F3F3F3</profile_sidebar_fill_color>
+      <profile_sidebar_border_color>DFDFDF</profile_sidebar_border_color>
+      <friends_count>34</friends_count>
+      <created_at>Fri Jun 05 05:44:39 +0000 2009</created_at>
+      <favourites_count>0</favourites_count>
+      <utc_offset>-28800</utc_offset>
+      <time_zone>Pacific Time (US &amp; Canada)</time_zone>
+      <profile_background_image_url>http://a0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url>
+      <profile_background_image_url_https>https://si0.twimg.com/profile_background_images/72774892/aparkviewweb4.jpg</profile_background_image_url_https>
+      <profile_background_tile>false</profile_background_tile>
+      <profile_use_background_image>true</profile_use_background_image>
+      <geo_enabled>false</geo_enabled>
+      <verified>false</verified>
+      <statuses_count>404</statuses_count>
+      <lang>en</lang>
+      <contributors_enabled>false</contributors_enabled>
+      <is_translator>false</is_translator>
+      <listed_count>34</listed_count>
+      <default_profile>false</default_profile>
+      <default_profile_image>false</default_profile_image>
+      <following></following>
+      <follow_request_sent></follow_request_sent>
+      <notifications></notifications>
+    </user>
+    <geo/>
+    <coordinates/>
+    <place/>
+    <contributors/>
+    <retweet_count>0</retweet_count>
+    <favorited>false</favorited>
+    <retweeted>false</retweeted>
+    <entities>
+      <user_mentions/>
+      <urls>
+        <url start="60" end="80">
+          <url>http://t.co/Ora9JeQy</url>
+          <expanded_url>http://www.youtube.com/watch?v=vQxtLzu3yYE&amp;feature=plcp</expanded_url>
+          <display_url>youtube.com/watch?v=vQxtLz&#8230;</display_url>
+        </url>
+      </urls>
+      <hashtags/>
+    </entities>
+  </status>
+</statuses>

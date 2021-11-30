@@ -1,0 +1,46 @@
+<?php
+/**
+ * ocdla.module
+ * list some default menu router items
+ *
+ */
+
+function ocdla_menu() {
+	$items = array();
+
+	$items['settings'] = array(
+		'name' => 'OCDLA',
+		'page_callback' => 'xml_settings',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',	
+	);
+	$items['query'] = array(
+		'name' => 'OCDLA',
+		'page_callback' => 'ocdla_test_query',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',	
+	);
+
+	
+	return $items;
+}
+
+
+function xml_settings() {
+	tail( 'XML settings() made it here...');
+	$settings = xml_settings_configuration( realpath('../config.xml') );
+	print_r( $settings );	
+}
+
+
+function ocdla_test_query() {
+	$stmt = db_query('select * from data_interests');
+	$rows = array();
+	while( $row = $stmt->fetch_row() ) {
+		$rows[] = $row;
+	}
+	$output = print_r( $rows, TRUE );
+	return "<h3>Ready to test the database!</h3><p>{$output}</p>";
+}

@@ -1,0 +1,47 @@
+<?php
+
+function product_menu()
+{
+	$items = array();
+	$items['product/%productId'] = array(
+		'title' => 'Product Details',
+		'access' => true,
+		'access arguments' => array('member'),
+		'page callback' => 'productDetails',
+		'routeArguments' => array(1),
+		'files' => array(
+			'includes/ProductController.php'
+		),
+		'routeClass' => 'ProductController',
+		'theme' => 'ocdla2'
+	);
+	
+	return $items;
+}
+
+
+function product_load_multiple( $items = array() )
+{
+	$itemids = implode( ',', $items );
+	$products = array();
+	$lookup = new DBQuery(
+		array(
+			'type' => 'select',
+			'tablenames' => array(
+				0 => array(
+					'name'=>'catalog',
+					'fields'=>array(),
+					'op'=>null,
+				)
+			),
+			'where' => array(
+				"i IN ({$itemids})",			
+			)
+		)	
+	);
+	$results = $lookup->exec();
+	foreach( $results AS $result ) {
+		$products[$result['i']] = (object)$result;
+	}
+	return $products;
+}

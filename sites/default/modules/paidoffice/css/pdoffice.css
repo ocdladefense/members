@@ -1,0 +1,273 @@
+
+form div[class*="row"] {
+	margin-top:15px;
+}
+
+form label[class*="help"] {
+	font-size:smaller;
+	font-style:italic;
+}
+
+input[class*="button"] {
+margin-top:15px;
+	width:200px;
+	height:75px;
+	font-weight:bold;
+	padding:15px;
+	font-size:14pt;
+}
+
+
+
+h1, h2 {
+	margin-top:0px;
+	font-weight:400;
+}
+
+.event-banner {
+	background-color:#53638c;
+	color:#fff;
+	padding:15px;
+	text-align:center;
+}
+
+
+
+div[id*="eventRegistrationForm"] {
+	clear:both;
+}
+
+.table-row, .registrant, .registration-headings {
+	display:table-row;   
+}
+
+#membership-form {
+	display:table;
+}
+
+.table-cell, .registrant-action, .registrant-field, .heading {
+	display:table-cell; 
+}
+
+.registrant-field-hidden {
+	display:none;
+}
+
+.no-registrants .heading {
+	min-width:100px;   
+}
+
+.table-cell {
+	padding:10px;
+}
+
+.store-product-options .product-option-name {
+	width:425px;
+}
+
+.product-option-description {
+	font-size:smaller;
+}
+
+
+
+.mobile {
+	display:none;
+}
+
+.page-wrapper {
+	background-color:#fff;
+}
+
+.row {
+	padding: 15px;
+	width: auto;
+	clear:none;
+}
+
+.content {
+	padding:15px;
+}
+
+.content:after {
+	content:"";
+	float:none;
+	display:block;
+	clear:both;
+}
+
+.col-right, .col-left {
+	background-color:#fff;
+}
+
+.panel {
+	padding:0;
+	text-align:left;
+}
+
+body {
+	margin:0 !important;
+}
+
+
+.main {
+	width:auto;
+}
+
+.button {
+	margin-top:3px;
+    margin-top: 3px;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+    color: #eee;
+}
+
+.button:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.button:hover a {
+	text-decoration:none;
+}
+
+
+input[type="text"], button, select, option {
+	font-size:1.1em;
+	max-width:100%;
+}
+
+.registrant-field, .heading {
+	padding-left:5px;
+}
+
+.registrant-field {
+	padding:6px;
+}
+
+
+
+@media screen and (max-width: 860px) {
+
+	.local-actions {
+		position:fixed;
+		bottom:0px;
+		text-align:center;
+	}
+	
+	div[id*="eventErrorMessages"] {
+		position:fixed;
+		top:115px;
+		z-index:5;
+	}
+	
+	.local-actions .local-action {
+		display:inline-block;
+	}
+
+	body {
+		font-size:12pt;
+	}
+	.main {
+		width:auto;
+	}
+
+	.mobile {
+		display:block;
+	}
+
+	.registration-headings {
+		display:none;
+	}
+
+	.row {
+		text-align:center;
+	}
+	
+	.content {
+		margin: 0 auto;
+		text-align:left;
+	}
+
+	.registrant {
+		display:inline-block;
+		margin-top:12px;
+		padding: 8px;
+		width:95%;
+		text-align:left;
+		border: 1px solid #eaeaea;
+	}
+	
+.new-registrant {
+
+}
+
+
+	.registrant-field, .registrant-action {
+		display:block;
+	}
+
+
+	.nav li.no-mobile, .no-mobile {
+		display:none;
+	}
+	
+	.col-right {
+		margin-top:8px;
+	}
+	
+	
+
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+	.mobile {
+		display:block;
+	}
+
+	.registration-headings {
+		display:none;
+	}
+
+	.registrant {
+		display:block;
+		margin-top:8px;
+		border-top:1px solid #666;
+		padding-top:4px;
+	}
+
+	.registrant-field, .registrant-action {
+		display:block;
+	}
+
+
+	.nav li.no-mobile, .no-mobile {
+		display:none;
+	}
+
+}
+
+.local-action {
+	display:inline-block;
+	width:20%;
+}
+
+.paid-office-loader {
+	display:none;
+	margin-top:80px;
+	background-color:#fff;
+	color:#666;
+	padding:15px;
+	border: 1px solid #666;
+	border-radius:8px;
+}
+
+.loading .paid-office-loader {
+	display:block;
+}
+
+.user-updated-true {
+	background-color:#eee;
+}

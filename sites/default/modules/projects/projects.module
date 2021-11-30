@@ -1,0 +1,62 @@
+<?php
+
+
+function projects_menu()
+{
+	$items = array();
+	
+	$items['projects'] = array(
+		'title' => 'AMS Project Updates',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_project_update',
+		'files' => array(
+			'controller' => 'includes/ProjectController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'ProjectController'
+	);	
+	
+	
+	$items['committees/webgov/directory-screenshots'] = array(
+		'title' => 'OCDLA Webgov Directory Screenshots',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_directory_screenshots',
+		'files' => array(
+			'controller' => 'includes/ProjectController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'ProjectController'
+	);	
+
+	$items['committees/webgov/home'] = array(
+		'title' => 'OCDLA Web Governance Committee',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_webgov_update',
+		'files' => array(
+			'controller' => 'includes/ProjectController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'ProjectController'
+	);	
+
+	$items['tests/js'] = array(
+		'title' => 'AMS Project Updates',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'jsTesting',
+		'files' => array(
+			'controller' => 'includes/ProjectController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'ProjectController'
+	);	
+	
+	return $items;
+}

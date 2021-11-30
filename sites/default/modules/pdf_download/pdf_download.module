@@ -1,0 +1,250 @@
+<?php
+
+
+use Ocdla\Member;
+use Ocdla\UserDownloadCollection;
+use Ocdla\UserDownloadManager;
+
+function pdf_download_menu()
+{
+	$items = array();
+	$items['download/pdf'] = array(
+		'name' => 'Profile',
+		'page callback' => 'ocdla_pdf_downloads',
+		// 'page arguments' => array( $user ),
+		'title' => 'Product Download',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'xhtml',
+	);
+	$items['pdf-notify'] = array(
+		'name' => 'PDF Notification',
+		'page callback' => 'pdf_notification',
+		'access' => true,
+		'output_handler' => 'html',
+		'files' => array(
+			'includes/sendmail.php'
+		)
+	);
+	$items['pdf-notify-test'] = array(
+		'name' => 'PDF Notification',
+		'page callback' => 'pdf_notification_test',
+		'access' => true,
+		'output_handler' => 'html',
+		'files' => array(
+			'includes/sendmail.php'
+		)
+	);
+	$items['recent-downloads'] = array(
+		'title' => 'Recent Downloads',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'listDownloads',
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	$items['recent-downloads/pdfs'] = array(
+		'title' => 'Recent Downloads',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'listPdfDownloads',
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	$items['my-downloads'] = array(
+		'title' => 'My Downloads',
+		'access' => 'user_has_role',
+		'access arguments' => array('member'),
+		'page callback' => 'memberDownloads',
+		'routeArguments' => array(0,'bar','baz'),
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	$items['create-pdfs'] = array(
+		'title' => 'Create multiple PDFs',
+		'access' => true,
+		'page callback' => 'createPdfs',
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	$items['recreate-pdfs/%daysBack'] = array(
+		'title' => 'Create multiple PDFs',
+		'access' => true,
+		'page callback' => 'recreatePdfs',
+		'routeArguments' => array(1),
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	$items['create-pdf/%downloadId'] = array(
+		'title' => 'Create a PDF',
+		'access' => true,
+		'access arguments' => array('admin'),
+		'page callback' => 'createPdf',
+		'routeArguments' => array(1),
+		'files' => array(
+			'includes/PdfController.php'
+		),
+		'routeClass' => 'PdfController'
+	);
+	
+	return $items;
+}
+
+
+
+function pdf_notification_test()
+{
+	$config;
+	$updateConfigLastRun;
+
+	// Running program and loading program parameters
+	$lastRun = new DateTime();
+	$lastRunString = $lastRun->format('Y-m-d H:i:s');
+	$updateConfigLastRun = array('lastProgramRunDateTime' => $lastRunString);
+	$config = xml_settings_load(DRUPAL_ROOT .'/sites/default/files/modules/pdfNotification.xml',$updateConfigLastRun);
+
+	// Find all the entries for file downloads where the user hasn't been notified
+	// downloads.notification_time
+	$manager = new UserDownloadManager();
+	$manager->populateDownloadsFromMemberId(25060);
+	$manager->notify();
+	return (string)$manager;
+}
+
+
+
+function pdf_notification()
+{
+	$daysPrevious = 10;
+	$config;
+	$updateConfigLastRun;
+
+	// Running program and loading program parameters
+	$lastRun = new DateTime();
+	$lastRunString = $lastRun->format('Y-m-d H:i:s');
+	$updateConfigLastRun = array('lastProgramRunDateTime' => $lastRunString);
+	$config = xml_settings_load(DRUPAL_ROOT .'/sites/default/files/modules/pdfNotification.xml',$updateConfigLastRun);
+
+	$manager = new UserDownloadManager();
+	$count = $manager->populateDownloadsFromTimestamp(time()-60*60*24*$daysPrevious);
+	if(0===$count)
+	{
+		return "There were no downloads to notify.";
+	}
+	$manager->notify();
+	return (string)$manager;
+}
+
+
+
+
+function ocdla_pdf_downloads( &$vars ) {
+	global $user, $request, $twig;
+	/**
+	 * Gather information about the file request
+	 * from the querystring
+	 * $productid = the product id for this download
+	 * this is the current example download link:
+	 * https://www.ocdla.org/send-pdfs/seminar_download_page.php?i=20565&productid=836
+	 */
+	 // #1 https://www.ocdla.org/index.php?q=download/pdf&productid=1192
+	 
+	 // #2 
+	 
+	 // turns into without a cookie
+	 	// https://www.ocdla.org/index.php?q=download/pdf
+
+	
+	$productid = $request->getRequestValue('productid');
+	$orderid = $request->getRequestValue('Order_ID');
+	$i = $request->getRequestValue('i');
+	
+	if( !user_is_authenticated() ){
+		$redirect_to = urlencode('/index.php?q=download/pdf&productid='.$productid);
+		clickpdx_goto( 'https://auth.ocdla.org/login?ref='.$redirect_to);
+	}
+
+	//if( empty($i) && empty($UserID) ) { echo "This link is incomplete.  Check your email again and copy and paste the entire link to continue."; exit; }
+	// first perform a lookup on the $UserID and the $productid from the URL
+	// if there is no $i then assume that this is a download for a $UserID
+	// redirect to the login page if the user isn't logged in
+	//if( isset($UserID) && user_has_download( $UserID, $productid );
+	
+	// there are two possible situations:
+	// either an anonymous user is wanting to download this file in which case
+	// they will need to have a valid $i valid
+	// or the user is trying to access a product ($productid) associated with a member
+	// in which case that member needs to be logged in
+	// here, check if the script has been passed a valid $i
+	
+	// function is_valid_download( $i=NULL, $productid=NULL, $memberid=NULL ) {
+	// function is_member_download( $i ) {
+	// function is_valid_member_download
+	try
+	{		
+		if( !is_valid_download( $productid, $user->uid ) ) {
+			$content = "<p>The information associated with this file is no longer valid.  Either your link has expired or you may not be the owner of this document.  <a href='https://www.ocdla.org/index.php?q=login&amp;referrer=index.php%3Fq=download/pdf%26productid={$productid}' title='Log in as a different user to access this resource'>Click here</a> to login again as the appropriate user.</p>";
+			return $content;
+		}
+		$product = new ProductDownload($productid);		
+	}
+	catch(Exception $e)
+	{
+		$pretty = $e->getMessage() . "\n\nUserID: ".$user->uid." \n\nModule: pdf_download.module, Line 67\n\nQuerystring:\n\n".$_SERVER['QUERY_STRING'];
+		$error_msg = $e->getMessage() . "\n\nUserID: ".$user->uid." \n\nModule: pdf_download.module, Line 67\n\nQuerystring:\n\n".urlencode($_SERVER['QUERY_STRING']);
+		send_error_message('OCDLA Download Error',$pretty);
+		trigger_error( $error_msg, E_USER_WARNING );
+		
+		throw new Exception('There was an error retrieving the file for this OCDLA product.');
+	}
+	
+	$catalog = $product->info;
+	
+	$filename = substr($catalog["DownloadLocation"],strrpos($catalog["DownloadLocation"],'\\')+1);
+	$downloadUri = $user->username . '_' . $filename;
+	//prepare information about this product
+	if(strrpos($catalog["Item"],'-') !== false) {
+		$option=substr($catalog["Item"],strrpos($catalog["Item"],'-')+1);
+	}
+	else {
+		$option='';
+	}
+	
+	if(strpos($catalog["Item"],'-') !== false) {
+		$ProductName=substr($catalog["Item"],0,strpos($catalog["Item"],'-'));
+	}
+	else {
+		$ProductName=$catalog["Item"];
+	}
+	
+
+	$content = <<<EOF
+<h2>$ProductName</h2>
+<span class="option">$option</span>
+<p>&nbsp;</p>
+<h5>$filename</h5>
+<h2>
+	<a id="download" href="http://members.ocdla.org/downloads/{$downloadUri}">Download Now&nbsp;&nbsp;
+		<img src="/images/adobe_icon.jpg" width="25px;" alt="Adobe Acrobat File" />
+	</a>
+</h2>
+<p>Click on the link above if your download does not start automatically. Downloads may take a few minutes</p><p style="font-weight:bold;">This download link will remain active for two weeks.</p>
+EOF;
+
+	return $content;
+}

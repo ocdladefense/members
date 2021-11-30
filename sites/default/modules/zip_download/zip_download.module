@@ -1,0 +1,125 @@
+<?php
+use Ocdla\UserDownload;
+use Clickpdx\Core\Asset\Script;
+
+/**
+ * Zip file overwrite.
+ *
+ * Set to true to use any previous version of this
+ * customer's zip file so it won't be recreated
+ */
+define('ZIP_OVERWRITE_EXISTING_FILE',true);
+
+
+/**
+ * Upload location.
+ *
+ * This is the location on the filesystem where folders
+ * that are to be zipped up should be located.  The application will
+ * look for folders in this directory when creating zip files.
+ */
+define('ZIP_UPLOAD_LOCATION',true);
+
+
+/**
+ * Download location.
+ *
+ * The location on the filesystem where zip files
+ * should be downloaded from.  The application will create zip files 
+ * in this directory and serve links to those files that point here.
+ */
+define('ZIP_DOWNLOAD_LOCATION',true);
+
+define('UNLIMITED_EXECUTION_TIME',0);
+
+ini_set('max_execution_time', UNLIMITED_EXECUTION_TIME);
+
+
+function zip_download_menu()
+{
+	$items = array();
+	$items['download/zip/%downloadId'] = array(
+		'name' => 'Profile',
+		'page callback' => 'zip_download',
+		'title' => 'Product Download',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'html',
+		'files' => 'includes/zip-info.inc',
+		'routeArguments' => array(2),
+	);
+
+	$items['zip/link/%downloadId'] = array(
+		'title' => 'Get Zip ',
+		'page callback' => 'getZipLink',
+		'access' => true,
+		'routeClass' => 'ZipController',
+		'routeArguments' => array(2),
+		'files' => array(
+			'includes/ZipController.php'
+		),
+		'output_handler' => 'json',
+	);
+	
+	$items['zip/create/%downloadId'] = array(
+		'title' => 'Create Zip file',
+		'page callback' => 'createZip',
+		'access' => true,
+		'files' => array(
+			'includes/ZipController.php'
+		),
+		'routeClass' => 'ZipController'
+	);
+	
+	$items['zip/error'] = array(
+		'title' => 'Generate an error',
+		'page callback' => 'genError',
+		'access' => true,
+		'files' => array(
+			'includes/ZipController.php'
+		),
+		'routeClass' => 'ZipController'
+	);
+	
+	return $items;
+}
+
+
+function zip_download($downloadId)
+{
+	global $user, $request, $twig, $db_connection;
+	$args = func_get_args();
+	$downloadId = array_pop($args);
+
+
+	// return "<h2>Maintenance</h2><p>Our download page is undergoing maintenance.  It will be back up shortly.</p>";
+	try
+	{
+		$product = new UserDownload($downloadId);
+	}
+	catch(Exception $e)
+	{ 
+		return $e->getMessage();
+	}
+				
+	$ajax = new Script(
+		array(
+			'type' => SCRIPT_INLINE,
+			'data' => "var zipLinker = jQuery.ajax('/zip/link/{$downloadId}',{dataType:'json'});
+				zipLinker.done(function(data){
+					jQuery('#progressIndicator').html(\"<a style='font-weight:bold;font-size:14px;' href='\"+data.url+\"'>Click here to download your zip file</a>\");});
+			zipLinker.fail(function(jq,textStatus,status){
+				var resp = jQuery.parseJSON(jq.responseText);
+				jQuery('#progressIndicator').html(\"<p class='error'>\"+resp.error+\"</p>\");
+			});"
+		)
+	);
+	
+	clickpdx_add_js( $ajax, THEME_SCRIPT_REGION_FOOTER );
+
+	$content = $twig->render('zip-download-page.html', array(
+		'product_name' => $product->getProductName()
+		));
+	
+	return $content;
+}

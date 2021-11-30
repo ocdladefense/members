@@ -1,0 +1,50 @@
+<?php
+/**
+ * @file - login.module
+ */
+function wiki_api_menu() {
+	$items = array();
+	
+	$items['wiki-api/user-info'] = array(
+		'name' => 'OCDLA',
+		'page_callback' => 'wiki_api_user_info',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+	);
+
+	$items['ocdla/login'] = array(
+		'name' => 'OCDLA',
+		'page_callback' => 'page_ocdla_login',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'xhtml',
+	);
+	
+	return $items;
+}
+
+
+function wiki_api_user_info(&$vars) {
+	/*	if(user_is_authenticated()) {
+			header("Location: https://www.ocdla.org/profiles/index.php");
+			exit;
+		}
+	*/
+	$f = array();  $form_state = array();
+	$form_options = array('id'=>'ocdla_login_form','action'=>'/index.php?q=ocdla/login','method'=>'post');
+	$form_options['input'] = &$_POST;	
+	// $form = ocdla_login_form( $f, $form_state, $vars['previous_form'] );
+	// $form = clickpdx_get_form( 'ocdla_login_form', $vars['previous_form'] );
+	// $rendered = clickpdx_render_form( $form, $form_options );	
+	$content = "<h2>Wiki API - User Info</h2>
+				<h3>Display information about the current Wiki user.</h3>";
+	$content .= $rendered;
+	$content .= <<<EOF
+	<p>If you cannot remember your password, <a href="mailto:info@ocdla.org"> email</a> or call OCDLA.</p>
+	
+	<p>If you are not an OCDLA member, <a href="/shop-membr-index.shtml">JOIN HERE.</a></p>
+EOF;
+	return $content;
+} //page_ocdla_login

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Barn Dance Form</title>
+	</head>
+	
+	<body>
+		<style type="text/css">
+			input[type="radio"] {
+				display:inline-block;
+			}
+			
+			label {
+				display:inline-block;
+				font-weight:bold;
+			}
+			
+			.modal-form-actions {
+				margin-top:25px;
+			}
+			
+			.modal-form-actions .form-action {
+				display:inline-block;
+				width:150px;
+			}
+
+			.food-menu-item {
+				margin-top:25px;
+				display:inline-block;
+			}
+
+			.all-attendees-wrapper {
+				height:0;
+				transition: height .5s ease-in;
+				overflow:hidden;
+			}
+
+			.all-attendees-wrapper.expanded {
+				height:1000px;
+			}
+
+			.attendee-wrapper .form-item {
+				display:inline-block;
+			}
+
+			.menu-description {
+				margin-bottom:15px;
+			}
+
+			.meal-label {
+				font-family:Verdana;
+				font-weight:bold;
+				display:block;
+			}
+
+
+			.food-menu-item {
+				margin-bottom:5px;
+			}
+
+			.menu-item-description {
+				display:inline-block;
+				margin-left:5px;
+			}
+			
+
+		</style>
+		<h2>{{title}}</h2>
+		<p class='form-message'>{{message}}</p>
+		
+		<form id='supplementary-form'>
+			<div class='modal-form-wrapper'>
+
+				<div class="form-item">
+					<label>Fish/Beef</label>
+					<select name="meat">
+						<option value="0" selected="selected">None selected</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+					<div class="meal-description">
+						Yes, I'm happy with the grilled tri-tip with sautéed mushrooms and foil-wrapped fresh-caught salmon with lemon wedges and tartar sauce.
+					</div>
+				</div>
+			
+				<div class="form-item">
+					<label>Vegetarian</label>
+					<select name="veggie">
+						<option value="0" selected="selected">None selected</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+					<div class="meal-description">
+						No, I'd prefer the vegetarian option: stuffed portabello mushrooms with quinoa and tomatoes.
+					</div>
+				</div>
+
+
+				<div class="modal-form-actions" style="margin-top:25px;">
+					<div class="form-action button" data-action="updateCartData" data-pricebook-entry-id="{{pricebookEntryId}}">Save</div>	
+			
+					<div data-action="close-modal" class="form-action form-action-close button">Cancel</div>
+				</div>
+			</div>
+		</form>
+
+	</body>
+</html>

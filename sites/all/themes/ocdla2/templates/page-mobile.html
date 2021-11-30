@@ -1,0 +1,82 @@
+
+<!-- this is a page-mobile.html template -->
+<div id="wrapper">
+	<div id="masthead">
+		<span class="mobile mobile-phone brand brand-company-name-short">OCDLA</span>
+		<!-- <span class="mobile mobile-tablet brand brand-company-name-long">Oregon Criminal Defense Lawyers Association</span> -->
+		<div class="content">
+			{{ menu|raw }}
+		</div>
+	</div>
+
+	<div id="topnav">
+		<ul class="content" id="navlinks">
+			<li id="user-widget">
+			</li>
+			<li id="login-block" class="menu-item first">
+				<a class="item last" id="login" href="https://auth.ocdla.org/login">Member Login</a>
+			</li>
+			<li class="menu-item">
+				<a id="lod_link" href="https://libraryofdefense.ocdla.org">Library of Defense</a>
+			</li>
+			<li class="menu-item">
+				<a href="https://ocdla.force.com">OCDLA Store</a>
+			</li>
+			<li class="menu-item">
+				<a href="https://www.ocdla.org/search.shtml">SEARCH</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="left">
+		{{ menu_left|raw }}
+		<p>&nbsp;</p>
+
+		<div class="content">
+			<h3>&nbsp;</h3>
+			<h3>&nbsp;</h3>
+			<h3>&nbsp;</h3>
+		</div>
+	</div>
+
+	<div id="column_wrapper">
+
+		<div id="center">
+			<div class="content">
+				{% set countCrumbs = breadcrumbs|length %}
+				{% set count = 1 %}
+				<div class="crumbs">
+				{% for crumb,link in breadcrumbs %}
+					{% if count==countCrumbs %}
+						<span class="crumb last-crumb"><a href="{{ link }}">{{ crumb }}</a></span>					
+					{% else %}
+						<span class="crumb"><a href="{{ link }}">{{ crumb }}</a></span>
+					{% endif %}
+					{% set count = count + 1 %}
+				{% endfor %}
+				</div>
+				{{ submenu ? submenu|raw : '' }}
+			
+				<h1>{{ title }}</h1>
+			
+				{% if messages|length %}
+					<div class='msg'>
+						{{ messages }}
+					</div>			
+				{% endif %}
+			
+			
+				<div class="node">
+					{{ page.content|raw }}
+				</div>
+			
+			</div>
+		</div>
+		
+	</div><!-- end column-wrapper -->
+
+
+	{{ footer_include|raw }}
+
+
+</div><!-- end wrapper -->

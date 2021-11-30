@@ -1,0 +1,13 @@
+{# extends "editing.twig" #}
+{# This is a Twig template file
+It's supposed to be easy to read and edit.
+What's inside these brackets are comments.  Comments won't display on the webpage.
+#}
+{% block content %}
+<h1 contenteditable="true" id="title-{{nid}}">
+	{{title}}
+</h1>
+<div contenteditable="true" id="body-{{nid}}">
+	{{ content | raw }}
+</div>
+{% endblock %}

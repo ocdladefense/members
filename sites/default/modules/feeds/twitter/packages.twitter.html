@@ -1,0 +1,58 @@
+  <!-- ++Begin Clickpdx Generated Code++ -->
+  <!--
+  // Created with a Google AJAX Search and Feed Wizard
+  // http://code.google.com/apis/ajaxsearch/wizards.html
+  -->
+
+
+  <!--
+  // The Following div element will end up holding the actual feed control.
+  // You can place this anywhere on your page.
+  -->
+
+
+  <!-- Ajax Api
+  -->
+  <!-- 1.) leading zeros can come off and so can years.  "Willamalane" needs to be omitted from the widget.-->
+
+<script src="/twitter/Ajax.js"
+    type="text/javascript"></script>
+    
+    
+<script type="text/javascript">
+
+if(location.pathname=="\/" || location.pathname=="\/index.shtml" || location.pathname=="\/index-with-twitter.shtml") {
+	var twitter_id="feed-control-right";
+	var feed_length = 42;
+	var home = document.getElementById( twitter_id );
+	var url = location.hostname + "/twitter/twitter-main.html";
+	var twitter = new AjaxRequest( url, {fl:"feed_length="+feed_length} );
+	twitter.sendRequest();
+	//document.write(feed);
+}
+else {
+	var twitter_id="feed-control-left";
+	var feed_length = 23;
+	var home = document.getElementById( twitter_id );
+	var url = location.hostname + "/twitter/twitter-sidebar.html";
+	var twitter = new AjaxRequest( url, {fl:"feed_length="+feed_length} );
+	twitter.sendRequest();
+}
+  
+
+
+//window.alert(home);
+
+var headID = document.getElementsByTagName("head")[0];         
+var cssNode = document.createElement('link');
+cssNode.type = 'text/css';
+cssNode.rel = 'stylesheet';
+cssNode.href = '/twitter/twitter-styles.css';
+cssNode.media = 'screen';
+headID.appendChild(cssNode);
+
+
+</script>
+
+
+<!-- ++End Clickpdx Generated Code++ -->

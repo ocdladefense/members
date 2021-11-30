@@ -1,0 +1,280 @@
+<?php
+/**
+ * email.module
+ *
+ */
+
+/**
+ * implements HOOK_menu
+ *
+ */
+function email_menu() {
+	$items = array();
+	
+	$items['email'] = array(
+		'name'=>'send mail',
+		'title'=>'Send Email',
+		'page_callback'=>'send_email',
+		'access'=>TRUE,
+		'#theme' => 'estilo',
+	);
+	return $items;
+}
+
+
+/**
+get and set the location of a template file for to be used to send HTML email
+define a set of tokens that are to be replaced within the template file
+set the headers for plain text vs. html email or both, i.e., multipart/alternative
+send mail to a specific email from a specific email
+set the subject of the email
+*/
+
+function send_email( &$vars ) {
+/** this function should redirect after it executes since its purpose is to send email, not to display content
+*/
+	$from = "style@stylebyestilo.com";
+	//$from = "admin@clickpdx.com";
+	$subject = "Style Emagazine from Estilo Salon - March, 2012";
+
+	//$bcc = "jbernal.web.dev@gmail.com";
+//$e='Style Emagazine Recipient <style@stylebyestilo.com>';
+
+
+
+
+	$e='jose.bernal@clickpdx.com';
+	$e= 'style@stylebyestilo.com';
+	$staff='jbernal.web.dev@gmail.com, morrillkj@gmail.com,beautygrl@comcast.net,amf050168@aol.com,hairdiva4u@aol.com';
+	//$e=',jbernal.web.dev@gmail.com';
+	//$e = 'hairdiva4u@aol.com,morrillkj@gmail.com';
+	$bcc = 'webfootsooner@gmail.com,Abbottsfolly@comcast.net,lineraider77@aol.com,adams.jordan56@yahoo.com,30500op@gmail.com,AdcockLibby@juno.com,ailanjim@comcast.net,Diana_Alcomendas@yahoo.com,blanca.alexander@fergusm.com,ddgmallen@comcast.net,cheerstolove@hotmail.com,gradamos@comcast.net,KcAnderson@gmail.com,mandersen@mba.medical.com,Lyn@alangelo.com,daniellaarvat@yahoo.com,smileyface.jen@gmail.com,aughenbaughsj@lcc.ctc.edu,haultom@gmail.com,theresakenney@comcast.net,abbyCdickhannah.com,traci.ball@gmail.com,bangled66@hotmail.com,Karenlists@comcast.net,shana210@comcast.net,emily@barramco.com,the1eviltemptress@yahoo.com,dkbieb@aol.com,NncBerg@gmail.com,slbillard@gmail.com,kimmieb7@yahoo.com,vangie_bogaty@yahoo.com,diallaura@frontier.com,jerinb2000@hotmail.com,marissa.brewster@me.com,krissybrinski@yahoo.com,veggiejess@yahoo.com,heenakay@frontier.com,info@bruggere.com,bryanhgWest@msn.com,MarciaeBridgesulas.net,NMCBurg@gmail.com,sunny.a.burke@gmail.com,yburrson@comcast.net,Mbury46@comcast.net,bussfam@gmail.com,jb@juliebussing.com,Katieabyrd@gmail.com,collen@calfarmsLLC.com,Meacheezit@hotmail.com,rebeccasue7@hotmail.com,pcampbell53004@sbcglobal.net,kristincano@yahoo.com,dyana@sorellanaturale.com,e-caraway@msn.com,carjcar9@msn.com,MalloryKitterman@comcast.net,BillCarsay@yahoo.com,dfcarson@comcast.net,MLCASSIDY@comcast.net,billcavanagh111@comcast.net,jordysmom@live.com,minouchan@gmail.com,jlpvchapman@g.com,anncheck@hotmail.com,amberaclark@yahoo.com,katy@jostenteam.com,acleveland@lhs.com,ccleve89@gmail.com,sjc6@comcast.net,RJcoffy33@comcast.net,tc2nd@comcast.net,Westfall08@comcast.net,dinaconigliaro@rocketmail.com,dianisty@hotmail.com,Scouch60@yahoo.com,lora@fazimond.com,craycraftf@comcast.net,alexandra_andra@hotmail.com,blackrabbitred@hotmail.com,bqcuesta@hotmail.com,kjc3901@comcast.net,famdameron@msn.com,barb-estilo@barberic.org,vdavids@attglobal.net,leslee-debruia@msn.com,cristi@crc.corporation.com,CandaceDennis@gmail.com,Kdickerhoof@comcast.net,juliedicksonmd@gmail.com,abernal3@mac.com,' . $staff;
+	//$bcc = 'jose.bernal@clickpdx.com';
+	
+	
+	//print_r($_SERVER);
+
+	/*$wd_was = getcwd();
+	chdir("/inetpub/ocdla/sqlconn");
+	require('sql_conn.php');
+	chdir("/inetpub/ocdla/php_mail");
+	*/
+	$vars['title'] = 'Estilo Salon';
+	$vars['page_title'] = 'Style Emagazine'; 
+ 	$vars['attributes'] = "style=\"padding: 0;margin: 0 auto;width: 650px !important;padding-left: 15px;padding-right: 15px;font-size: 12px; line-height:22px; font-family:'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;color: #666;\"";
+	$vars['content'] = email_body( $vars );
+	$vars['email_body'] = theme_render_template( 'sites/all/themes/estilo/templates/page--email.tpl.php',$vars );
+	$html_body = 	theme_render_template( 'sites/all/themes/estilo/templates/html--email.tpl.php',$vars );
+	//$text_body = theme_email( $type='text' );
+	
+	$vars['email_type'] = 'text';
+	$text_body = email_body( $vars );
+	//$text_body = 'Hello World!';//@jbernal pre-flight
+	
+	$boundary = '----=_NextPart_';
+
+$multi_body = <<<EOF
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain; charset=UTF-8; format=flowed;
+Content-Transfer-Encoding: 8bit
+
+$text_body
+
+
+--$boundary
+Content-Type: text/html; charset=UTF-8; format=flowed; 
+Content-Transfer-Encoding: 8bit
+
+$html_body	
+EOF;
+
+/*	$headers='From: Estilo Salon <' . $from . '>'."\r\n".'Bcc: ' . $bcc ."\r\n".'MIME-Version: 1.0'."\r\n".'Content-Type: multipart/alternative; boundary="'.$boundary.'"'."\r\n".'Content-Transfer-Encoding: 8Bit'."\r\n";
+*/
+
+  $headers .= "Reply-To: Estilo Salon <style@stylebyestilo.com>\r\n";
+  $headers .= "Return-Path: Estilo Salon <style@stylebyestilo.com>\r\n"; 
+  $headers .= "From: Estilo Salon <style@stylebyestilo.com>\r\n";
+	if(!empty($bcc)) $headers .= "Bcc: {$bcc}\r\n";
+  $headers .= "Organization: Estilo Salon\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: multipart/alternative; boundary=\"{$boundary}\"\r\n";
+  $headers .= "X-Priority: 3\r\n";
+  $headers .= "X-Complaints-To: style@stylebyestilo.com\r\n";
+  $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
+	 
+	/*Make sure the Content-type parameter's value is all on one line!!!
+	$params = array(
+	 'MIME-Version' => '1.0',
+	 'Content-Type' => 'multipart/alternative; boundary="'.$boundary.'"',
+	 'Content-Transfer-Encoding' => '8Bit');
+	*/
+	 
+	 //
+	// tail(
+	 
+	$sent2 = mail($e, $subject, $multi_body, $headers);
+	
+	if( $sent2 ) {
+		$output =  "<h2>Thanks, José for sending this email...</h2>";
+	} else { $output = '<h3>Sorry, the website encountered an error.</h3>';}
+	return $html_body;
+	
+	//if($sent2) echo "your rideshare email was sent successfully!"; else echo "your mail could not be sent...";
+}//function send_email
+
+
+
+function email_body( &$vars ) {
+	$vars['email_footer'] = array(
+'Estilo Salon',
+'style@stylebyestilo.com',
+'2520 Columbia House Blvd, Suite 102',
+'Vancouver, WA 98661',
+'360-719-2571',
+'http://stylebyestilo.com',
+'Learn how to <a href="http://stylebyestilo.com/privacy/emagazine/optout">opt out</a> of our emag',
+);
+$vars['email_footer'] = theme_footer_info( $vars['email_footer'] );
+
+$results = db_query();
+$results = array();//create some dummy announcements
+$file_loc = 'http://clickpdx.local/sites/default/files';
+$file_loc = 'http://stylebyestilo.com/sites/estilo_test/files';
+
+
+
+$announcement3 = new stdClass();
+$announcement3->nid = 01103;
+$announcement3->path = 'style-emagazine/march/2012/cosmetics/jane-iredale-flirty-faces-for-spring';
+$announcement3->title = 'FREE Event: "Flirty Faces for Spring" Makeup Trends';
+//$announcement3->title_text = 'ESTILO [hearts] Red Lips';
+$announcement3->teaser = 'Join Elias, Jane Iredale\'s celebrity make-up artist, at Estilo\'s "Flirty Faces for Spring" make-up event, Thursday, March 8...';
+$announcement3->author = 'Lavonne Morrill';
+$announcement3->has_image = TRUE;
+$announcement3->image = array('src'=>'/emails/march-2012/jane-iredale.png','alt'=>'Jane Iredale Marketing');
+$results[0] = $announcement3;
+
+$announcement1 = new stdClass();
+$announcement1->nid = 01101;
+$announcement1->path = 'style-emagazine/march/2012/nails/girls-on-the-go-perfect-10';
+$announcement1->title = 'Girls on the Go - Perfect 10';
+$announcement1->teaser = 'You\'re a Girl on the Go and you need those 10 perfectly polished fingertips to stay shiny for weeks. We know how to do it...';
+$announcement1->author = 'Lavonne Morrill';
+$announcement1->has_image = TRUE;
+$announcement1->image = array('src'=>'/emails/march-2012/opi-nails.png','alt'=>'OPI Marketing');
+$results[1] = $announcement1;
+
+$announcement4 = new stdClass();
+$announcement4->nid = 01103;
+$announcement4->path = 'style-emagazine/march/2012/hair/products/tigi-copyright-color';
+$announcement4->title = 'Refresh Your Spring Color';
+$announcement4->teaser = 'Imaging brighter, shinier more full color without the negative side-effects.  Impossible, right?  Not with emerging TIGI color technology...';
+$announcement4->author = 'Anthony Fischer';
+$announcement4->has_image = TRUE;
+$announcement4->image = array('src'=>'/emails/march-2012/tigi-copyright-color.png','alt'=>'TIGI Color Marketing');
+$results[2] = $announcement4;
+
+$announcement2 = new stdClass();
+$announcement2->nid = 01102;
+$announcement2->path = 'style-emagazine/march/2012/stylists/meet-out-color-experts-anthony-fischer-and-wendy-vail';
+$announcement2->title = 'Meet our Color Experts at Estilo!';
+$announcement2->teaser = 'Spring is the season for your new vibrant hair color to bloom.  Anthony and Wendy have the expertise and experience to bring your spring look to life...';
+$announcement2->author = 'Lavonne Morrill';
+$announcement2->has_image = TRUE;
+$announcement2->image = array('src'=>'/emails/march-2012/color-experts.jpg','alt'=>'Estilo Color Experts');
+$results[3] = $announcement2;
+
+
+$announcement5 = new stdClass();
+$announcement5->nid = 01103;
+$announcement5->path = 'style-emagazine/march/2012/products/product-focus-TIGI-colour-goddess-shampoo-and-conditioner';
+$announcement5->title = 'Product Focus: TIGI Colour Goddess Shampoo and Conditioner';
+$announcement5->teaser = 'We\'ve got the therapy to keep those dark chocolate tones, rich caramel browns and spicy red hues as delicious as the day they were done!...';
+$announcement5->author = 'Lavonne Morrill';
+$announcement5->has_image = TRUE;
+$announcement5->image = array('src'=>'/emails/march-2012/bead-head-colour-goddess-shampoo.png','alt'=>'TIGI Product Focus');
+$results[4] = $announcement5;
+
+
+
+
+
+	$utm_source = '201203';
+	//$utm_source = '201203_newsletter_test';
+	$content = '';
+	$i = 0;
+	foreach( $results AS $article ) {
+		$i++;
+		$zebra = $i % 2 > 0 ? 'odd' : 'even';
+		$content .= "<tr valign='top'><td colspan='2' class='article' style='border-top:1px solid #ccc;padding-top:8px;margin-top:0px;margin-bottom:0px;padding-bottom:0px;'><h2 style='color:#666666;padding-bottom:0px;padding-top:0px;'>
+			<a href='http://stylebyestilo.com/{$article->path}?utm_source={$utm_source}&amp;utm_medium=email&amp;utm_campaign=emag' style='text-decoration:none; color:#666666;'>{$article->title}</a>
+			</h2>
+			</td>
+			</tr>";
+		
+		$content .= "<tr valign='top'>
+		<td style='vertical-align:top;margin-top:0px;margin-bottom:0px;padding-bottom:0px;padding-top:0px;'>
+		<p class='teaser' style='font-size:12pt;padding-right:25px;margin-top:0px;margin-bottom:0px;padding-bottom:0px;padding-top:0px;'>{$article->teaser}</p>";
+		
+		$content .= "<p style='margin-top:0px;padding-top:0px;padding-bottom:0px;margin-bottom:0px;font-size:12pt;'><a class='article-title article-title-link' href='http://stylebyestilo.com/{$article->path}?utm_source={$utm_source}&amp;utm_medium=email&amp;utm_campaign=emag' style='text-decoration:none;'>Read More</a>
+		</p>
+		</td>";
+		if( $article->has_image ) {
+			$content .= "<td class='visual' width='100px' style='vertical-align:top;margin-top:0px;margin-bottom:0px;padding-bottom:0px;padding-top:0px;'>
+				<a href='http://stylebyestilo.com/{$article->path}?utm_source={$utm_source}&amp;utm_medium=email&amp;utm_campaign=emag' style='border:none;'>
+					<img src='{$file_loc}{$article->image['src']}' alt='{$article->image['alt']}' style='margin-top:0px;margin-bottom:0px;padding-bottom:0px;padding-top:0px;border:none;' />
+				</a>
+				</td>
+			</tr>";
+		}//if
+		else { $content .= "<td class='visual' width='100px' style='margin-top:0px;margin-bottom:0px;padding-bottom:0px;padding-top:0px;'> </td></tr>"; }
+		//$content .= "<tr><td colspan=\"2\"><hr />
+	}//foreach
+
+
+/**
+ * if we pass $vars['email_type'] == 'text'
+ * then reprocess $content for the text-only part
+ *
+ */
+	if($vars['email_type']=='text') {
+		$text_header = <<<EOF
+Welcome to the March issue of Style, a monthly emagazine about what's happening here and now in beauty and fashion. Spring is around the corner, the runways are bursting with color and so are we at Estilo. Read on to discover the latest colorful trends, starting with Estilo's "Flirty Faces for Spring!"\n\t--Lavonne Morrill, Owner, Stylist, Estilo Salon			
+EOF;
+		$content = '';
+		$i = 0;
+		foreach( $results AS $article ) {
+			$i++;
+			$zebra = $i % 2 > 0 ? 'odd' : 'even';
+			$title = isset($article->title_text) ? $article->title_text : $article->title;
+			$content .= "\n\n{$title}\n{$article->teaser}\nhttp://stylebyestilo.com/{$article->path}?utm_source=newsletter20120209&amp;utm_medium=email&amp;utm_campaign=emag";
+		}//foreach
+	$text_footer = array(
+'Estilo Salon',
+'style@stylebyestilo.com',
+'2520 Columbia House Blvd, Suite 102',
+'Vancouver, WA 98661',
+'360-719-2571',
+'http://stylebyestilo.com',
+'Learn how to opt out of our emag:',
+'http://stylebyestilo.com/privacy/emagazine/optout',
+);		
+
+
+		$text_footer = implode("\n",$text_footer);
+		$text_footer = "\n\n" . $text_footer;
+		
+		$content = $text_header . $content . $text_footer;
+	}//if processing a text-only emailbody
+
+
+
+
+	// here $content must include both the HTML version, the boundary and the text version
+	// below this value gets returned to the function that is actually sending the email
+
+	return $content;
+}//email_estilo

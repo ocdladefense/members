@@ -1,0 +1,96 @@
+<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
+<label for="drawer-toggle" id="drawer-toggle-label"></label>
+<header>OCDLA</header>
+<nav id="drawer">
+	<ul>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+		 <li><a href="#">Menu Item</a></li>
+	</ul>
+</nav>
+<!-- this is a page.html template -->
+<div id="wrapper">
+
+
+	{{ top_include|raw }}
+
+	<div id="column_wrapper">
+
+		<div id="left">
+			{{ menu|raw }}
+			<p>&nbsp;</p>
+
+			<div class="content">
+				<h3>&nbsp;</h3>
+				<h3>&nbsp;</h3>
+				<h3>&nbsp;</h3>
+			</div>
+		</div>
+	
+		<div id="center">
+			<div class="content">
+				{{ submenu ? submenu|raw : '' }}
+			
+				<h3>{{ title }}</h3>
+			
+				{% if messages|length %}
+					<div class='msg'>
+						{{ messages }}
+					</div>			
+				{% endif %}
+			
+			
+				<div class="node">
+					{{ page.content|raw }}
+				</div>
+			
+			</div>
+		</div>
+    
+    <div id="right">
+			<div class="content">
+	
+				<h4>Online Membership Directory</h4>
+	
+				<p>
+				You may download a current membership directory  <a href="https://www.ocdla.org/membership/memberdirectory_newocdla.php" target="_new" title="OCDLA Membership Directory">here</a>.
+				</p>
+				<p>Many sections are updated on a daily basis, including:</p>
+				<p>&bull; members by last name<br />
+					&bull; members by city<br />
+					&bull; members areas of interest<br />
+					&bull; Public Defense / Aggravated Murder Contracts
+				</p>
+				<p>You can also find these lists, updated every September, in the directory:<br />
+					&bull; Public Defender Boards<br />
+					&bull; Office of Public Defense Services Staff<br />
+					&bull; Federal Public Defender Offices
+				</p>
+				<h4>&nbsp;</h4>
+			</div>
+		</div>
+		
+		
+	</div><!-- end column-wrapper -->
+
+
+	{{ footer_include|raw }}
+
+
+</div><!-- end wrapper -->

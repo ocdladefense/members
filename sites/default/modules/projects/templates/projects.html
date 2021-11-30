@@ -1,0 +1,50 @@
+<!--
+<div class='feature'>
+	<h3 class='feature-title'>Feature Title</h3>
+	<span class='feature-summary'>A feature summary here.</span>
+	<p class='feature-description'>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non elit eget felis vulputate dictum. Sed ac ullamcorper velit. Vestibulum non eleifend metus, non ornare nisi. Nunc in nisi at justo condimentum tristique. Nullam ultricies magna eu massa rhoncus, a efficitur dolor efficitur. Vivamus aliquam tincidunt enim at dignissim. Phasellus efficitur turpis nec rhoncus venenatis. Donec et pulvinar nisl. Suspendisse et enim quis erat lobortis iaculis eget ut arcu. Suspendisse id ipsum posuere, blandit sem sed, sagittis purus. Pellentesque auctor feugiat lectus, vel vulputate mauris venenatis tincidunt. Nam vitae risus a turpis elementum rutrum eget eu risus.
+	</p>
+</div>
+-->
+<span class='project-last-udpated'>Last Updated: {{ lastUpdated }}</span>
+{% for notice in notices %}
+	<div class='ams-system-notice'>
+		{{ notice | raw }}
+	</div>
+{% endfor %}
+<div id="ams-important-links" style="margin-top:10px;">
+	<h3>Important Links</h3>
+	<ol>
+		<li>
+			<a target="_new" href="/committees/webgov/home">
+				WebGov directory screenshots - feedback reference
+			</a>
+		</li>
+		<li>
+			<a target="_new" href="https://docs.google.com/spreadsheets/d/16jByDJQd6H_5qCWnGZFuqXhNyNUxMePJJ1sCLhJpVtE/edit#gid=1362897610">
+				AMS Checklist
+			</a>
+		</li>
+		<li>
+			Update-to-date <a target="_new" href="https://docs.google.com/spreadsheets/d/1xaHnsBWjrAbqQ1kwfUrlyzDmDnylgVcuyUO7DXRWAbk/edit#gid=71133660">
+				Fonteva Bug Report
+			</a>
+		</li>
+	</ol>
+</div>
+
+<h3>Recent Updates</h3>
+{% for project in projects %}
+<div class='feature'>
+	<div class='feature-icon-container'>
+		<img class='feature-icon' src='/sites/default/modules/projects/images/{{ project.thumbnail }}' />
+	</div>
+	<h3 class='feature-title'>{{ project.title }}</h3>
+	<span class='feature-summary'>{{ project.summary }}</span>
+	<div style='clear:both;font-size:10px;'>{{ project.date_completed }}</div>
+	<p class='feature-description'>
+		{{ project.description | raw }}
+	</p>
+</div>
+{% endfor %}

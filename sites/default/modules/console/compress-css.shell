@@ -1,0 +1,2 @@
+# Script to compress CSS
+sudo java -jar /Users/jbernal/Desktop/Resume/yuicompressor-2.4.8.jar --line-break 300 ../style.css > style.min.css

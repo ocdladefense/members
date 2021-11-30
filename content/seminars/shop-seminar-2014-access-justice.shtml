@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>Access to Justice / Federal Pro Bono Panel Project</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" /><style type="text/css">
+<!--
+.style23 {color: #CC0000}
+-->
+</style>
+<style type="text/css">
+<!--
+.style3 {color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+</head>
+
+<body id="p7bod">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <h5>CLE Credit </h5>
+            <p>Credit will be applied for in OR, WA and CA.<br />
+            </p>
+              <h6 class="style3 style23"><br />
+            </h6>
+            <!-- #BeginLibraryItem "/Library/login-joinnow.lbi" --><h6><img src="/images/images-buttons/icon-login.jpg" alt="login" width="40" height="40" /><br />
+        Remember to log in! </h6>
+      <p><a href="/cart/login_newocdla.cfm">LOG IN</a>. If you NOT a member, <a href="/shop-membr-index.shtml">JOIN NOW</a>.
+        Once OCDLA has processed your membership, you will be able to take advantage of membership discounts online.</p>
+            <!-- #EndLibraryItem -->
+                </p>
+            </p>
+            <p>&nbsp;</p>
+              <h4>&nbsp;</h4>
+            <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+        <h4>Seminars </h4>
+        <p><a href="/seminars/shop-seminar-index.shtml" class="tableheader">Back to SEMINARS
+            index</a></p>
+        <h4>2014 Access to Justice / Federal Pro Bono Panel Project<br />
+        </h4>
+        <p>September 30, 2014<br />
+        OCDLA Office • 3:00–5:00 p.m.<br />
+        Sponsored by Public Defender Services of Lane County</p>
+        <p><a href="http://www.hallmarkinns.com/index.asp?property=3&amp;rec_id=38" target="_blank"><br />
+        </a><br />
+        <strong>Please check back for registration and program information.</strong></p>
+        <p><br />
+    </p>
+    <h6>&nbsp;</h6>
+        <p><br />
+        </p>
+        <p><img src="/images/images-buttons/credit_cart_icons/visa1.gif" width="50" height="30" alt="visa" /> <img src="/images/images-buttons/credit_cart_icons/master1.gif" width="50" height="30" alt="master" /> <img src="/images/images-buttons/credit_cart_icons/amex1.gif" width="50" height="30" alt="amercian express" /> <img src="/images/images-buttons/credit_cart_icons/discover1.gif" width="50" height="30" alt="discover" /> <a href="/cart/checkout/privacy_statement.shtml"><img src="/images/images-buttons/credit_cart_icons/secure.gif" alt="security" width="90" height="26" border="0" /></a><br />
+        </p>
+        <h1>&nbsp;</h1>
+        <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+        <h5><br />
+        </h5>
+        <h5>&nbsp;</h5>
+        <p>&nbsp;</p>
+        <h5>&nbsp;</h5>
+        <h5>&nbsp;</h5>
+        <p></p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

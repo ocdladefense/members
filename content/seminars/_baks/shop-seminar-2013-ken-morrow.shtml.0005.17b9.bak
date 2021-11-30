@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="file:///Library/WebServer/Documents/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" />
+<style type="text/css">
+<!--
+.style3 {color: #660033}
+-->
+</style>
+<!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+ 
+</head>
+
+<body id="p7bod">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <p>&nbsp;</p>
+              <!-- #BeginLibraryItem "/Library/login-joinnow.lbi" --><h6><img src="/images/images-buttons/icon-login.jpg" alt="login" width="40" height="40" /><br />
+        Remember to log in! </h6>
+      <p><a href="/cart/login_newocdla.cfm">LOG IN</a>. If you are NOT a member, <a href="/shop-membr-index.shtml">JOIN NOW</a>.
+        Once OCDLA has processed your membership, you will be able to take advantage of membership discounts online.</p>
+<!-- #EndLibraryItem --><p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+        <h4>Ken Morrow Lifetime Achievement Award</h4>
+        <h3>2013 Recipient Emily Simon</h3>
+        <p><strong>December 6, 2013</strong> • <strong>6:00 p.m. • The Benson Hotel, Portland</strong></p>
+        <p>Please join the OCDLA Board of Directors in honoring Emily with the prestigious Ken Morrow Lifetime Achievement Award.</p>
+        <p>Master of Ceremonies: OCDLA President Lane Borg</p>
+        <p>The evening includes:<br />
+          • Cocktail Reception<br />
+          • Dinner (with Kosher option)<br />
+          • Oral Auction<br />
+        • Tribute with speakers Josh Heumann, Nick Ure, and David McDonald</p>
+        <p><strong>Entrée Choices: </strong></p>
+        <p>• <span class="style3">Roasted Salmon</span> with Wild Mushroom Vin Blanc, Lemon Basmati Rice and Winter Vegetable </p>
+        <p>• <span class="style3">Pan Seared Chicken</span> with Sundried Tomatoes Cream Sauce, Cheese Tortellini and Winter Vegetable </p>
+        <p>• <span class="style3">Wild Mushroom Strudel </span>Thyme Demi-Glace and Winter Vegetable</p>
+        <p>• <span class="style3">Kosher Salmon</span> — Guests choosing the kosher salmon will receive a sealed meal from a reliable provider of kosher meals to Portland's Jewish community. </p>
+        <p><br />
+          After you purchase tickets online, OCDLA will contact you regarding your meal choices. <br />
+        </p>
+        <p><a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=1384">Order tickets online</a>. </p>
+        <p><a href="/pdfs/seminars/2013_Ken_Morrow_Award_Event.pdf">Download a flier and ticket order form.</a></p>
+        <p>&nbsp;</p>
+        <p><a href="http://www.jscottcellars.com/"><img src="/images/images-seminars/JScottDefenseWineAd300.jpg" width="300" height="188" border="0" class="imgLeft" /></a>Wine for the event is provided by <a href="http://www.jscottcellars.com/" target="_blank">J. Scott Cellars</a>, Eugene. </p>
+        <p><br />
+        </p>
+        <h6>&nbsp;</h6>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+        <p><img src="/images-photos/2013-kenmorow/emilysimon_150.jpg" width="138" height="138" alt="Emily Simon" /></p>
+        <p><strong>Emily Simon</strong> will be the 10th recipient of the Ken Morrow Lifetime Achievement Award, which dates back to 2001. The award was created by OCDLA following the passing of renowned Eugene attorney Ken Morrow to recognize the lifelong commitment and significant achivements of attorneys who have worked in the defense community, and those who have made important contributions to the administration of justice.<br />
+          <br />
+        </p>
+        <p><a href="/seminars/about-award.shtml">See other Ken Morrow Award recipients.</a></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

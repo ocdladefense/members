@@ -1,0 +1,231 @@
+{% set count = 0 %}
+
+{% for member in members %}
+	{% set count = count +1 %}
+	{% set street = member.MailingStreet|replace({"\n":"<br />"}) %}
+					{# member.MailingStreet|nl2br #}
+
+
+
+<div class="renewal-form-page">
+		<div class="intro no-print">
+			<h3>Hi, {{ member.FirstName }}:</h3><h3>Page: {{ count }}</h3>
+			<p>Thank you for renewing your OCDLA membership for the 2018-2019 membership year.  You can use this form to complete your renewal.  After filling it out, you can either print it and send it with your dues to OCDLA or simply click "Renew Now" to complete your renewal using a credit card on our new secure eStore.</p>
+			<p>If you have any questions, don't hesitate to call us at 541.686.8716 or <a href="mailto:info@ocdla.org&subject=Membership+Renewal">email Alene Sybrant</a>.
+			</p>
+		</div>
+
+		<div class="renewal-form" style="position:relative;">
+			<div class="title-section">
+				<h1 class="form-title">Oregon Criminal Defense Lawyers Association<br />
+				2020-2021 Membership Dues&nbsp;<span style="color:red;background-color:yellow;">THIRD NOTICE</span>
+				</h1>
+			</div>
+			<div class="fold top-fold">	      
+				<h2>OCDLA Member Categories (select one):</h2>
+				<div class="table">
+					<ul class="row">
+						<li class="first"><span>Life Membership</span></li>
+						<li><!--.........--><span>❐ $5000</span></li>
+					</ul>
+					<ul class="row">
+						<li class="no-leader"><span>Sustaining Membership</span><span style="font-size:12px;">(includes written PDF materials for March, Juvenile Law, </span></li>
+						<li>&nbsp;</li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span style="font-size:12px;">September & Winter Conference seminars)</span></li>
+						<li><span>❐ $560</li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>New Lawyer Membership <span class="bold">(Bar #2020)</span></span></li>
+						<li><span>❐ $60</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Regular Membership <span class="bold">(Bar #2016–2019)</span></span></li>
+						<li><span>❐ $265</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Regular Membership <span class="bold">(all other Bar #s)</span></span></li>
+						<li><span>❐ $370</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Nonlawyer Professional Membership</span></li>
+						<li><span>❐ $150</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Honored Member Membership<span style="font-size:12px;"> (permanently or temporarily retired from practice.)</span></span></li>
+						<li><span>❐ $150</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Law Library Membership</span></li>
+						<li><span>❐ $150</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Law Student Membership <span style="font-size:12px;">(includes $25 CLE registrations option)</span></span></li>
+						<li><span>❐ $10</span></li>
+					</ul>
+				</div>
+	
+	
+				<h2>Journal and Membership Directory hard copy options:</h2>
+				<div class="table">
+					<ul class="row">
+						<li class="first"><span>Defense Attorney Journal (PDF version included with membership)</span></li>
+						<li><span>❐ $25 hard copy</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Membership Directory (online version standard, updated daily and downloadable)</span></li>
+						<li><span>❐ $25 hard copy</span></li>
+					</ul>
+				</div>
+			
+				<h2>Capital Defender Membership (optional):</h2>
+				<div class="table">
+					<ul class="row">
+						<li class="first"><span>Lawyer Member</span></li>
+						<li><span>❐ $40 ❐ Renewal  ❐ New</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span>Nonlawyer Member</span></li>
+						<li><span>❐ $15 ❐ Renewal  ❐ New</span></li>
+					</ul>
+				</div>
+			
+	
+				<h2>Books Online Subscription<span style="font-size:10px;">— do not check this box if you are already a subscriber;</span></h2>
+				<div class="table">
+					<ul class="row">
+						<li class="first"><span>Check with your office if you are unsure</span></li>
+						<li><span>❐ $149 <span style="color:red;">New Subscribers only</span></span></li>
+					</ul>
+				</div>
+			
+			</div><!-- end top fold -->
+
+
+			<div class="fold middle-fold">	      
+				<h2>Donations (optional):</h2>
+				<div class="table">
+					<ul class="row">
+						<li class="first"><span><span class="bold">Building Fund</span> (Help us burn the mortgage)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span><span class="bold">CLE Scholarship Fund</span> (Assist others who otherwise cannot attend)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span><span class="bold">General Support Fund</span> (Support basic operations and priority needs)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span><span class="bold">Legislative Fund</span> (Support our lobbying effort in Salem)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span><span class="bold">Library of Defense Fund</span> (Support for the online Library of Defense)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+					<ul class="row">
+						<li class="first"><span><span class="bold">OCDLA Political Action Committee</span> (An independent political committee)</span></li>
+						<li><span>❐ $__________</span></li>
+					</ul>
+				</div>
+	
+				<div class="table">
+					<ul class="row" style="font-weight:bold;">
+						<li style="text-align:right;">TOTAL </li><li>&nbsp;&nbsp;&nbsp;$_________</li>
+					</ul>																																																													 
+				</div>																																																							
+				
+				<h2 style="margin-top:-10px;">Payment Options:</h2>																																																																																																																														
+				<div class="write-in">
+					❐  Check enclosed: $ ___________ <br />
+					❐  Charge my credit card (VISA, MC, DISC, AMEX) __ __ __ __  __ __ __ __  __ __ __ __  __ __ __ __<br />
+
+					Name on Card:___________________________________ Billing Zip Code: ________________ CVC: _______<br />
+					Billing Address:___________________________________________________________  Exp: ____________<br />
+					Need a payment plan? Financial assistance? We can help, contact Alene at (541) 686-8716.<br />
+				</div>
+
+				<h2>Legislative Advocacy Registry:</h2>
+				<span style="color:blue;">Providing your home address allows OCDLA to match members with their legislators.</span><br />
+				<span style="font-style:italic; font-family:sans-serif;">This information will not be public and you will not receive OCDLA mailings at your home address.</span><br />
+			
+				{% if member.Ocdla_Home_City__c is not empty %}
+					{% set homeAddressCityStateZip = member.Ocdla_Home_City__c ~ ', ' ~ member.Ocdla_Home_State__c ~ '  ' ~ member.Ocdla_Home_Zip__c %}
+				{% else %}
+				 {% set homeAddressCityStateZip = '' %}
+				{% endif %}
+				<div class="table write-in">
+					<ul class="row">
+						<li style="width:30%;">HOME Street Address:</li>
+						<li style="width:66%; padding-left:20px;border-bottom:1px solid #666;">
+							{{ member.Ocdla_Home_Street__c }}
+						</li>
+					</ul>
+					<ul class="row">
+						<li style="width:30%;">HOME City/State/9-digit ZIP:</li>
+						<li style="width:66%; padding-left:20px;border-bottom:1px solid #666;">
+							{{ homeAddressCityStateZip }}
+						</li>
+					</ul>
+				</div>
+	
+			</div><!-- end middle fold -->
+
+
+			{% set Names = member.FirstName ~ ' ' ~ member.LastName %}
+			{% if member.Ocdla_Organization__c is not empty %}
+			 {% set Names = Names ~ '<br />' ~ member.Ocdla_Organization__c %}
+			{% endif %}
+	
+			<div class="fold bottom-fold">
+				<div class="bottom-fold-left">
+					<div id="callout" style="margin-left:-25px;">
+					Do you prefer to renew online?<br />
+					Visit the <a href="http://www.ocdla.org/shop-membr-index.shtml">OCDLA website</a> here:<br />
+					<a href="http://www.ocdla.org/shop-membr-index.shtml">http://www.ocdla.org/shop-membr-index.shtml</a>
+					<br />&nbsp;
+					<br />&nbsp;
+						<!--<span style="font-weight:bold;font-size:12pt;">All unrenewed members will be removed<br />on September 29.</span>-->
+					</div>
+					<div id="envelope-window">
+					{{ Names|raw }}<br />
+	<!--				{{ member.Ocdla_Address_Line_1__c }}<br />
+					{{ member.Ocdla_Address_Line_2__c }}<br />
+					-->
+					{{ member.MailingStreet|nl2br }}<br />
+					{{ member.MailingCity }}, {{ member.MailingStateCode }}  {{ member.MailingPostalCode }}
+					</div>
+				</div>
+
+				<div class="bottom-fold-right write-in">
+					Make contact changes below or at <a href="https://members.ocdla.org/my-profile">My Profile</a><br />
+					Name:	________________________________<br />
+					Firm:	__________________________________<br />	
+					Address:	_______________________________<br />
+					City/State/ZIP: 	____________________________<br />
+					Email on file: 	{{ member.OrderApi__Work_Email__c }}<br />
+					Change email to:	___________________________<br />
+					Phone on file: {{ member.OrderApi__Work_Phone__c }}<br />
+					Change phone to:  (____)______________________<br />
+					Fax on file: {{ member.Fax }}<br />
+					Change fax to: (____)_________________________<br />
+					Website: {{ member.Ocdla_Website__c }}<br />
+					Change website to: _________________________<br />
+					Billing email (email for invoice billing):<br />
+					__________________________________________
+				</div>
+
+			</div><!-- end bottom fold -->
+		
+			<footer>
+			OCDLA is a 501(c)(3) tax-exempt organization<br />
+			101 E. 14th Ave., Eugene, OR 97401-3517, (541) 686-8716, fax: (541) 686-2319, email: <a href="info@ocdla.org">info@ocdla.org</a>, web: <a href="https://www.ocdla.org">www.ocdla.org</a>
+			</footer>                                                                                                                  
+																																																												
+		</div>
+	
+</div>																																																					
+{% endfor %}																																																											

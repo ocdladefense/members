@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" />
+<!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+ 
+</head>
+
+<body id="p7bod" onLoad="P7_Uberlink('p7uberlink','p7bod')">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <p>Additional Resources on Unzipping Files:<br />
+                <a href="http://netsquirrel.com/articles/zip.html" target="_blank">• netsquirrel</a></p>
+            <p>&nbsp;</p>
+            <h3>&nbsp;</h3>
+				  <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+          <h1>General Download Information</h1>
+          <p>Downloads may take as long as ten minutes.  Please wait until the file has completely downloaded.  Download your files to a laptop or desk computer. Do not download your files to a hand-held device.</p>
+          <h6><strong>Zip Files</strong></h6>
+          <p>If you find that your Zip Archive does not expand or you encounter an error after downloading, you may need to download expansion software, although most computers come with built in expansion software.</p>
+          <ul>
+            <li>Free Expander for Windows <a href="http://my.smithmicro.com/win/stuffit/index.html">here</a>.</li>
+            <li>Free Expander for or the Mac <a href="http://my.smithmicro.com/mac/stuffit/expander.html">here</a>.</li>
+          </ul>
+          <p>Consult with your technical support staff for questions regarding your computer's system and set-up.<br />
+          </p>
+          <p><strong>Windows<br />
+          </strong>1. Once your zip is created on the download page, click on the blue text that says, “Click here to start your download.” </p>
+          <p>2. In the next window you will see text that says: “Do you want to open or save this file?”            </p>
+          <p><strong>Choosing Open — </strong>If you select  <strong>Open </strong>(see <span class="style2">Note</span> below if you choose Save instead), the download will take a few moments and then you will see another window that says this: “Do you want to open this file?” Click <strong>Open</strong>. You will see a window that shows the downloaded files on the right. </p>
+          <p><strong>Choosing Save — </strong>If you select <strong>Save</strong> you will see a window that shows your where the files will be saved. You may change the “Save In” location if you like. Click the Save button. Find the files by double-clicking on the items in the downloads directory or browsing to the location you chose to save them in.</p>
+          <p><strong>Mac<br />
+          </strong>1. Once your zip is created on the download page, click on the blue text that says, “Click here to start your download.” </p>
+          <p>2. In the next window you will see text that says: What should be done with this file? </p>
+          <p><strong>Choosing Open</strong> — Your system is probably already set to decompress and open zips automatically with sofware that came with your computer. But if not,  select the decompression software you want to use. At OCDLA, we use Stuffit Expander. Click <strong>OK</strong>. The software will download to the area on your computer where downloads are stored.</p>
+          <p><strong>Choosing Save</strong> — If you choose <strong>Save</strong>, the zip will be saved in the Downloads folder, or, if you have changed this settting on your computer, into the folder you have selected for downloads. </p>
+          <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+			    <h6><strong>PDF Files</strong></h6>
+	    <p>1. Once you have received your PDF download link via email, click on the blue link in the email. </p>
+	    <p>2. On the download page, click on the big blue link to start your download.</p>
+	    <p>3. Choose Open or Save (see Open or Save information at left).</p>
+	    <p>4. You will be asked to enter your passphrase (your OCDLA user name and password with no space between them). Enter your passphrase, and the file will open.</p>
+	    <p>&nbsp;</p>
+        <p>&nbsp;</p>        
+        <h4>&nbsp;</h4>
+			  <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

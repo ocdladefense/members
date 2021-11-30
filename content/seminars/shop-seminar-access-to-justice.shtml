@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="file:///Library/WebServer/Documents/Templates/main-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="Metatags" -->
+<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+<meta name="Keywords" content="Keywords go here" />
+<meta name="Description" content="Description goes here" />
+<style type="text/css">
+<!--
+.style5 {color: #333333}
+-->
+</style><!-- InstanceEndEditable -->
+
+<!--#include virtual="/includes/headtag-include.htm" -->
+ 
+</head>
+
+<body id="p7bod">
+<div id="wrapper">
+
+		<!--#include virtual="/includes/top-include.htm" -->
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+            <!--#include virtual="/includes/menu1-include.htm" -->
+
+            <div class="content"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <p>&nbsp;</p>
+              <!-- #BeginLibraryItem "/Library/login-joinnow.lbi" --><h6><img src="/images/images-buttons/icon-login.jpg" alt="login" width="40" height="40" /><br />
+        Remember to log in! </h6>
+      <p><a href="/cart/login_newocdla.cfm">LOG IN</a>. If you are NOT a member, <a href="/shop-membr-index.shtml">JOIN NOW</a>.
+        Once OCDLA has processed your membership, you will be able to take advantage of membership discounts online.</p>
+<!-- #EndLibraryItem --><p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+      <div class="content"><!-- InstanceBeginEditable name="MainContent" -->
+        <h4>CLE Archive – Access to Justice Credits</h4>
+        <p>These items are downloads. You will receive a download link after you have paid and checked out.<br />
+          <br />
+        </p>
+        <h3><strong>2012<br />
+        </strong></h3>
+        <table width="500" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="55" class="cart-first"><p><strong>Record Date</strong></p></td>
+            <td width="208" class="cart-middle"><p><strong>Presentation / Speakers</strong></p></td>
+            <td width="141" class="cart-middle"><p><strong>Seminar</strong></p></td>
+            <td width="96" class="cart-last"><p><strong>Credits</strong></p></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" class="cart-first"><p>Oct 15</p></td>
+            <td align="left" valign="top" class="cart-middle"><p><a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=1250">ICWA Overview</a><br />
+                <em>Michael Livingston, Oregon Judicial Dept. Salem; Lee Ann Easton, Portland</em></p></td>
+            <td align="left" valign="top" class="cart-middle"><p>Juvenile Law Training Academy: Best Practices in Juvenile Dependency </p></td>
+            <td align="left" valign="top" class="cart-last"><p><strong>.75</strong></p></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" class="cart-first"><p>Oct 15</p></td>
+            <td align="left" valign="top" class="cart-middle"><p>QUICWA: Tools &amp; Strategies for Ensuring ICWA Compliance—the South Dakota Experience <br />
+                <em>Fred Fisher, Director, Indian Child Welfare Program, Casey Family Foundation, Denver, CO; Paul Minehart, Program Director, Indian Child Welfare Program, Minneapolis American Indian Center, and George McCauley, QUICWA System Administrator, Minneapolis American Indian Center, Minneapolis, MN</em></p></td>
+            <td align="left" valign="top" class="cart-middle"><p>Juvenile Law Training Academy: Best Practices in Juvenile Dependency </p></td>
+            <td align="left" valign="top" class="cart-last"><p><strong>.75</strong></p></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" class="cart-first"><p>June 16</p></td>
+            <td align="left" valign="top" class="cart-middle"><p><a href="/cart/detail_newocdla.cfm?i=1209">Turning Bias to Your Benefit</a><br />
+                <em>Honorable Kenneth R. Walker, Multnomah County Circuit Court </em></p></td>
+            <td align="left" valign="top" class="cart-middle"><p>Annual Conference</p></td>
+            <td align="left" valign="top" class="cart-last"><strong>1</strong></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+      <h5 class="style2 style5">CLE Catalog</h5>
+      <p><a href="/pdfs/cle_catalog.pdf">Download a CLE Catalog.</a></p>
+      <p>&nbsp;</p>
+      <h6>CLE Credit Summary</h6>
+      <p><a href="mailto:info@ocdla.org">Email info@ocdla.org</a> to obtain your personal CLE history. </p>
+      <p>&nbsp;</p>
+      <h5>CLE Archive</h5>
+      <p><a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=CLE Archive 2012" target="_blank">2012</a><br />
+        <a href="https://www.ocdla.org/cart/browse_clenewocdla.cfm?category=SeminarArchives">2006–2011</a><br />
+        <a href="https://www.ocdla.org/cart/browse_newocdla.cfm?category=CLE Archive - Specialty">Specialty Credits</a></p>
+      <p>&nbsp;</p>
+      <h5>CLE Video Clips</h5>
+      <p><a href="/resources-video-archive.shtml">View video clip archive</a>.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h6>&nbsp;</h6>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<!--#include virtual="/includes/footer-include.htm" -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

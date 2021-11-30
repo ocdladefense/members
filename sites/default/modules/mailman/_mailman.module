@@ -1,0 +1,85 @@
+<?php
+// https://github.com/pear/Services_Mailman/blob/master/Services/Mailman.php
+require 'Services/Mailman.php';
+	
+function mailman_menu() {
+	global $user;
+	$items = array();
+	
+	$items['profile/mailing-lists'] = array(
+		'name' => 'Profile Occupation',
+		'page callback' => 'mailman_profile_mailinglists',
+		// 'page arguments' => array( $user ),
+		'title' => 'Membership Profile - Mailing Lists',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output_handler' => 'xhtml',
+	);
+	return $items;	
+}
+
+
+function mailman_profile_mailinglists( &$vars ) {
+	global $pf, $crumb, $UserID, $twig;
+		
+	$output = clickpdx_get_form( 'mailman_profile_mailinglists_form');
+	return $output;
+}
+
+
+function mailman_profile_mailinglists_form( $form, &$form_state ) {
+	global $user;
+	$form = array();
+
+	$form['#attributes'] = array(
+		'classes' => array( 'custom' ),
+		'id' => 'ocdla_profile_mailinglists_form',
+	);	
+	
+	$form['form_id'] = array(
+		'#type' => 'hidden',
+		'#value' => 'ocdla_profile_mailinglists_form',
+		'#theme' => 'form_hidden_element',
+	);
+	$form['lists'] = array(
+		'#type' => 'checkbox',
+		'#title' => 'Mailing Lists',
+		'#options' => array('The Pond','Capital Defenders','Juvenile Law Committee','Legislative Committee','Drug Policy Committee','Education Committee','DUII'),//getContactTypes( $user->contact_status ),
+		'#default_value' => false,//!empty( $form_state['values']['p_ctype'] ) ?  $form_state['values']['p_ctype'] : $form_state['build_info']['args'][0],
+		// '#placeholder' => 'ENTER YOUR OCCUPATION',// HTML5 only
+		'#required' => TRUE,
+		'#id' => 'lists',
+		'#theme' => 'form_checkbox_element',
+	);
+	return $form;	
+}
+
+
+function _is_true( $var ) {
+	if( $var === true ) return true;
+	else return false;
+}
+
+
+function _mailman_get_list_registrations() {
+	$lists = array();
+	$lists['ocdlapond'] = null;
+	
+	$mailman = get_pond_mailman_service();
+	// initialize mailman
+	try {
+		$results = $mm->member('jbernal.web.dev@gmail.com');
+		$lists['ocdlapond'] = true;
+	} catch (Services_Mailman_Exception $e) {
+		$lists['ocdlapond'] = false;
+	}
+	// return array( 'ocdlapond' => true );
+	$registered = array_filter( $lists );
+	return $registered;
+}
+
+
+function get_pond_mailman_service() {
+	$mailman = new Services_Mailman( LIST_POND_ADMIN_URL, LIST_POND_LIST_NAME, LIST_POND_PASSWORD );
+	return $mailman;
+}

@@ -1,0 +1,152 @@
+/* 
+  -----------------------------------
+  Pop Menu Magic 2
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Vertical
+  Style Theme: 08 - Cayenne
+  -----------------------------------
+*/
+
+/*Menu Outer Wrapper*/
+.p7PMMv08 {
+	width: auto;
+	margin: 0 auto;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 0;
+	text-align: left;
+	line-height: normal;
+}
+/*Hide Sub-Menu in Design View*/
+.p7PMMv08 ul div {
+	display: none;
+}
+/*
+TOP LEVEL MENU
+*/
+.p7PMMv08 ul {
+	margin: 0;
+	padding: 0;
+}
+.p7PMMv08 li {
+	list-style-type: none;
+}
+.p7PMMv08 a {
+	display: block;
+	text-decoration: none;
+	padding: 5px 16px;
+	color: #54558B!important;
+	background-color: #F7F0D4;
+	border-bottom: 1px solid #BF9500;
+	text-align: left;
+}
+.p7PMMv08 a:hover {
+	color: #FFFFFF!important;
+	background-color: #D4B752!important;
+}
+/*
+Syntax for special classes programatically assigned to first and last links and also LIs
+See user guide for more information
+*/
+.p7PMMv08 ul a.pmmfirst {
+}
+.p7PMMv08 ul a.pmmlast {
+}
+.p7PMMv08 ul li.pmmfirst {
+}
+.p7PMMv08 ul li.pmmlast {
+}
+
+/*First Sub Level*/
+.p7PMMv08 ul ul {
+	z-index: 10000;
+	width: 146px;
+	background-color: #F7F0D4;
+}
+.p7PMMv08 ul ul li {
+	background-image: none;
+	background-color: #F7F0D4;
+}
+.p7PMMv08 ul ul a {
+	color: #54558B!important;
+	background-color: #F7F0D4;
+	text-align: left;
+	overflow: hidden;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D4B752;
+}
+.p7PMMv08 ul ul a:hover {
+	color: #FFFFFF;
+	background-color: #54558B;
+}
+/*
+SPECIAL IMAGE-BASED RULES
+*/
+.p7PMMv08 img {
+	border: 0;
+}
+.p7PMMv08 .p7PMM_img {
+	padding: 0;
+	border: 0;
+	background-image: none;
+	background-color: transparent;
+}
+
+/*
+TRIGGERS and CUURENT MARK RULES
+The Closed state relates to trigger items when their child menus are not showing
+The Open state relates to trigger items when their child menus are showing
+Selectors appended with _left Automatically change arrow position and orientation
+if sub levels are set to fly out to the left
+*/
+
+/*Root Level*/
+.p7PMMv08 a.trig_open {
+}
+.p7PMMv08 a.trig_closed {
+	background-image: url(../p7pmm/img/pmm_east_dark.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.p7PMMv08 a.trig_closed_up {
+	background-image: url(../p7pmm/img/pmm_north_dark.gif);
+	background-repeat: repeat;
+	background-position: right center;
+}
+.p7PMMv08 a.trig_closed_left {
+	background-image: url(../p7pmm/img/pmm_west_dark.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.p7PMMv08 a.trig_open, .p7PMMv08 a.trig_open_left {
+}
+/*Sub Level*/
+.p7PMMv08 ul ul a.trig_closed {
+	background-image: url(../p7pmm/img/pmm_east_medium.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.p7PMMv08 ul ul a.trig_closed_left {
+	background-image: url(../p7pmm/img/pmm_west_medium.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.p7PMMv08 ul ul a.trig_open, .p7PMMv08 ul ul a.trig_open_left {
+	color: #54558B!important;
+	background-image: none;
+}
+
+/*The Current Marker (You are here) links*/
+.p7PMMv08 .current_mark {
+	color: #FFFFFF!important;
+	background-color: #53638C;
+}
+.p7PMMv08 ul ul .current_mark {
+	color: #FFFFFF!important;
+}
+.p7PMMv08 .current_mark:hover {
+	color: #FFFFFF !important;
+	background-color: #CDAC38;
+}

@@ -1,0 +1,29 @@
+.content-box-selector
+{
+	clear:both;
+}
+
+.content-box-selector .project-heading
+{
+	width:48%;
+	float:left;	
+	cursor:pointer;
+}
+
+.content-box-selector .project-heading-active
+{
+	background-color:#eee;
+}
+
+/**
+ * Hide projects.
+ *
+ * By default, we hide the projects tab,
+ * since the "Responsibilities" tab is visible by default.
+ * The print-friendly view shouldn't hide anything but 
+ * come up with a different layout for displaying it.
+ */
+.content-box-invisible
+{
+	display:none;
+}

@@ -1,0 +1,7 @@
+.message {
+	padding:4px;
+}
+.success {
+	background-color:green;
+	color:#ccc;
+}

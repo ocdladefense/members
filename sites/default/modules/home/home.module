@@ -1,0 +1,33 @@
+<?php
+
+function home_menu() {
+	$items = array();
+	
+	$items['ocdla-home'] = array(
+		'comment' => 'Mock homepage for testing with new menu links.',
+		'access' => true,//'user_has_role',
+		// 'access arguments' => array('admin'),
+		'files' => array(
+			'controller' => 'includes/HomePageController.php'
+		),
+		'page callback' => 'showHomepage',
+		'theme' => 'ocdla',
+		'routeClass' => 'HomePageController',
+		// 'routeArguments' => array(2),
+	);
+	
+	$items['ocdla-password-reset'] = array(
+		'comment' => 'Mock homepage for testing with new menu links.',
+		'access' => true,//'user_has_role',
+		// 'access arguments' => array('admin'),
+		'files' => array(
+			'controller' => 'includes/HomePageController.php'
+		),
+		'page callback' => 'showLoginReminder',
+		'theme' => 'ocdla',
+		'routeClass' => 'HomePageController',
+		// 'routeArguments' => array(2),
+	);
+
+	return $items;
+}

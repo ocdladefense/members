@@ -1,0 +1,388 @@
+.add-to-cart-donation-button {
+ padding-left:35px;
+}
+
+.add-to-cart-donation-button .loading {
+
+}
+
+.content h1 {
+	font-family:Verdana;
+	color:#393939;
+}
+
+.column-second h3 {
+	font-family: Verdana;
+	font-weight: normal;
+	margin-top: 40px;
+	font-size: 1.6em;
+	margin-bottom: -5px;
+	color: #363636;
+}
+
+.about-content {
+	line-height: 1.8em;
+	font-family: Raleway;
+	font-size: 0.9em;
+	text-rendering: optimizeLegibility;
+}
+
+.instructions {
+	margin-bottom:15px;
+	line-height:1.5em;
+	text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+
+.form-section {
+	border-bottom: 1px solid #ccc;
+}
+
+.form-section-label {
+	margin-bottom: 0px;
+	display: inline-block;
+	color: #fff;
+	font-weight: normal;
+	background-color: #53638c;
+	-webkit-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	border-radius: 8px 8px 0px 0px;
+}
+
+.form-section-label-inactive {
+	background-color:rgba(83, 99, 140, 0.7);
+	vertical-align:bottom;
+	-webkit-transition: height 2s, padding-top 0.25s, background-color 0.5s, -webkit-transform 2s;
+	transition: width 2s, height 2s, padding-top 0.25s, background-color 0.5s, transform 2s;
+}
+
+.form-section-label-inactive:hover {
+	background-color: rgba(83,99,140,1.0);
+}
+
+.form-section-label a {
+	display:block;
+	/* width:100%; */
+	height:100%;
+	padding:15px;
+	color:inherit;
+	text-decoration:none;
+}
+
+.form-section-label-active a {
+	padding-top:15px;
+}
+
+.form-section-label-inactive a {
+	padding-top:10px;
+	-webkit-transition: padding-top 0.25s;
+	transition: padding-top 0.25s;
+}
+
+.form-section-label-inactive a:hover {
+	padding-top:15px;
+}
+
+
+
+.form-actions {
+	clear:both;
+	margin-top:25px;
+	border-top:1px solid #ccc;
+	padding-top:20px;
+}
+
+.donate .add-to-cart-donation-button {
+	font-size:16px;
+}
+
+/**
+ * Visualforce-specific selectors.
+ *
+ */
+.product-option-add-to-cart {
+	color: #fff !important;
+}
+
+.product-option-add-to-cart a:hover {
+	color: #fff !important;
+}
+
+
+
+/**
+ * jQuery UI-specific selectors.
+ *
+ */
+.ui-datepicker {
+	background-color: rgba(255,255,255,1.0);
+	padding:15px;
+	border:1px solid #ccc;
+}
+
+
+
+
+
+/**
+ * How to display errors on the Form.
+ *
+ */
+.errors {
+	visibility: visible;
+	background-color:yellow;
+	padding:6px;
+}
+
+
+/* 	font-family: Verdana; */
+.errors-hidden {
+	visibility:hidden;
+}
+
+
+
+
+
+
+
+/* The container */
+.donate .container {
+    position: relative;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.donate .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.donate .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.donate .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.donate .container input:checked ~ .checkmark {
+    background-color: #596992;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.donate .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.donate .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.donate .container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+
+
+.donate .btn-input {
+	border-radius: 10px;
+	background-color:rgba(83, 99, 140, 0.8);
+	transition: background-color 0.5s;
+	border: none;
+	color: white;
+	padding: 5px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 8px;
+	cursor: pointer;
+}
+
+
+.donate .btn-input:hover {
+	background-color:rgba(83, 99, 140, 1.0);
+}
+
+.donate .btn-submit {
+	border-radius: 32px;
+	margin: 8px;
+	line-height: 1.5;
+	height: auto;
+	text-transform: uppercase;
+	background-image: none;
+	cursor: pointer;
+}
+
+.donate .btn input {	
+	font-size: 24px Arial;
+	opacity: 0.01;
+	float: right;
+	display: none;
+	z-index: 100;
+}
+
+.donate .donate-button {
+	line-height: 1.5;
+	height: auto;
+	text-transform: uppercase;
+	background-image: none;
+	display:inline-block;
+	max-width:45%;
+}
+
+
+.donate .input-group {
+	margin: 5px;
+	line-height: 1.5;
+	height: auto;
+	background-image: none;
+}
+
+
+
+.donate .input-group-addon {
+	border-radius: 32px;
+}
+
+.donate .form-control {
+	border-radius: 32px;
+}
+
+
+
+@media only screen and (min-width: 800px) {
+
+	.donate .donate-button {
+		max-width:25%;
+	}
+	
+.product-option-add-to-cart .button {
+	width:200px;
+	text-align:center;
+}
+
+}
+
+
+
+
+
+
+
+/**
+ * Form-specific selectors
+ *
+ */
+label {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: larger;
+	margin-bottom: 13px;
+	display: block;
+}
+
+label.btn-input {
+	font-weight:normal;
+}
+
+
+.form-item {
+	margin-top:45px;
+}
+
+
+.donate #donate-ocdla-intro {
+	font-size: 1.5rem;
+	line-height: 1.8;
+	color: #666;
+}
+
+#fund-description {
+    padding: 15px;
+    margin-top: 0px;
+    min-height: 75px;
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0,0,175,0.1);
+}
+
+/*
+.fund-name:before {
+    display: inline-block;
+    background: #878787;
+    color: #fff;
+    font-size: 13px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 4px;
+    content: "?";
+}
+*/
+
+.donate .form-control-start-date,
+.donate .form-control-donation-amount {
+	font-size:1.4em;
+	border-radius: 8px;
+	padding:10px;
+}
+
+
+.fund-name {
+    display: block;
+    font-weight: 700;
+    font-family: Verdana;
+    margin-bottom:5px;
+}
+
+.fund-description {
+	line-height:1.7em;
+    text-rendering: optimizeLegibility;
+}
+
+.donate .dropdown {
+	background-color: #fff;
+	font-family: Verdana;
+	font-size: 1rem;
+}

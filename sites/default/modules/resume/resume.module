@@ -1,0 +1,158 @@
+<?php
+use Clickpdx\Core\Script;
+
+define('RESUME_VERSION_UPDATED_1.0','10-15-2015');
+
+
+define('RESUME_DEFAULT_DATE_UPDATED','10-16-2015');
+
+
+function resume_menu()
+{
+	$items = array(
+		'resume/%version' => array(
+			'title' => 'Homepage',
+			'access' => true,
+			'page callback' => 'resume_resume',
+			'files' => array(
+				'data/data.php',
+				'data/resume-data.php',
+				'includes/theme.inc',
+				'includes/ResumeController.php'
+			),
+			'routeClass' => 'ResumeController'
+		),
+		'resume/%version/print' => array(
+			'title' => 'Homepage',
+			'access' => true,
+			'page callback' => 'resume_resume',
+			'files' => array(
+				'data/data.php',
+				'data/resume-data.php',
+				'includes/theme.inc',
+				'includes/ResumeController.php'
+			),
+			'routeClass' => 'ResumeController'
+		)
+	);
+	return $items;
+}
+
+
+
+
+
+
+
+function resume_resume($arg0,$version)
+{
+	$out = resume_version($version);
+	// $out->add_html_comment ... @todo, make this OOP.
+	$out .= add_html_comment("Resume version {$version}.");
+	// print $version;exit;
+	// return "hello";
+	return $out;
+}
+
+function resume_is_printer_friendly()
+{
+	return strpos(drupal_get_path_alias(),'print')!==false;
+}
+
+
+function resume_preprocess_page(&$vars)
+{
+	$version = $vars['route_arguments'][1];
+	$dateUpdated = 'RESUME_VERSION_UPDATED_'.$version;
+	$vars['lastUpdated'] = defined($dateUpdated)?constant($dateUpdated):RESUME_DEFAULT_DATE_UPDATED;
+	$vars['anotherVar'] = 'Some value';
+	
+	/*
+	$inline = new Script(
+		array(
+			'type' => SCRIPT_INLINE,
+			'data' => "var foo = CLICKPDX.MVC.Controller.Base('#page-wrapper');"
+		)
+	);
+	*/
+	if(path_contains("resume")&&!resume_is_printer_friendly())
+	{
+		$event = new Script(array(
+			'type'	=> SCRIPT_LOCAL_FILE,
+			'path'	=> base_path().'/sites/all/libraries/clickpdx/mvc/event/event.js'
+		));
+		$controller = new Script(array(
+			'type'	=> SCRIPT_LOCAL_FILE,
+			'path'	=> base_path().'/sites/all/libraries/clickpdx/mvc/controller/controller.js'
+		));
+		$toggle = new Script(array(
+			'type'	=> SCRIPT_LOCAL_FILE,
+			'path'	=> base_path().'/sites/default/modules/resume/js/toggle.js'
+		));
+	
+
+		drupal_add_js( $controller, THEME_SCRIPT_REGION_FOOTER );
+		drupal_add_js( $event, THEME_SCRIPT_REGION_FOOTER );
+		drupal_add_js( $toggle, THEME_SCRIPT_REGION_FOOTER );
+	}
+	// drupal_add_js( $inline, THEME_SCRIPT_REGION_FOOTER );
+	// print entity_toString($vars);exit;
+}
+
+function resume_version($version=null)
+{
+	if(!function_exists("resume_version_".str_replace('.','_',$version)))
+		return "Version {$version} of the resume doesn't exist.";
+	switch($version)
+	{
+		case 1.0:
+			return resume_version_1_0($version);
+			break;
+		case 1.1:
+			return resume_version_1_1($version);
+			break;
+		default:
+			return "Version {$version} of the resume doesn't exist.";
+			break;
+	}
+}
+
+
+function resume_get_template($version)
+{
+	$dir = DRUPAL_ROOT."/sites/default/modules/resume/templates/versions/{$version}";
+	$path = resume_is_printer_friendly()?$dir .= "/resume-detail--print.tpl.php":$dir .= "/resume-detail.tpl.php";
+	return $path;
+}
+
+function resume_version_1_0($version)
+{
+	$out = '';
+	$template = resume_get_template($version);
+	if(!file_exists($template)) print "File not found.";
+	foreach(resume_get_positions($version) as $project=>$item)
+	{
+		$vars=$item;
+		$vars['project']=$project;
+		$vars += resumeItems($project);
+		$out .= resume_theme($template,$vars);
+	}
+	return "<ul>" .$out . "</ul>";
+}
+
+
+
+
+function resume_version_1_1($version)
+{
+	$out = '';
+	$template = resume_get_template($version);
+	foreach(resume_get_positions($version) as $project=>$item)
+	{
+		$vars=$item;
+		$vars['project']=$project;
+		$vars += resumeItems($project);
+		$out .= resume_theme($template,$vars);
+	}
+	return $out;
+}

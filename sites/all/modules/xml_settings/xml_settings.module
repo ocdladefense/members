@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file - xml_settings.module
+ * @description - parser to retrieve configuration settings for a program
+ * @param $run - whether the lastUpdatedDateTime value should be updated with the last run time, default to FALSE
+ */
+
+ 
+function xml_settings_load( $path = NULL, $data = NULL ) {
+	if( !file_exists( $path ) ) {
+		tail('XML settings file not found.');
+		throw new Exception('XML file not found.');
+	}
+	$settings = new DOMDocument();
+	$settings->preserveWhiteSpace = false; 
+	$settings->formatOutput = true; 
+	$settings->load( $path );
+	
+	$root = $settings->getElementsByTagName('connection');
+	$lastRun = $settings->getElementsByTagName('lastProgramRunDateTime')->item(0);
+	$config['server'] = $settings->getElementsByTagName('server')->item(0)->nodeValue;
+	$config['user'] = $settings->getElementsByTagName('user')->item(0)->nodeValue;
+	$config['pass'] = $settings->getElementsByTagName('pass')->item(0)->nodeValue;
+	$config['database'] = $settings->getElementsByTagName('database')->item(0)->nodeValue;
+	$config['queryTable'] = $settings->getElementsByTagName('queryTable')->item(0)->nodeValue;
+	
+	foreach( $data AS $tagName=>$value ) {
+		if( $tagName == 'lastProgramRunDateTime' ) $lastRun->nodeValue = $value;
+	}
+	
+	
+	$settings->save( $path );
+	return $config;
+}

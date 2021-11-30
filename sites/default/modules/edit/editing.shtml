@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OCDLA: Oregon Criminal Defense Lawyers Association</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="sites/all/modules/ckeditor/ckeditor.js"></script>
+	
+<!--<link href="sites/all/modules/ckeditor/samples/sample.css" rel="stylesheet" />-->
+<meta name="Keywords" content="oregon criminal law,oregon criminal defense lawyer,oregon criminal defense attorney,oregon criminal defense,criminal defense lawyer,criminal defense attorney,attorney,lawyer,law directory,continuing legal education,library of defense" />
+<meta name="Description" content="The Oregon Criminal Defense Lawyers Association serves the defense community through continuing legal education, public education, networking and legislative action." />
+<style type="text/css">
+<!--
+.style12 {color: #333333; }
+.style19 {color: #CDAC38}
+.style20 {color: #0099CC; }
+.style20 a {color: #0099CC !important; font-size:14px; font-weight:700;}
+-->
+</style>
+<!-- InstanceEndEditable -->
+
+<link href="/stylesheets/layout.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/sites/all/libraries/jquery-ui-1.9.2/themes/base/jquery-ui.css" media="all" type="text/css" />
+<link href="/scripts/p7pmm/p7PMMv08.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 5]>
+<style>body {text-align: center;}#wrapper {text-align: left;}.menulist a {float: left; clear: both;}
+#column_wrapper {height: 1%;}</style>
+<![endif]-->
+<!--[if lte IE 7]>
+<style>#wrapper, #footer, #masthead, #column_wrapper {zoom: 1;}</style>
+<![endif]-->
+
+<script type="text/javascript" src="/sites/all/libraries/jquery-1.8.3/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/sites/all/libraries/jquery-ui-1.9.2/jquery-ui-1.9.2.js"></script>
+<!--<script type="text/javascript" src="/scripts/p7pmm/p7PMMscripts.js"></script>-->
+<script type="text/javascript" src="/sites/all/themes/ocdla/scripts/ocdla.js?v=1.0"></script>
+<script type="text/javascript" src="/sites/all/themes/ocdla/scripts/inline-editing.js?v=1.0"></script>
+<script type="text/javascript" src="/includes/ajax_globals.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(function() {
+$( "#menu" ).menu();
+});
+//--><!]]>
+</script>
+<style type="text/css">
+	#menu li a {
+		border:none !important;
+		border-bottom: 1px solid #BF9500 !important;
+		border-bottom-width: 1px !important;
+		border-bottom-color: #BF9500 !important;
+		border-bottom-style: solid !important;
+		margin: 0px !important;
+	}
+	
+	.ui-state-focus {
+		background-color:#f7f0d4 !important;
+		background-image:none !important;
+	}
+	.ui-corner-all {
+		border-radius:0px !important;
+	}
+	.ui-menu {
+		width: 100%;
+	}
+	li .ui-menu {
+		width:157px;
+	}
+	#menu a {
+		background-color: #F7F0D4;
+		border-bottom: 1px solid #BF9500;
+		color: #54558B !important;
+		display: block;
+		padding: 5px 16px;
+		text-align: left;
+		text-decoration: none;
+		padding-left: 10px !important;
+		padding-right: 0 !important;
+	}
+	</style>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	var home;
+	$(document).ready(function(){
+	if(location.pathname=="\/" || location.pathname=="\/index.shtml") {
+		var twitter_id="feed-control-right";
+		var feedlength = 35;
+	}
+	else {
+		var twitter_id="feed-control-left";
+		var feedlength = 42;
+	}
+	//home = document.getElementById( twitter_id );
+	//var url = location.hostname + "/twitter/twitter.php";
+	//var twitter = new AjaxRequest( url, {fl:"feed_length="+feed_length} );
+	//twitter.sendRequest();
+	$.get('twitter/twitter.php', { feed_length : feedlength}, function(data) {
+	  $('#feed-control-right').html(data);
+	});
+	//document.write(feed);
+	
+	//window.alert(home);
+	
+	var headID = document.getElementsByTagName("head")[0];         
+	var cssNode = document.createElement('link');
+	cssNode.type = 'text/css';
+	cssNode.rel = 'stylesheet';
+	cssNode.href = '/twitter/themes/default/style.css';
+	cssNode.media = 'screen';
+	headID.appendChild(cssNode);
+	});
+//--><!]]>
+</script>
+</head>
+
+<body id="p7bod">
+<div id="fb-root"></div>
+
+<div id="wrapper">
+
+			<div id="masthead">
+		<div class="content">
+		</div>
+	</div>
+
+		
+	<div id="topnav">
+		<div class="content" id="navlinks">
+		<div id="login-block" style="display:inline;">
+			<a id="login" href="/index.php?q=login"><strong>Member Login</strong></a>|
+		</div>
+		<a id="lod_link" href="https://libraryofdefense.ocdla.org"><strong>Library of Defense</strong></a>|	
+		<a href="/cart/index_newocdla.cfm"><strong>OCDLA Store</strong></a>|
+		<a href="/cart/viewcart_newocdla.cfm"><strong>View Cart</strong></a>|
+		<a href="/search.shtml"><strong>SEARCH</strong></a>
+		<span id="user-widget"></span>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	var ocdlaLoginRequest = new AjaxRequest(CartLibrary.loginurl);
+	//override the default DOMStringProcessor with the addButton function from the CartLibrary
+	ocdlaLoginRequest.DOMStringProcessor = function(){CartLibrary.getLoginWidget(this)}
+	ocdlaLoginRequest.sendRequest();
+//--><!]]>
+</script>
+		
+  <div id="column_wrapper">
+    <div id="left">
+
+              <ul id="menu" class="p7PMMv08">
+    <li><a href="/index.shtml">Home</a></li>
+    <li><a href="/seminars/shop-seminar-index.shtml">Seminars &amp; Events</a></li>
+    <li><a href="/cart/browse_newocdla.cfm?category=Publications">Publications</a></li>
+    <li><a href="#">CLE Archive</a>
+          <ul>
+            <li><a href="/cart/browse_newocdla.cfm?category=CLE%20Archive%202012">2012 CLEs</a></li>
+            <li><a href="/cart/browse_clenewocdla.cfm?category=SeminarArchives">2006-2011 CLEs</a></li>
+            <li><a href="/seminars/shop-seminar-specialty.shtml">Specialty Credits</a></li>
+          </ul>
+    </li>
+    <li><a href="#">Membership</a>
+          <ul>
+            <li><a href="/shop-membr-index.shtml">Join</a></li>
+            <li><a href="/about-life.shtml">Life Members</a></li>
+            <li><a href="/about-sustaining.shtml">Sustaining Members</a></li>
+          </ul>
+    </li>
+    <li><a href="javascript:;">About OCDLA</a>
+          <ul>
+            <li><a href="/shop-membr-index.shtml">About OCDLA</a></li>
+            <li><a href="/contact-board.shtml">Board of Directors</a></li>
+            <li><a href="/contact-committee.shtml">Committees</a></li>
+            <li><a href="/contact-us.shtml">Office/Staff/Lobbyists</a></li>
+            <li><a href="/about-faq.shtml">FAQs</a></li>
+            <li><a href="/about-copyright.shtml">Copyright Info</a></li>
+          </ul>
+    </li>
+    <li><a href="#" onclick="MM_openBrWindow('/membership/memberdirectory_newocdla.php','','menubar=yes,scrollbars=yes,resizable=yes,width=850,height=800');return false;">Member Directory</a></li>
+    <li><a href="http://libraryofdefense.ocdla.org/">Library of Defense</a></li>
+    <li><a href="/news-legis.shtml">Legislative Action</a></li>
+    <li><a href="/shop-membr-capdef.shtml">Capital Defenders</a></li>
+    <li><a href="/news-defenseattorney-archive.shtml">Defense Attorney</a></li>
+    <li><a href="/shop-donation-index.shtml">Donate</a></li>
+        <li><a href="/about-donors.shtml">Donors</a></li>
+    <li><a href="#">Court Info</a>
+          <ul>
+            <li><a href="http://www.ojd.state.or.us/judges">Circuit Court Judges</a></li>
+            <li><a href="http://courts.oregon.gov/Supreme/index.page">Supreme Court</a></li>
+            <li><a href="http://courts.oregon.gov/COA/index.page">Appellate Court</a></li>
+            <li><a href="http://courts.oregon.gov/OJD/aboutus/courtsintro/judicialdistricts.page?">Oregon Judicial Districts</a></li>
+            <li><a href="http://www.ojd.state.or.us/Web/OJDPublications.nsf/Rules?OpenPage">Rules</a></li>
+            <li><a href="http://www.ojd.state.or.us/Web/OJDPublications.nsf/SLR?OpenView%26count=1000">SLRs</a></li>
+          </ul>
+    </li>
+    <li><a href="#">Resources</a>
+          <ul>
+            <li><a href="http://www.ocdla.org/resources-expert-witness.shtml/">Expert Witnesses</a></li>
+            <li><a href="http://libraryofdefense.ocdla.org/">Library of Defense</a></li>
+            <li><a href="/members_only/index.php">Legal Document Library</a></li>
+            <li><a href="/news-whats-appening.shtml">What's APPening</a></li>
+            <li><a href="/news-view.shtml">View From Here</a></li>
+            <li><a href="/resources-video-archive.shtml">Seminar Video Highlights</a></li>
+            <li><a href="/news-announce.shtml">News</a></li>
+            <li><a href="/resources-pd.shtml">Public Defense</a></li>
+            <li><a href="/resources-links.shtml">Links</a></li>
+            <li><a href="/data-emaillists.shtml">E-mail Lists</a></li>
+          </ul>
+    </li>
+    <li><a href="/employment/jobs_newocdla.cfm">Jobs</a></li>
+    <li><a href="#">Members Only</a>
+          <ul>
+            <li><a href="/profiles/index.php">My Profile</a></li>
+            <li><a href="/members_only/index.php">Legal Document Library</a></li>
+          </ul>
+    </li>
+    <li><a href="/calendar.shtml">Calendar</a></li>
+    <li><a href="#">Contact Us</a>
+          <ul>
+            <li><a href="/contact-board.shtml">Board of Directors</a></li>
+            <li><a href="/contact-committee.shtml">Committees</a></li>
+            <li><a href="/contact-us.shtml">Office/Staff/Lobbyists</a></li>
+          </ul>
+    </li>
+  </ul>
+  
+<p>&nbsp;</p>
+			<div class="content">
+              <h5 class="eventdescrip">
+              	<a href="http://www.twitter.com/OregonDefense">
+              		<img src="/images/images-icons/follow_us-a.png" alt="Follow OregonDefense on Twitter" width="128" height="21" />
+              	</a>
+              </h5>
+              	<br />
+				<div style="margin:0 auto;width:30px;">
+					<a href="http://www.facebook.com/pages/Oregon-Criminal-Defense-Lawyers-Association/123699404364462?ref=tn_tnmn">
+						<img width="20" height="20" src="/images/images-icons/facebook.gif" alt="Facebook" />
+					</a>
+				</div>
+			</div>
+
+            <div class="content" contentEditable="true"><!-- InstanceBeginEditable name="SidebarLeft" -->
+              <table width="100%" border="0" cellpadding="5" cellspacing="10" class="boxbackgroundgold">
+              <tr>
+                <td><h5><a href="/shop-membr-index.shtml">Join OCDLA</a></h5>
+                    <p><img src="/images/images-buttons/arrow-trans.png" width="7" height="10" alt="transparent arrow" /> <a href="/shop-membr-index.shtml">Demand <br />
+                      &nbsp;&nbsp;                  Justice</a></p>
+                  <p><img src="/images/images-buttons/arrow-trans.png" width="7" height="10" alt="transparent arrow" /> <a href="/shop-membr-index.shtml">Speak for <br />
+                    &nbsp;&nbsp;                  the Voiceless</a></p>
+                  <p> <img src="/images/images-buttons/arrow-trans.png" width="7" height="10" alt="transparent arrow" /> <a href="/shop-membr-index.shtml">Act with<br />
+                    &nbsp;                  Courage</a></p></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <table width="100%" border="0" cellpadding="5" cellspacing="10" class="boxbackground">
+              <tr>
+                <td><h5>FIND A<br />
+                  LAWYER
+                </h5>
+                  <p><a href="http://www.ocdla.org/membership/memberdirectory_newocdla.php">Search our <br />
+                  membership<br />
+                  directory</a></p></td>
+              </tr>
+            </table>
+      <p>&nbsp;</p>
+				  <!-- InstanceEndEditable --></div>
+    </div>
+    <div id="center">
+    <div id="blog_title" contenteditable="true">
+<h3><a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=8"><img src="/images/images-products/tnb_150.jpg" alt="Trial Notebook  Cover" width="150" height="174" border="0" class="imgLeft" /></a><span class="style2">NEW!</span> Trial Notebook</h3>
+        <h6>Edited by Rob Raschio<strong></strong></h6>
+        <p>OCDLA’s 2013 edition of <em>The Trial Notebook</em> has achieved new levels of excellence. Extensive revisions to the chapters on Discovery, Jury Selection, and Closing Arguments will help you hone your skills and rule the courtroom. A new chapter on electronic evidence unravels the admissibility of email, text messages and social network data. Need to know how to subpoena an out-of-state witness? It’s in there. Want to blast the DDAs with an extensive background on prosecutorial vouching case law? It’s in there. Want the best damn discovery checklist and rundown of digital discovery basics at your fingertips? You’re covered.  <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=8">Purchase PDF licenses and hardcopies here.</a></p>
+        <h3>&nbsp;</h3>
+    </div>
+      <div class="content" contentEditable="true"><!-- InstanceBeginEditable name="MainContent" -->
+        <h3><a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=8"><img src="/images/images-products/tnb_150.jpg" alt="Trial Notebook  Cover" width="150" height="174" border="0" class="imgLeft" /></a><span class="style2">NEW!</span> Trial Notebook</h3>
+        <h6>Edited by Rob Raschio<strong></strong></h6>
+        <p>OCDLA’s 2013 edition of <em>The Trial Notebook</em> has achieved new levels of excellence. Extensive revisions to the chapters on Discovery, Jury Selection, and Closing Arguments will help you hone your skills and rule the courtroom. A new chapter on electronic evidence unravels the admissibility of email, text messages and social network data. Need to know how to subpoena an out-of-state witness? It’s in there. Want to blast the DDAs with an extensive background on prosecutorial vouching case law? It’s in there. Want the best damn discovery checklist and rundown of digital discovery basics at your fingertips? You’re covered.  <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=8">Purchase PDF licenses and hardcopies here.</a></p>
+        <h3>&nbsp;</h3>
+    </div>
+    <div class="content" contentEditable="true">
+        <h3><a href="/seminars/shop-seminar-2013-sentencing.shtml"><img src="/images/images-seminars/sentencing_150.jpg" alt="sentencing brochure cover" width="150" height="194" border="0" class="imgRight" /></a>Hard Time Made Easy: How to Win At Sentencing</h3>
+        <h6>March 8–9, Eugene</h6>
+        <p>So many changes have occurred in sentencing since our last CLE on the topic. Sentencing is more complex, more severe and ever more important to our clients. The Education Committee has put tgether two days of discussions about Oregon sentencing law, featuring practical information and the latest developments in sentencing arguments for all state court practitioners. This is THE sentencing program you won’t want to miss.<br />
+        <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="/seminars/shop-seminar-2013-sentencing.shtml">Program and registration</a>.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div class="content" contentEditable="true">
+        <h3>Legislative Drive-In</h3>
+        <h6>March 18, 2013</h6>
+        <p>The Legislative Drive-In will help you effectively lobby legislators, understand pending legislation, and provides a venue to meet your own legislators. It supports OCDLA's lobbyists Gail Meyer and Aaron Jeffers who are in the Capitol every day working on your behalf. And, it is a good civil duty event. <br />
+          <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="http://www.ocdla.org/seminars/shop-seminar-2013-legislative-drive-in.shtml">Program and registration</a>.<br />
+          <br />
+          <br />
+        </p>
+    </div>
+    <div class="content" contentEditable="true">
+        <h3><span class="style2"><a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=1259"><img src="/images/images-products/sci_evid_cover_200.jpg" alt="scientific evidence" width="194" height="192" border="0" class="imgLeft" /></a>NEW!</span> Scientific Evidence: A Manual for Oregon Defense Attorneys</h3>
+        <h6>By Kevin Sali<strong></strong></h6>
+        <p> Scientific evidence is a critical and challenging element of a criminal case. A criminal defense attorney must be able to work effectively with scientific evidence, both offensively and defensively. OCDLA’s new manual is intended to help you gain the confidence you need with scientific evidence by addressing some of the unique factual and legal issues that can be helpful in using or attacking it. Includes an extensive discussion of the large body of Oregon case law relating to scientific evidence, and provides sample case materials, motions &amp; memoranda included in an appendix.   <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="https://www.ocdla.org/cart/detail_newocdla.cfm?i=1259">Purchase PDF licenses and hardcopies here.</a><br />
+        </p>
+        <p>&nbsp;</p>
+    </div>
+    <div class="content" contentEditable="true">
+        <h3><span class="style12"><img src="/images/images-resources/lod-graphic1.jpg" alt="library of defense" width="196" height="46" class="imgRight" />Library of Defense</span><br />
+        </h3>
+        <p>The OCDLA Library of Defense is a digital manual for criminal defense built by the collective contributions of OCDLA members. Ultimately, it will contain every law, every case, every expert, every resource and every good idea an Oregon defense attorney might need. For example, see <strong>Bronson James’ </strong>December 3 article, “Thoughts on <em>Lawson</em>, the New Eyewitness ID Case,” here. <a href="/calendar.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /></a> <a href="http://libraryofdefense.ocdla.org/">Take me to the  Library.</a></p>
+        <p><a href="/seminars/shop-seminar-2012-investigation.shtml"><br />
+        </a></p>
+        <p><br />
+        </p>
+        <h3>&nbsp;</h3>
+        <h4>&nbsp;</h4>
+        <!-- InstanceEndEditable -->
+    </div>
+    </div>
+    <div id="right">
+      <div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+        <h6 class="style12">Special <em>Gideon</em> Issue</h6>
+        <p class="style19"><a href="/news-defenseattorney-archive.shtml"><img src="/images/images-products/feb_mar_2013_cover_150.jpg" alt="Gideon Issue" width="135" height="177" border="0" /></a><br />
+          <a href="/news-defenseattorney-archive.shtml"><img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /> MORE.</a><br />
+        </p>
+        <h6 class="eventdate">&nbsp;</h6>
+
+
+
+<!-- twitter example markup -->
+<span class="style20"><a href="http://twitter.com/OregonDefense">OCDLA Twitter</a></span>
+       <!-- <span class="style20">OCDLA Twitter</span>-->
+  <div id="feed-control-right" style="/*height:200px; padding-bottom:5px;*/">
+
+    <span style="color:#676767;font-size:11px;margin:10px;padding:4px;">Loading...</span>  </div>
+  <!-- end twitter example markup (see below for the virtual include)-->
+  
+  
+<h6 class="eventdate">&nbsp;</h6>
+        <p><a href="http://www.lifesafer.com/oregon/ocdla/?utm_source=ocdla&amp;utm_medium=banner&amp;utm_campaign=sponsorship" target="_blank"><img src="/images/images-ads/LifeSafer_150_x_194_banner.jpg" alt="LifeSafer Ad" width="141" height="178" border="0" /></a></p>
+        <p><a href="http://www.lifesafer.com/oregon/ocdla/?utm_source=ocdla&amp;utm_medium=banner&amp;utm_campaign=sponsorship" target="_blank">OCDLA members and their clients save with LifeSafer ignition interlock, proud sponsor of OCDLA.</a></p>
+        <h6 class="eventdate">&nbsp;</h6>
+        <h5>Meetings</h5>
+        <p><strong>Board Meeting</strong><strong><br /> 
+        March 8, 9:00 a.m. – Noon</strong><br /> 
+        Eugene Hilton
+<span class="eventdescrip"><br />
+<a href="/calendar.shtml"> <img src="/images/images-buttons/arrow-trans.png" alt="arrow" width="7" height="10" border="0" /> See calendar for other events and meetings</a></span>.<br />
+        </p>
+        <h6>&nbsp;</h6>
+
+			  <!-- InstanceEndEditable --></div>
+    </div>
+  </div>
+		<div id="footer">
+	<div class="content">OCDLA, 96 East Broadway, Suite 5, Eugene, OR 97401
+	  - 541.686-8716 - <a href="mailto:info@ocdla.org" style="color:#fff; font-weight:bold;">info@ocdla.org</a>
+	</div>
+</div>
+
+<!-- BEGIN WebSTAT Activation Code -->
+<script type="text/javascript" src="https://secure.webstat.com/cgi-bin/wsv2.cgi?125722"></script>
+
+
+
+<!-- END WebSTAT Activation Code -->
+</div><!-- end wrapper -->
+</body>
+<!-- InstanceEnd --></html>

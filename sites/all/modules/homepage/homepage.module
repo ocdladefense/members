@@ -1,0 +1,22 @@
+<?php
+
+function homepage_menu()
+{
+	$items = array();
+	
+	$items['home'] = array(
+		'name' => 'home',
+		'page callback' => 'page_homepage',
+		'title' => 'OCDLA',
+		'access' => true,
+		'#theme' => 'ocdla',
+	);
+
+	return $items;
+}
+
+
+function page_homepage()
+{
+	return call_user_func_array(system_get_homepage_callback(),func_get_args());
+}

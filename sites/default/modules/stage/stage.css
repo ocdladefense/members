@@ -1,0 +1,58 @@
+.staged #stage {
+	max-height:100%;
+}
+
+#stage {
+	display:block;
+	max-height:0px;
+	background-color:#fff;
+	overflow:hidden;
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	-ms-transition:  max-height 0.8s;
+	-o-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+body.staged {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+/**
+ * @section
+ *	- Loading
+ *
+ */
+.loading {
+	display:none;
+}
+.not-loaded .loading {
+	display:block;
+	position:absolute;
+	left:150px;
+	top:75px;
+	z-index:50;
+}
+
+.staged .menuPane {
+	max-height:50px;
+}
+.menuPane {
+/*	max-height:0px;*/
+	width:100%;
+	height:75px;
+	background-color:#eee;
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	-ms-transition:  max-height 0.8s;
+	-o-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+	border-bottom:1px solid #666;
+}
+
+
+.stage-content {
+	position:relative;
+	margin-top:15px;
+}

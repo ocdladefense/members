@@ -1,0 +1,561 @@
+
+
+body {
+	padding:0px;
+	margin:0px;
+	font-family:Raleway;
+	color:#6a6363;
+}
+
+.updated {
+	display:inline-block;
+	float:right;
+	margin-right:8px;
+	padding-top:15px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size:10px;
+}
+.banner-item {
+	width:300px;
+	float:left;
+}
+#page-wrapper {
+	width:auto;
+	position:relative;
+	margin-top:95px;
+}
+nav {
+	width:100%;
+	height:80px;
+	background-color:#2a75a9;
+	border-bottom:1px solid #eee;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:10;
+	color:#fff;
+	padding-top:6px;
+}
+section > h3.title { 
+	margin-top:30px;
+	font-size:1.68em;
+}
+section ul {
+	margin-top:0px;
+	padding-left:0px;
+}
+h3.title {
+	margin-bottom:8px;
+}
+h3 + p {
+	margin-top:5px;
+}
+section,aside {
+	margin-left:35px;
+	clear:both;
+}
+header,nav h1,nav h2 {
+	margin-left:35px;
+}
+
+
+nav h2
+{
+	font-size:1.2em;
+}
+
+footer {
+	width:100%;
+	min-height:250px;
+	background-color:#2A75A9;
+	text-align:center;
+	font-size:1.4em;
+}
+footer, footer a {
+	color:#fff;
+}
+
+footer .container {
+	padding:15px;
+} 
+li
+{
+	list-style-type:none;
+}
+#positions li
+{
+	margin-bottom:35px;
+	line-height:21px;
+}
+#positions li li
+{
+	margin-bottom:10px;
+}
+.label {
+	font-weight:bold;
+}
+
+input[type="button"] {
+	cursor:pointer;
+	line-height:20px;
+	vertical-align:3px;
+}
+
+
+.jump img {
+	vertical-align:middle;
+}
+a {
+	text-decoration:none;
+}
+/**
+ * @section
+ *	- Stage
+ *
+ * @description
+ *	- Create a staging area.  The stage can display visual data for a given resume item.
+ */
+.stage {
+	position:relative;
+	width:100%;
+	max-height:800px;
+	overflow:hidden;
+	height:auto;
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	-ms-transition:  max-height 0.8s;
+	-o-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+	background-color:#fff;
+	color:#666;
+	font-size:12pt;
+}
+.closed {
+	/* Initially we don't want any height, and we want the contents to be hidden */
+	max-height: 0px;
+}
+.stage .label {
+	background:rgba(255,255,255,0.8);
+	color:#666;
+	width:100%;
+	height:25px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:5;
+	text-align:left;
+	display:none;
+}
+div.captions {
+	background-color: #eee;
+	color: #313131;
+	height: auto;
+	max-height:625px;
+	padding: 15px 12px 12px;
+	position: absolute;
+	left: 0;
+	text-align: left;
+	top: 0;
+	width: 30%;
+	max-width:375px;
+	z-index: 2;
+	overflow-y:scroll;
+}
+.caption-subtitle {
+	font-size:16.5px;
+	color:#3e3e3e;
+	margin-top:8px;
+	margin-bottom:4px;
+	font-weight:normal;
+}
+.caption-title {
+	font-size:18px;
+}
+/**
+ * @section
+ *	- Transitions
+ * 
+ * @description
+ *	- Invoke animations.  Captions should be animated as the user chooses to display certain images.
+ */
+div.captions p {
+	font-size: 14px;
+	margin-top: 25px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+div.captions p.load {
+	opacity: 1;
+}
+
+
+/**
+ * @section
+ *	- Slides
+ *
+ */
+.slide {
+	position:static;
+	height:600px;
+	top:auto;
+	opacity: 0;
+	width:800px;
+	margin-right:20px;
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+.slide img {
+	display:none;
+	border:1px solid #999;
+}
+
+.active {
+	top:0px;
+	opacity: 1;
+
+}
+.active img {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:425px;
+}
+
+.project-title {
+	font-size:24px;
+}
+
+div.position-body {
+	font-size:14.5px;
+}
+
+
+/**
+ * @section
+ * - About Me
+ */
+#about {
+	width:425px;
+	height:auto;
+	line-height:20px;
+	background-color:#eee;
+	color:#666;
+	font-size:1.0em;
+	position:absolute;
+	right:30px;
+	top:-30px;
+	padding:15px;
+	position:absolute;
+}
+.mobile #about {
+	position:static;
+}
+#about h3 {
+	margin-bottom:2px;
+}
+.vtrim {
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+nav h1.vtrim {
+	margin-top:15px;
+}
+/**
+ * @section
+ *	- Loading
+ *
+ */
+.loading {
+	display:none;
+}
+.not-loaded .loading {
+	display:block;
+	position:absolute;
+	left:150px;
+	top:75px;
+	z-index:50;
+}
+
+/**
+ * @section
+ * 	- Stage Content
+ */
+.stage-content {
+	opacity:1;
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;	
+}
+.not-loaded .stage-content {
+	opacity:0;
+}
+
+
+.language {
+	display:block;
+	margin-left:15px;
+	margin-bottom:5px;
+}
+
+.organization {
+	font-weight:bold;
+}
+
+.phone div.caption {
+	width:100%;
+}
+
+.caption {
+	opacity:0.55;
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;	
+	cursor:pointer;
+}
+
+.caption-active {
+	opacity:1.0;
+}
+
+.caption-text {
+	font-family:'Helvetica';
+}
+
+#positions h3.title {
+	margin-bottom:25px;
+}
+
+
+body.staged {
+	width:100%;
+	height:100%;
+}
+.staged .project {
+	overflow:scroll;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+/*
+.project {
+	position:relative;
+	top:0px;
+	-webkit-transition: top 1.5s ease-in;
+	-moz-transition: top 1.5s ease-in;
+	-ms-transition: top 1.5s ease-in;
+	-o-transition: top 1.5s ease-in;
+	transition: top 1.5s ease-in;	
+}
+.staged .project {
+	top:0px;
+	position:relative;
+	z-index:100;
+}
+*/
+
+
+ul {
+	padding-left:0px;
+}
+
+footer a[href*="mailto"] {
+	font-size:14px;
+	
+}
+footer a[href*="mailto"]:hover {
+	text-decoration:underline;
+}
+
+
+
+.language-list {
+	float:left;
+	width:200px;
+}
+
+.mobile .language-list {
+	float:none;
+}
+
+#references li {
+	margin-bottom:8px;
+}
+
+.project
+{
+	max-width:600px;
+}
+
+h3.project-heading
+{
+	font-weight:normal;
+	margin-top:5px;
+	margin-bottom:5px;
+	border-bottom:1px solid #666;
+}
+
+body .project-item-heading
+{
+	font-weight:500;
+	color:#333;
+}
+
+.dates
+{
+	font-size:12px;
+	display:block;
+	float:right;
+}
+
+.website
+{
+	display:block;
+	float:right;
+}
+
+.education-label
+{
+	text-decoration:underline;
+}
+
+
+#alternate-version
+{
+	display:none;
+}
+/*
+@media only screen and (max-width:480px),
+@media only screen and (max-device-width:480px) and (orientation: landscape)
+
+@media only screen and (max-width:640px)
+*/
+@media only screen
+{
+
+	.print #title
+	{
+		display:block;
+	}
+
+	.print #about {
+		width:650px;
+		height:auto;
+		line-height:20px;
+		background-color:#eee;
+		color:#666;
+		font-size:1.0em;
+		padding:15px;
+		position:static;
+	}
+	.print #alternate-version
+	{
+	 	width:150px;position:absolute;
+	 	right:0px;
+	 	top:0px;
+	 	font-size:10px;
+	 	display:block;
+	 }
+	 	.page-break {
+	 		display:none;
+	 }
+}
+@media only screen and (max-width:800px),
+only screen and (min-device-width : 375px) 
+and (max-device-width : 667px)
+{
+	body
+	{
+		-webkit-text-size-adjust:none;
+	}
+	.content-wrapper
+	{
+		padding-left:11px;
+		padding-right:11px;
+	}
+	#about
+	{
+		display:none;
+	}
+	
+	section
+	{
+		margin-left:0px;
+	}
+}
+
+@media only print
+{
+#title
+{
+	text-align:center;
+	margin:0 auto;
+	width:300px;
+}
+	body {
+		font-size:12pt;
+	}
+	#alternate-version
+	{
+	 	width:150px;position:absolute;
+	 	right:0px;
+	 	top:0px;
+	 	font-size:10px;
+	 	display:block;
+	 }
+	header,footer
+	{
+		display:none;
+	}
+
+	.project
+	{
+		max-width:800px;
+	}
+	#about {
+		width:650px;
+		height:auto;
+		line-height:20px;
+		background-color:#eee;
+		color:#666;
+		font-size:1.0em;
+		padding:15px;
+		position:static;
+		padding:6px;
+		margin-top:10px;
+	}
+	#about h3 {
+		margin-top:0px;
+	}
+	#about p {
+		margin-bottom:0px;
+	}
+	.auto-page-break {
+		break-before: auto;
+		page-break-before: auto;
+	}
+	.no-page-break-after {
+		page-break-after: avoid;
+	}
+	.page-break {
+		break-before: always;
+		page-break-before: always;
+	}
+}

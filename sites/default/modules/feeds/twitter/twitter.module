@@ -1,0 +1,130 @@
+<?php
+/*
+ * http://stackoverflow.com/questions/1863933/php-how-to-return-an-instantiated-class-object-given-a-class-name
+ * http://willamalane.org/twitter/xml.php
+ * https://dev.twitter.com/docs/intents
+ * https://dev.twitter.com/docs/twitter-libraries
+ * https://dev.twitter.com/docs/embedded-timelines
+ */
+define('CONSUMER_SECRET',"PDExbHXXZ43NXxp2Kvjmk2tlnqAUNqQKIlUveKP1Ad4");
+// determine the length of the feed
+define('CONSUMER_KEY',"yowe4yclJfS7NJid9otw");
+
+require( 'twitter.settings.php' );
+require('JSONTwitterFeed.php');
+require('tmhOAuth/tmhOAuth.php');
+require('tmhOAuth/tmhUtilities.php');
+require('TweetCacheFile.php');
+ 
+function twitter_menu() {
+	$items = array();
+
+	$items['feeds/twitter/ocdla'] = array(
+		'name' => 'login',
+		'page callback' => 'twitter_homepagefeed',
+		'title' => 'OCDLA Twitter Feed',
+		'access' => TRUE,
+		'#theme' => 'ocdla',
+		'output handler' => 'jsonp'
+	);
+	return $items;
+}
+
+function twitter_homepagefeed()
+{
+	return array('callback'=>$_GET['callback'],'json'=>array(
+		'markup' => file_get_contents(DRUPAL_ROOT.'/sites/default/files/cache/twitter/twitter-sidebar.html')
+	));
+}
+
+// require( SETTINGS_DIR . '/settings.php');
+// include( INCLUDE_DIR . '/sqlconn.php');//MAY NOT NEED THIS
+// include( INCLUDE_DIR . '/Exceptions.php');
+// include( INCLUDE_DIR . '/DBQuery.php');
+
+
+
+function twitter_feed( $name = "ocdla", $length = null ) {
+
+	$feed_length = isset($_GET["feed_length"]) ? $_GET["feed_length"] : null;
+	$oauth_access_token = "234103725-3I87N8rRrlOctXpluZi4USStAkAcQmBPJvAaL0Ra";
+	$oauth_access_token_secret = "Y50nusggnPNEDY6jhad7Uz4LoKScyTJoKFt7PqysG0E";
+
+	$tmhOAuth = new tmhOAuth(array(
+	  'consumer_key'    => CONSUMER_KEY,
+	  'consumer_secret' => CONSUMER_SECRET,
+	  'user_token'      => $oauth_access_token,
+	  'user_secret'     => $oauth_access_token_secret,
+	));
+
+	$code = $tmhOAuth->request('GET', $tmhOAuth->url('1.1/statuses/user_timeline'), array('screen_name' => TWITTER_FEED_NAME));
+
+	function wrap($t/*tag*/,$v,$attr){
+		return "<a href=\"{$attr['href']}\">{$v}</a>";
+	}
+
+	$json = $tmhOAuth->response;
+	// $keys = "<pre>" . print_r(array_keys($json),TRUE) . "</pre>";
+	// print $keys;
+	// $output = print_r($json['response']);
+	// $output = "<pre>" . $output . "</pre>";
+	// print $output;
+	$tweets = $t = json_decode( $json['response'] ) or die('could not convert string from JSON.');
+
+
+	$D = array(new JSONTwitterFeed( $tweets, 42 ), new JSONTwitterFeed( $tweets, 23 ) );
+	$main = $D[0]->init(TWITTER_FEED_NAME);
+	$sidebar = $D[1]->init(TWITTER_FEED_NAME);
+	
+	
+	$tweets = $main->getTweets();
+	
+	$content = theme('twitter',array('tweets' => $tweets));
+	return $content;
+}
+
+
+function twitter_cron( $name = "ocdla", $length = null ) {
+
+	$feed_length = isset($_GET["feed_length"]) ? $_GET["feed_length"] : null;
+	$oauth_access_token = "234103725-3I87N8rRrlOctXpluZi4USStAkAcQmBPJvAaL0Ra";
+	$oauth_access_token_secret = "Y50nusggnPNEDY6jhad7Uz4LoKScyTJoKFt7PqysG0E";
+
+	$tmhOAuth = new tmhOAuth(array(
+	  'consumer_key'    => CONSUMER_KEY,
+	  'consumer_secret' => CONSUMER_SECRET,
+	  'user_token'      => $oauth_access_token,
+	  'user_secret'     => $oauth_access_token_secret,
+	));
+
+	$code = $tmhOAuth->request('GET', $tmhOAuth->url('1.1/statuses/user_timeline'), array('screen_name' => TWITTER_FEED_NAME));
+
+	function wrap($t/*tag*/,$v,$attr){
+		return "<a href=\"{$attr['href']}\">{$v}</a>";
+	}
+
+	$json = $tmhOAuth->response;
+	// $keys = "<pre>" . print_r(array_keys($json),TRUE) . "</pre>";
+	// print $keys;
+	// $output = print_r($json['response']);
+	// $output = "<pre>" . $output . "</pre>";
+	// print $output;
+	$tweets = $t = json_decode( $json['response'] ) or die('could not convert string from JSON.');
+
+
+	$D = array(new JSONTwitterFeed( $tweets, TWITTER_RENDER_DEFAULT), new JSONTwitterFeed( $tweets, TWITTER_RENDER_RIGHT_SIDEBAR) );
+	$main = $D[0]->init(TWITTER_FEED_NAME);
+	$sidebar = $D[1]->init(TWITTER_FEED_NAME);
+	
+	
+	$main_tweets = $main->getTweets();
+	$sidebar_tweets = $sidebar->getTweets();
+	
+	$main_content = theme('twitter',array('tweets' => $main_tweets));
+	$sidebar_content = theme('twitter',array('tweets' => $sidebar_tweets));
+
+	/* save main and sidebar twitter feeds in HTML files */
+	$io1 = new TwitterCacheFile(TWITTER_CACHE_DIR . '/twitter-main.html') and $io1->load( $main_content)->saveFile();
+	
+	$io2 = new TwitterCacheFile(TWITTER_CACHE_DIR . '/twitter-sidebar.html') and $io2->load( $sidebar_content)->saveFile();
+}

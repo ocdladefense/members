@@ -1,0 +1,135 @@
+/*#slider {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #FFFFFF;
+    float: left;
+    height: 380px;
+    margin: 70px 0 0 70px;
+    overflow: auto;
+    position: relative;
+    width: 700px;
+}
+*/
+
+#slider {
+	float:left; 
+	display:block;
+	position:relative; 
+	overflow:auto; 
+	width:740px; 
+	/*height:440px; */
+	border:2px solid #fff; 
+	background:#fff; 
+	margin:70px 0px 0px 70px;
+	margin-top:23px;
+	}
+/*	
+#slider ul {
+	position:absolute; 
+	list-style:none; 
+	top:0; 
+	left:0;
+	}
+*/
+
+#slider ul {
+    left: 0;
+    list-style: none outside none;
+    position: absolute;
+    top: 0;
+}
+
+
+#slider .slider-content ul {
+	position:relative;
+}
+
+.slider-content #challengesColumn2,
+.slider-content #challenges 	{
+	float:left;
+	width:50%;
+	
+}
+
+#slider li.slider-content {
+    float: left;
+    height: 300px;
+    padding-right: 10px;
+    width: 725px;
+}
+
+li.slider-content {
+    height: 285px;
+    padding: 15px 28px 15px 5px;
+    width: 725px;
+}
+
+#results {
+    left: 368px;
+    position: absolute;
+    top: 100px;
+    width: 250px;
+}
+
+#solutions {
+    left: 350px;
+    position: relative;
+    top: -275px;
+    width: 250px;
+}
+
+#challenges {
+    left: 10px;
+    position: relative;
+    top: 0;
+    width: 250px;
+}
+
+/*#challengesColumn2 {
+    left: 370px;
+    position: relative;
+    top: -36px;
+    width: 250px;
+}
+*/
+
+#results ul {
+    list-style: disc outside none;
+    padding: 20px 0 0 20px;
+}
+
+#slider .slider-content ul {
+    color: #58585A;
+    font: 12px Verdana,Geneva,sans-serif;
+    list-style: disc outside none;
+    padding: 0 0 0 20px;
+}
+
+
+#results li {
+    color: #58585A;
+    font: 12px/14px Verdana,Geneva,sans-serif;
+    height: auto;
+    padding: 0 0 10px;
+    width: 300px;
+}
+
+#slider .slider-content h3 {
+	display:block;
+	color:#55274f;
+/*	margin-bottom: 20px;*/
+	padding-left: 20px;
+	font-size:13px;
+font-family: Verdana,Geneva,sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    
+}
+
+#slider #situation {
+	width:45%;
+}
+
+#challengesColumn2 {
+	position:relative;
+	top:50px;
+}

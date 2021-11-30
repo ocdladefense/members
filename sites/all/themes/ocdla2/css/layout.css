@@ -1,0 +1,437 @@
+body
+{
+	margin:0px;
+	padding:0px;
+}
+
+#left {
+	position:relative;
+	z-index:999999;
+} 
+img {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	padding: 0px;
+	margin: 0px;
+}
+
+#masthead {
+	color: #999999;
+	padding: 0px;
+	margin: 0;
+	background-image: url('/sites/all/themes/ocdla2/images/banner-title.png'),
+	url('/sites/all/themes/ocdla2/images/banner-roman-columns.png'),
+	url('/sites/all/themes/ocdla2/images/banner-bg.png');
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-size: auto, auto, auto;
+	background-position: 200px 10px, left, left;
+	height: 100px;
+}
+
+#topnav {
+	color: #999999;
+	padding: 0px 14px 0px 0px;
+	margin: 0px;
+	background-color: rgb(86,101,138);
+	height: 24px;
+}
+
+#wrapper {
+	width: 100%;
+	background-color:#fff;
+}
+
+#column_wrapper{}
+
+.clearfloat {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+#center {
+	width: 70%;
+	float: left;
+}
+#left {
+	width: 156px;
+	float: left;
+	padding-left: 8px;
+	padding-top: 36px;
+}
+#right {
+	width: 156px;
+	float: right;
+}
+#center .content {
+	padding: 36px 32px 24px;
+}
+#left .content {
+	padding: 16px;
+}
+#right .content {
+	padding: 36px 16px 36px 0px;
+}
+#masthead .content {
+	padding: 12px;
+}
+#topnav .content {
+	padding: 4px 10px;
+	text-align: right;
+	color: #FFFFFF;
+	margin:0px;
+}
+
+#footer .content {
+	padding: 12px 16px;
+	text-align: center;
+}
+#footer {
+	padding: 0px;
+	margin: 0;
+	clear: both;
+	/* background-image: url(/sites/default/files/images/images-stylesheets/background-gold.png);
+	background-repeat: repeat-y;
+	background-size:cover;
+	*/
+	background-color:#bf9500;
+	color: #dedede;
+	font: 1em/1.5em Helvetica;
+}
+
+
+
+#left a:link {
+	color: #3333FF;
+	text-decoration: none;
+}
+#left a:visited {
+	color: #3333FF;
+	text-decoration: none;
+}
+#left a:hover {
+	color: #990000;
+	text-decoration: none;
+}
+
+
+#center a:link {
+	color: #3333FF;
+	text-decoration: none;
+}
+#center a:visited {
+	color: #3333FF;
+	text-decoration: none;
+}
+#center a:hover {
+	color: #3333FF;
+	text-decoration: underline;
+}
+
+
+#right a:link {
+	color: #3333FF;
+	text-decoration: none;
+}
+#right a:visited {
+	color: #3333FF;
+	text-decoration: none;
+}
+#right a:hover {
+	color: #3333FF;
+	text-decoration: underline;
+}
+
+
+#wrapper .menulist a, #wrapper .menulist a:visited {
+	color: #000000;
+	border-left: 6px solid #FFD940;
+	padding: 0 0 0 6px;
+}
+#wrapper .menulist a:hover {
+	border-color: #000000;
+}
+
+
+#topnav a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#topnav a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#topnav a:hover {
+	color: #EDE1BA;
+	text-decoration: none;
+}
+#footer a:link {
+	color: #3333FF;
+	text-decoration: none;
+}
+#footer a:visited {
+	color: #3333FF;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #3333FF;
+	text-decoration: underline;
+}
+
+.crumbs {
+	line-height:3.0em;
+}
+
+.crumb a {
+	color:inherit;
+}
+
+.crumb:after {
+	content: ' >>';
+}
+
+.crumb.last-crumb:after {
+	content: '';
+}
+
+
+h1 {
+	font-size: 3.0em;
+	margin: 0 0 0px;
+	font-weight: bold;
+	padding: 0px;
+}
+h2 {
+	font-size: 20px;
+	margin: 0px 0;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+	line-height: 24px;
+}
+h3 {
+	font-size: 18px;
+	margin: 0px 0;
+	font-weight: bold;
+	padding: 0px;
+}
+h4 {
+	font-size: 18px;
+	margin: 0px 0 0px;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+}
+h5 {
+	font-size: 14px;
+	margin: 0px 0px 0px;
+	font-weight: bold;
+	padding: 0px;
+}
+h6 {
+	font-size: 14px;
+	margin: 0px 0 5px;
+	font-weight: bold;
+	color: #CDAC38;
+	padding: 0px;
+}
+
+.nomargintop {
+	margin-top: 0;
+}
+
+.content p {
+	margin: 0px 0 10px;
+	line-height: 20px;
+}
+.imgRight {
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	float: right;
+}
+.imgLeft {
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	float: left;
+}
+.eventdate {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CDAC38;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: bold;
+}
+.eventdescrip {
+	color: #666666;
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight: normal;
+}
+.eventplace {
+	color: #666666;
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight: normal;
+}
+
+.tableheader {
+	font-size: 10px;
+	font-weight: bold;
+}
+.tablebackground {
+	background-color: #D2D2D2;
+}
+.boxbackground {
+	background-color: #828DAB;
+	color: #FFF;
+}
+
+
+
+
+
+.browse td {padding-bottom:5px;padding-top:10px;}
+
+.style1 {font-weight: bold;}
+.style2 {color: #FF0000;}
+.editable {color:red;}
+	
+	
+#software-table {
+margin-bottom:25px;
+}
+
+.downloaditem, .purchaseitem {
+	width:500px; height:30px; margin-top:15px;
+}
+
+.downloaditem img {
+	display:inline; padding-left:7px; width:25px; vertical-align:middle;
+}
+
+
+
+/**
+ * resize the GeoTrust seal
+ */
+img[src="//smarticon.geotrust.com/smarticon?ref=www.ocdla.org"] {
+	width:50px !important;
+	height:25px !important;
+}
+.boxbackgroundgold {
+	background-color: #F7F0D4;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	color: #54558B;
+	border-top:1px solid #BF9500;
+}
+.boxbackgroundgold .title a {
+	color: #333 !important;
+}
+
+#left .boxbackgroundgold a {
+	color: #54558B;/* !important;*/
+}
+
+.boxbackgroundgold p {
+	border-top:1px solid #aaa;
+	padding:0px;
+	margin:0px;
+}
+
+.content p.first {
+	border-top:none;
+}
+
+
+.boxbackgroundgold .title {
+	font-size:16px;
+	font-variant:small-caps;
+	width:100%;
+	background-color:#eee;
+	color:#54558B;
+	padding-left:3px;
+	padding-bottom:3px;
+	padding-right:5px;
+}
+
+.box-content {
+	margin-left:5px;
+}
+
+
+.connect_widget div.connect_confirmation_cell_no_like {
+	display:none !important;
+}
+
+
+
+
+.cat {display:block; margin-bottom:10px;}
+
+.node {
+	margin-top:20px;
+}
+
+
+
+
+	
+.imgNoBorder
+{
+	border-top-width: 0px;
+	border-top-style: none;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+#lod-feed-replace h6
+{
+	clear:both;
+	margin-top:15px;
+}
+
+
+.lod-feed-item ul {
+	margin-bottom:8px;
+}
+
+.heading-search {
+	margin-top:15px;
+	margin-bottom:25px;
+}
+
+#center .search-results {
+	min-height:500px;
+}
+
+.brand-company-name-short {
+	display:none;
+}

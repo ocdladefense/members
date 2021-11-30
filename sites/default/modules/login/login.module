@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file - login.module
+ */
+function login_menu()
+{
+	$items = array();
+	
+	$items['login/eval'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'login_eval',
+		'access' => true,
+		'output_handler' => 'xml',
+		'files' => 'includes/userXml.inc'
+	);
+
+	return $items;
+}
+
+function login_eval()
+{
+	global $sess;
+	return str_pad(xmlUserInfo($sess),8024);
+}

@@ -1,0 +1,44 @@
+{# This is a Twig template file
+It's supposed to be easy to read and edit.
+What's inside these brackets are comments.  Comments won't display on the webpage.
+#}
+
+
+<h2>{{ product_name }}</h2>
+
+
+{{ option }}
+<p>{{ location }}</p>
+<p style="font-weight:bold;">&nbsp;</p>
+<h5 style="padding-bottom:6px;color:red;">A high-speed internet connection is required to access this file.</h5>
+
+
+{# if( now < readydate )
+#}
+{#
+<p>The {{ item }} materials will be available for downloading on {{ readydate }}.
+Use the link in your OCDLA Shopping Cart Order Confirmation email to download your materials on or after {{ readydate }}.</p>
+#}
+
+
+<div id="progressIndicator">
+	<img src="/sites/all/themes/ocdla/images/ajax-loader.gif" alt="Processing Your File" style="float:left; margin-right:10px; vertical-align:middle;" />
+	<h3>Please wait while we create your Zip archive.</h3>
+	<p>This may take a few minutes.  When your download is ready, this icon will be replaced by a link to your Zip Archive download.</p>
+</div>
+
+
+<p>Once ready, downloads may take a few minutes.</p>
+<p><strong>IMPORTANT:</strong> Most computers include the capability to expand zipped files automatically. However, if you find that your Zip archive does not expand, you may download a Free Expander for Windows <a href="http://my.smithmicro.com/win/stuffit/index.html">here</a> or for the Mac <a href="http://my.smithmicro.com/mac/stuffit/expander.html">here</a>.</p>
+
+<p>If you experience a problem, please call the OCDLA office during regular business hours.</p>
+
+      <!-- InstanceEndEditable -->
+<div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+
+	<a style="font-size:1.6em;" href="//www.ocdla.org/download_help.shtml" rel="external">Click here for detailed download instructions.</a>
+	<h5>&nbsp;</h5>
+</div>   
+
+    
+{{ block_right }}

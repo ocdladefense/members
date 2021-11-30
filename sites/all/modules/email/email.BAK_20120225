@@ -1,0 +1,107 @@
+<?php
+/**
+ * email.module
+ *
+ */
+
+/**
+ * implements HOOK_menu
+ *
+ */
+function email_menu() {
+	$items = array();
+	
+	$items['email'] = array(
+		'name'=>'send mail',
+		'title'=>'Send Email',
+		'page_callback'=>'send_email',
+		'access'=>TRUE
+	);
+	return $items;
+}
+
+
+/**
+get and set the location of a template file for to be used to send HTML email
+define a set of tokens that are to be replaced within the template file
+set the headers for plain text vs. html email or both, i.e., multipart/alternative
+send mail to a specific email from a specific email
+set the subject of the email
+*/
+
+function send_email( &$vars ) {
+/** this function should redirect after it executes since its purpose is to send email, not to display content
+*/
+	$from = "style@stylebyestilo.com";
+	$from = "admin@clickpdx.com";
+	$subject = "Style Emagazine from Estilo Salon";
+//	$e='jbernal.web.dev@gmail.com';
+	$bcc = "jbernal.web.dev@gmail.com";
+$e='Style Emagazine Recipient <style@stylebyestilo.com>';
+	//	$e='jbernal.web.dev@gmail.com, morrillkj@gmail.com,beautygrl@comcast.net,amf050168@aol.com,hairdiva4u@aol.com';
+	//$e=',jbernal.web.dev@gmail.com';
+	//$e = 'hairdiva4u@aol.com,morrillkj@gmail.com';
+	
+	
+	//print_r($_SERVER);
+
+	/*$wd_was = getcwd();
+	chdir("/inetpub/ocdla/sqlconn");
+	require('sql_conn.php');
+	chdir("/inetpub/ocdla/php_mail");
+	*/
+ $vars['title'] = 'Estilo Salon';
+ $vars['page_title'] = 'Style Emagazine';
+ 
+ 	$vars['attributes'] = <<<EOF
+style="padding: 0;margin: 0 auto;width: 650px !important;padding-left: 15px;padding-right: 15px;font: 12px/22px 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;color: #666" 	
+EOF;
+	$vars['content'] = email_body( $vars );
+	$vars['email_body'] = theme_render_template( 'sites/all/themes/clickpdx/templates/page--email.tpl.php',$vars );
+	$html_body = 	theme_render_template( 'sites/all/themes/clickpdx/templates/html--email.tpl.php',$vars );
+	//$text_body = theme_email( $type='text' );
+	
+	$vars['email_type'] = 'text';
+	$text_body = email_body( $vars );
+	
+	$boundary = '----=_NextPart_';
+
+$multi_body = <<<EOF
+
+This is a multi-part message in MIME format.
+
+--$boundary
+Content-Type: text/plain; charset=UTF-8; format=flowed;
+Content-Transfer-Encoding: 8bit
+
+$text_body
+
+
+--$boundary
+Content-Type: text/html; charset=UTF-8; format=flowed; 
+Content-Transfer-Encoding: 8bit
+
+$html_body	
+EOF;
+
+	$headers='From: Estilo Salon <' . $from . '>'."\r\n".'Bcc: ' . $bcc ."\r\n".'MIME-Version: 1.0'."\r\n".'Content-Type: multipart/alternative; boundary="'.$boundary.'"'."\r\n".'Content-Transfer-Encoding: 8Bit'."\r\n";
+	 
+	/*Make sure the Content-type parameter's value is all on one line!!!
+	$params = array(
+	 'MIME-Version' => '1.0',
+	 'Content-Type' => 'multipart/alternative; boundary="'.$boundary.'"',
+	 'Content-Transfer-Encoding' => '8Bit');
+	*/
+	 
+	 //
+	// tail(
+	 
+	$sent2 = mail($e, $subject, $multi_body, $headers);
+	
+	if( $sent2 ) {
+		$output =  "<h2>Thanks, José for sending this email...</h2>";
+	} else { $output = '<h3>Sorry, the website encountered an error.</h3>';}
+	return $html_body;
+	
+	//if($sent2) echo "your rideshare email was sent successfully!"; else echo "your mail could not be sent...";
+}//function send_email

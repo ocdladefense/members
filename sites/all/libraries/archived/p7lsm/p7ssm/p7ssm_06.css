@@ -1,0 +1,153 @@
+/* 
+  ------------------------------------------------
+  PVII Slideshow Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style: 06
+	Image Rotator
+  ------------------------------------------------
+*/
+/*
+The Root Slideshow DIV
+*/
+#p7ssm {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	width: auto;
+	position: relative;
+	z-index: 100;
+	padding: 0;
+}
+/*Toolbar Controls */
+#p7ssm_toolbar {
+	background-color: #3C3C3C;
+	background-image: url(img/p7ssm4_ctrl_bg.jpg);
+	background-repeat: repeat-x;
+}
+#p7ssm_tools {
+	margin: 0 auto;
+}
+#p7ssm_toolbar em {display: none;}
+#p7ssm_toolbar a {display: block;}
+#p7ssm_first {
+	background-image: url(img/p7ssm4_first.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 20px;
+	background-position: left top;
+}
+#p7ssm_prev {
+	background-image: url(img/p7ssm4_prev.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 18px;
+}
+.p7ssm_play {
+	background-image: url(img/p7ssm4_play.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 24px;
+}
+.p7ssm_pause {
+	background-image: url(img/p7ssm4_pause.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 24px;
+}
+#p7ssm_next {
+	background-image: url(img/p7ssm4_next.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 18px;
+}
+#p7ssm_last {
+	background-image: url(img/p7ssm4_last.jpg);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 20px;
+}
+#p7ssm_bottom, #p7ssm_nav_wrapper, #p7ssm_counter, #p7ssm_slidechannel, #p7ssm_slider, #p7ssm_slidebar, 
+#p7ssm_speed, #p7SSMthmb, #p7SSMwhmb {
+	display: none;
+}
+/*The Hover state for all the toolbar icons*/
+#p7ssm_first:hover, #p7ssm_prev:hover,
+.p7ssm_play:hover, .p7ssm_pause:hover,
+#p7ssm_next:hover, #p7ssm_last:hover {
+	background-position: left bottom;
+}
+/*FULLSIZE IMAGE */
+/*The Outer Wrapper for Fullsize Image*/
+/*\FS TABLE DO NOT EDIT - and hide from IE5 Mac*/
+#p7ssm_fstbl {
+	margin: 0 auto;
+}
+#p7ssm_fullsize {
+	padding: 0px;
+}
+/*Animating Box Wrapper for Fullsize Image*/
+#p7ssm_fsc {
+	margin: 0 auto;
+	border: 1px solid #000000;
+	padding: 0px;
+	background-color: #333333;
+}
+/*Inner Wrapper for Fullsize Image*/
+#p7ssm_fsw {
+	padding: 0;
+	position: relative;
+}
+/*Crossfade Wrapper - DO NOT EDIT*/
+#p7ssm_cf {
+	position: absolute;
+	visibility: hidden;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+/*Firefox Strict Mode Box Model Fix - DO NOT EDIT*/
+#p7ssm_cf img {
+	display: block;
+}
+/*The Fullsize Image*/
+#p7ssm_fsc img {
+	border: 0;
+}
+/*\Firefox Fix - Hide from IE5 Mac*/
+#p7ssm_fsc img {
+	display: block;
+}
+/* Description Styles */
+#p7ssm_description {
+	font-size: 10px;
+	padding: 6px 12px;
+	color: #999999;
+	line-height: 1.5em;
+	letter-spacing: 0.1em;
+	display: none;
+}
+/*Description Paragraphs*/
+#p7ssm_description p {
+	margin: 6px 0;
+}
+/*Description Links*/
+#p7ssm_description a {
+	color: #3366CC;
+}
+/*Hiiden Link for Fullsize Image. DO NOT EDIT*/
+.p7ssm_lk {
+	display:none;
+}
+/*Hidden Description Source. DO NOT EDIT*/
+.p7ssm_fd {
+	display:none;
+	padding: 0;
+}
+/*The Loading Progrees Bar. DO NOT EDIT*/
+#p7ssm_loading {
+	position:absolute;
+	left:0px;
+	top:0px;
+	visibility: hidden;
+	z-index: 100;
+}

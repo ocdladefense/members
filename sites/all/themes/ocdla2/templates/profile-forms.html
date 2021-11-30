@@ -1,0 +1,43 @@
+{# This is a Twig template file
+It's supposed to be easy to read and edit.
+What's inside these brackets are comments.  Comments won't display on the webpage.
+#}
+<div id="profiles-menu">
+<a href="profiles.php?page=home">Profile Home</a> | <a href="profiles.php?page=contact">Contact Info</a> | <a href="profiles.php?page=address">Address</a> | <a href="profiles.php?page=contact_types">Occupation</a> | <a href="profiles.php?page=interests">Interests</a> | <a href="/profiles/profiles-cle-summary.shtml">CLE Summary</a> | <a href="profiles.php?page=ldoc_disclaimer">Legal Doc Lib Disclaimer</a>
+</div>
+
+<h3><p style="font-size:12pt;" class="largertextheader">My Profile - Occupation</p></h3>
+
+		<form name="profile_update" action="/profiles/profiles.php?page=contact_types" method="post" onsubmit="return checkForm();">
+
+		<table width='450px' cellspacing='0' cellpadding='5'>
+
+		<input type='hidden' name='ocdla_profiles_contact_type_action' value='submit' />
+	<tr>
+		<td width='50px'>
+			&nbsp;
+		</td>
+		<td width='150px' align='left'>
+			Occupation / Field:
+		</td>
+		<td align='right'>
+			<select name='p_ctype'>{{contact_types|raw}}</select>
+		</td>
+		<td>
+			<input type='hidden' name='p_contact_id' value='{{contact_id}}' />
+			<input type='hidden' name='p_id' value='{{id}}' />
+		</td>
+	</tr>
+	
+	{{content | raw}}
+	
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td align="right">
+			<input type="hidden" name="ocdla_id" value="ocdla_profiles_contact_types" />
+			<input type="submit" name="p_submit" value="Update" />
+		</td>
+	</tr>
+	</table>
+	</form>

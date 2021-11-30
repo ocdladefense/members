@@ -1,0 +1,156 @@
+<?php
+use Clickpdx\Core\Asset\Script;
+
+// Profiles module
+define( 'PROFILE_AREA_OF_INTEREST', 2);
+
+define( 'PROFILE_CONTACT_TYPE', 1);
+
+
+function profile_menu() {
+	$items = array();
+	$items['profile'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_home',
+		'title' => 'Profile Home',
+		'access' => 'user_is_authenticated',
+		'#theme' => 'ocdla',
+		'type' => MENU_ITEM_ROUTER,
+		'files' => array(
+			'base' => 'includes/content.inc',
+			'foo' => 'includes/profiles_regex.php',
+			'baz' => 'includes/profiles_funcs.php',
+			'process_post' => 'includes/update.inc'
+		),
+		'routeArguments' => array(
+			'member' => 'member_load',
+		)
+	);
+	$items['profile/home'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_home',
+		'title' => 'Profile Home',
+		'#theme' => 'ocdla',
+		'type' => MENU_ITEM_NORMAL,
+	);		
+	$items['profile/contact'] = array(
+		'name' => 'Contact Info',
+		'page callback' => 'profile_contact_info',
+		'title' => 'Contact Info',
+		'#theme' => 'ocdla',
+		'files' => 'includes/contact.inc',
+		'routeArguments' => array(
+			'contactInfo' => 'contact_info_load',
+		)
+	);
+	$items['profile/address'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_address',
+		'title' => 'Address',
+		'#theme' => 'ocdla',
+		'files' => 'includes/address.inc'	
+	);
+	$items['profile/contact-type'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_contact_type',
+		'title' => 'Contact Type',
+		'#theme' => 'ocdla',	
+		'files' => array(
+			'includes/contact-type.inc'
+		),
+		'routeArguments' => array(
+			'occupation' => 'occupation_load'
+		)
+	);	
+	$items['profile/interests'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_interests',
+		'title' => 'Areas of Interest',
+		'#theme' => 'ocdla',
+		'files' => 'includes/interests.inc',
+		'routeArguments' => array(
+			'interests' => 'interests_load'
+		)	
+	);	
+	$items['profile/ldoc-disclaimer'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'profile_ldoc_disclaimer',
+		'title' => 'Legal Document Library Disclaimer',
+		'#theme' => 'ocdla',
+		'files' => 'includes/ldoc.inc',
+		'routeArguments' => array(
+			'interests' => 'ldoc_load'
+		)		
+	);		
+	return $items;
+}
+
+
+
+function member_load($memberId)
+{
+	global $user;
+	if(!isset($memberId)) $memberId = $user->getMemberId();
+	$query = 'SELECT *, member_addresses.id AS addid FROM members LEFT JOIN member_addresses ON( members.id=member_addresses.member_id ) LEFT JOIN member_interests ON( members.id=member_interests.member_id) WHERE members.id=:id';
+	return db_query($query,array('id'=>$memberId),'pdo')->fetch();
+}
+
+
+function maintenance_content()
+{
+	return "<h4>The profiles application is currently undergoing maintenance.</h4><p>Thank you for your patience as we update this section of the OCDLA website.</p>";
+}
+
+
+function profile_content($arg = null)
+{
+	// All profile forms/tables share this same data
+	$thisPage = '/'.drupal_get_path_alias();
+	$onsubmit = $arg == "interests" ? "return checkInterestsForm();" : "return;";
+	$onsubmit = 'window.alert("Profile updates are temporarily disabled.\n\nMember profile updates will resume in a few days.  If you have urgent updates that need to be applied to your profile, please email OCDLA directly at info@ocdla.org.  Thank you for your patience!");return false;';
+	$content = "<form name='profile_update' action='{$thisPage}' method='post' onsubmit='{$onsubmit}'>";
+	$content .= "
+		<table width='550px' cellspacing='0' cellpadding='5' rules='none' border='0'>";
+	return $content;
+}
+
+function profile_preprocess_html()
+{
+	clickpdx_add_js(
+		'/sites/default/modules/profile/js/FormChecker.js',
+		'/sites/default/modules/profile/js/validation.js',
+		'/sites/default/modules/profile/js/interests.js',
+		'/sites/default/modules/profile/js/address_validation.js',
+		'/sites/default/modules/profile/js/Form_ldoc_disclaimer.js',
+		THEME_SCRIPT_REGION_FOOTER
+	);
+}
+
+function profile_home($pf)
+{
+	$content= "<h4>Welcome, ".$pf["name_first"]." ".$pf["name_last"].", to your OCDLA Membership Profile</h4>";
+
+$content .= <<<EOF
+	</p>  
+	<div style="width:83%;">
+	<!--<p style="color:red; border:1px solid grey; padding:3px;">
+		NOTE: The OCDLA Profiles area is undergoing maintenance until 5pm on Thursday, October 1 while our office changes internet service providers. Please check back here after that time to login and modify your OCDLA directory information. If you would like to update your Profile immediately, please call the OCDLA office.
+	</p>-->
+	
+	<!--<p style="border:1px solid grey; padding:3px;"><strong>Routine Maintenance</strong>: Routine maintenance is scheduled for this site Monday-Friday, 11:00pm-1:00am.  During scheduled maintenance, users may view directory information in the OCDLA Online Directory, but access to the OCDLA Online Profiles module will be unavailable.
+	</p>-->
+	
+	<p>The OCDLA membership profile allows you to update your own profile, including all contact information, mailing address and areas of interest. You must log-in to  update your Profile.</p>
+	<p>
+	Your updated information will be reflected in OCDLA's records, in the online membership directory (updated immediately) and in the downloadable PDF membership directory (updated daily) within 24 hours.
+	</p>
+	<p>
+	Email address updates made here will be reflected on the OCDLA Pond Listserve, and any other applicable OCDLA listserves, within 24 hours. Email updates received Friday afternoon will appear on the listserves the following Monday.
+	</p>
+	<p>
+	If you have any questions, please <a href="mailto:tmay@ocdla.org">email</a> OCDLA or call us at 541-686-8716.</p>
+	</div>
+
+EOF;
+	return $content;
+}

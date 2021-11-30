@@ -1,0 +1,12 @@
+{% set options = attribute( product, 'getOptions' ) %}
+<h1>{{ attribute(product,'getName') }}</h1>
+<p class="price"> {{ attribute(product, 'getPrice') }}!</p>
+<p class="description"> {{ product.getDescription }} </p>
+
+
+<h2>Product Options</h2>
+<table cellspacing="0" cellpadding="0" id="product-options">
+    {% for option in options %}
+        {% include "product-option.html" %}
+    {% endfor %}
+</table>

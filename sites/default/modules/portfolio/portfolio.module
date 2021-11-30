@@ -1,0 +1,74 @@
+<?php
+
+define('PORTFOLIO_SRC', DRUPAL_ROOT.'/sites/default/modules/portfolio');
+
+define('PORTFOLIO_TEMPLATE_SRC',PORTFOLIO_SRC.'/templates/project.tpl.php');
+
+define('PORTFOLIO_FRAME_TEMPLATE_SRC',PORTFOLIO_SRC.'/templates/frame.tpl.php');
+
+define('PORTFOLIO_CAPTION_TEMPLATE_SRC',PORTFOLIO_SRC.'/templates/caption.tpl.php');
+
+/*
+function portfolio_init()
+{
+	// Check the path
+	// If we're looking at the portfolio then load up the relevant JavaScripts
+	/*
+	if(isset($_GET['test'])){ ?>
+	<script src="js/utility.js" type="text/javascript"></script>
+	<script src="js/environment.js" type="text/javascript"></script>
+	<script src="js/event.js" type="text/javascript"></script>
+	<script src="js/controller.js" type="text/javascript"></script>
+	<script src="js/frame.js" type="text/javascript"></script>
+	<script src="js/FrameCollection.js" type="text/javascript"></script>
+	<script src="modules/stage/stage.js" type="text/javascript"></script>
+<?php } else { ?>
+	<script src="js/site.js" type="text/javascript"></script>
+<?php } ?>
+	<script src="settings.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	
+}
+*/
+
+function portfolio_menu()
+{
+	$items = array();
+	$items['portfolio'] = array(
+		'name' => 'portfolio',
+		'title' => 'Portfolio',
+		'page callback' => 'portfolio_item',
+		'access' => true,
+		'files' => array(
+			'includes/theme.inc',
+			'data/slide-data.php'
+		)
+	);
+	return $items;
+}
+
+
+function portfolio_item()
+{
+	$projectKey = $_GET['project'];
+	$variables=array();
+	$slides=array();
+	$captions=array();
+	
+	$output = null;
+	$projects=portfolio_init();
+	$fetch=$projects[$projectKey];
+	$variables=$fetch;
+	$variables['project']=$projectKey;
+	$index=0;
+	foreach($fetch['frames'] as $frame)
+	{
+		$variables['imageFile']=PORTFOLIO_SRC.'/'.$projectKey . '/'.$frame['image'];
+		$variables['classes']=implode($frame['attributes']['classes_array']);
+		$slides[]=theme(PORTFOLIO_FRAME_TEMPLATE_SRC,$variables);		$captions[]=theme(PORTFOLIO_CAPTION_TEMPLATE_SRC,array('index'=>$index,'caption'=>$frame['caption'],'caption_text'=>$frame['caption_text']));
+		$index++;
+	}
+	$variables['content']		= implode("\n",$slides);
+	$variables['captions']	= implode("\n",$captions);
+	return theme(PORTFOLIO_TEMPLATE_SRC,$variables);
+}

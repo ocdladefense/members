@@ -1,0 +1,28 @@
+{% extends "editing.twig" %}
+{# This is a Twig template file
+It's supposed to be easy to read and edit.
+What's inside these brackets are comments.  Comments won't display on the webpage.
+#}
+{% block content %}
+	<h4>Welcome, {{ user.name_first }} {{ user.name_last }}, to your OCDLA Membership Profile</h4>
+
+	<!-- <p class="largertextheader"> -->
+	<div style="width:83%;">
+		<!--<p style="color:red; border:1px solid grey; padding:3px;">
+			NOTE: The OCDLA Profiles area is undergoing maintenance until 5pm on Thursday, October 1 while our office changes internet service providers. Please check back here after that time to login and modify your OCDLA directory information. If you would like to update your Profile immediately, please call the OCDLA office.
+		</p>-->
+		
+		<!--<p style="border:1px solid grey; padding:3px;"><strong>Routine Maintenance</strong>: Routine maintenance is scheduled for this site Monday-Friday, 11:00pm-1:00am.  During scheduled maintenance, users may view directory information in the OCDLA Online Directory, but access to the OCDLA Online Profiles module will be unavailable.
+		</p>-->
+	
+	<p>The OCDLA membership profile allows you to update your own profile, including all contact information, mailing address and areas of interest. You must log-in to  update your Profile.</p>
+	<p>
+	Your updated information will be reflected in OCDLA's records, in the online membership directory (updated immediately) and in the downloadable PDF membership directory (updated daily) within 24 hours.
+	</p>
+	<p>
+	Email address updates made here will be reflected on the OCDLA Pond Listserve, and any other applicable OCDLA listserves, within 24 hours. Email updates received Friday afternoon will appear on the listserves the following Monday.
+	</p>
+	<p>
+	If you have any questions, please <a href="mailto:tmay@ocdla.org">email</a> OCDLA or call us at 541-686-8716.</p>
+	</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+# Composer
+#
+# These are files used by composer.
+/composer.lock
+
+# Htaccess
+#
+# This is a reference to Apache's .htaccess file.
+# .Htaccess is a site-specific file.
+/.htaccess
+
+# Robots
+#
+# Ignore the robots file.
+# This file should be site-specific, anyways.
+/robots.txt
+
+# Main config
+/config.php
+
+
+# vrc
+vrc
+vrc/
+vrc/*
+vdrc
+vdrc/
+vdrc/*
+
+
+# Error pages
+#
+# Ignore certain error pages.
+# Some of these pages may contain custom links.
+content/error_pages/error-access.html
+content/error_pages/error-access.php
+
+
+# Theme Settings
+#
+# Ignore theme settings that differ from site to site.
+sites/all/themes/ocdla/js/settings.js
+
+# Other app settings
+sites/all/modules/cart/js/OCDLA.js
+sites/default/modules/salesorder/js/app.settings.js
+sites/default/modules/paidoffice/js/app.settings.js
+sites/default/modules/ccauthorize/js/app.settings.js
+sites/default/modules/salesorder/settings.js
+sites/default/modules/event/js/app.settings.js
+sites/default/files/data/webgov.php
+sites/default/files/data*
+
+# Images
+sites/default/files/images*
+
+# Uploads
+sites/default/files/uploads*
+
+# Downloads
+sites/default/files/downloads
+sites/default/files/pdf
+
+# Cache
+#
+# Ignore cache files
+sites/default/files/cache
+
+# Modules
+#
+# At some point we'll want to ignore modules, which should have their
+# own repositories.  For now we're including them in the repo
+# until a time when they have their own states.
+# sites/default/modules
+# sites/default/modules*
+# sites/default/modules/*
+
+# Sites
+#
+# The sites file contains a list of domains intended
+# to be managed by this installation.
+sites/sites.php
+
+# Settings.php
+# 
+# The settings file contains settings
+# specific to this installation and should not be part
+# of the repository
+sites/*/settings.php
+sites/*/settings-default.php
+sites/default/modules/directory/pdf
+
+# XML settings files
+#
+# Ignore these XML settings files, which only
+# store info about temporal settings specific
+# to the state of a website.
+sites/default/files/modules/pdfNotification.xml
+
+
+
+# PHP logs
+phplog
+
+
+
+# Vendor files
+#
+/vendor
+
+
+# Ignore modules managed by Composer
+sites/default/modules/attendees
+sites/default/modules/checkout
+sites/default/modules/directory
+sites/default/modules/event
+sites/default/modules/experts
+sites/default/modules/salesforce
+sites/default/modules/search
+sites/default/modules/wordpress
+sites/force.com/assets
+sites/all/modules/cart

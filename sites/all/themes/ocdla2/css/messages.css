@@ -1,0 +1,22 @@
+.alert
+{
+	display:none;
+}
+.error {
+    background-color: #ffebeb;
+    min-height: 35px;
+    padding: 8px 8px 8px 15px;
+}
+
+.error pre {
+	overflow:scroll;
+}
+
+
+
+
+.msg .notice {
+	border:2px solid yellow;
+	padding:8px;
+	padding-left:20px;
+}

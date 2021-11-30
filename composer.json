@@ -1,0 +1,42 @@
+{
+    "require": {
+        "doctrine/orm": "*",
+        "clickpdx/core": "1.0.1",
+        "clickpdx/services": "~1.0",
+        "clickpdx/ocdla": "~0.0.1",
+        "twig/twig": "~1.0",
+		"authorizenet/authorizenet": "1.9.2",
+        "ocdladefense/legacy-attendees": "~1.0",
+        "ocdladefense/legacy-checkout": "~1.0",
+        "ocdladefense/legacy-directory": "~1.0",
+        "ocdladefense/legacy-event": "~1.0",
+        "ocdladefense/legacy-experts": "~1.0",
+        "ocdladefense/legacy-salesforce": "~1.0",
+        "ocdladefense/legacy-search": "~1.0",
+        "ocdladefense/legacy-wordpress": "~1.0",
+        "ocdladefense/legacy-assets": "~1.0",
+	"ocdladefense/legacy-cart":"~1.0"
+    },
+        "name": "clickpdx/clickpdxdev",
+        "description": "Clickpdx routing files.",
+    "require-dev": {
+        "phpunit/phpunit": "^4"
+    },
+    "config":{
+        "preferred-install":{
+            "ocdladefense/*": "source"
+        },
+        "installer-paths":{
+            "sites/default/modules/attendees":["ocdladefense/legacy-attendees"],
+            "sites/default/modules/checkout":["ocdladefense/legacy-checkout"],
+            "sites/default/modules/directory":["ocdladefense/legacy-directory"],
+            "sites/default/modules/event":["ocdladefense/legacy-event"],
+            "sites/default/modules/experts":["ocdladefense/legacy-experts"],
+            "sites/default/modules/salesforce":["ocdladefense/legacy-salesforce"],
+            "sites/default/modules/search":["ocdladefense/legacy-search"],
+            "sites/default/modules/wordpress":["ocdladefense/legacy-wordpress"],
+            "sites/force.com/assets":["ocdladefense/legacy-assets"],
+	    "sites/all/modules/cart":["ocdladefense/legacy-cart"]
+        }
+    }
+}

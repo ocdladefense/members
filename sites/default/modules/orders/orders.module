@@ -1,0 +1,233 @@
+<?php
+/**
+ * orders.module
+ */
+
+ 
+ /**
+ * cart.module
+ */
+function orders_menu() {
+	$items = array();
+	
+	$items['orders/add-software-purchase'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'theme_order_page',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',	
+	);
+	$items['orders/test'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'add_software_purchase_test',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',	
+	);	
+	$items['orders/theme-order'] = array(
+		'name' => 'OCDLA',
+		'page callback' => 'theme_order_page',
+		'title' => 'OCDLA',
+		'access' => TRUE,
+		'#theme' => 'ocdla',	
+	);	
+	return $items;
+}
+ 
+ 
+function theme_order_page(){
+	$uid = $_POST['contact_id'];
+	$invoiceNo = $_POST['INVOICE'];
+	print theme_order($invoiceNo,$uid);
+	exit;
+}
+
+function add_software_purchases($args = array()) {
+	$uid = $_POST['contact_id'];
+	$invoiceNo = $_POST['INVOICE'];
+	print theme_order($invoiceNo,$uid);
+}
+
+
+function load_invoice($invoiceNo){
+
+}
+
+function add_software_purchase_test(){
+	$uid = 25060;
+	$invoiceNo = 12257;
+	print theme_order($invoiceNo,$uid);
+	exit;
+}
+
+
+
+function add_purchase($uid,$itemid){
+		$add_to_cart = new DBQuery(
+			array(
+				'type' => 'insert',
+				'tablenames' => array(
+					0 => array(
+						'name' => 'downloads',
+						'fields' => array(),
+						'op' => '',
+					),
+				),
+				'fields' => array(
+					'memberid' => $uid,
+					'productid' => $itemid,
+				),
+			)
+		);
+}
+
+
+function theme_order($invoice,$contact_id){
+	$readorder="SELECT *, Round(ORDERS.totalitemprice*ORDERS.Quan,0) AS RoundedPrice, ORDERS.i AS Order_I, fm_child_id FROM ORDERS, catalog WHERE ORDERS.Order_ID={$invoice} AND ( ORDERS.Item_ID = catalog.i AND catalog.ID not like 'TAX' AND catalog.ID not like 'SHIPPING') ORDER BY ReadyDate ASC";
+		
+		$resource_for_readorder = mysql_query( $readorder );
+	
+		
+		$linenumber = 1;
+
+		$order_table = '<table id="Cart-checkout-invoiceform" cellspacing="0px" cellpadding="0px" border="0">
+			<tr><th>Item</th><th>Quantity</th><th>Total Price</th></tr>';
+		
+		//assign $software_table an blank value so PHP doesn't throw an undefined error
+		$software_table = '';
+
+		$SoftwareCounter = 0;
+		$download_product_types = array(
+			'Seminars',
+			'CLEArchive',
+			'Materials',
+			'Access to Justice',
+			'Child Abuse Reporting',
+			'Ethics',
+		);
+					
+		while($order = mysql_fetch_assoc($resource_for_readorder)){
+			$order_table.="<tr class='purchaseitem' style=\"background-color:#FFFFFF;\"><td width=\"300px\">{$order['Item']}</td><td width=\"125px\" align=\"center\">{$order['Quan']}</td><td align=\"center\">\${$order['RoundedPrice']}</td></tr>";
+
+			if( $order["SoftwareDownload"]==1 ) {
+				if(++$SoftwareCounter==1) {
+					$software_table = '<h1>&nbsp;</h1><h5 style="margin-bottom:15px;">The following items are downloads:</h5>';
+				}
+				$software_table .= 	getDownloadInfo($order,$contact_id);
+			}
+			$linenumber++;
+		}
+		
+		$order_table .= '</table>';
+		$software_table .= '';							
+
+		$out = $order_table . $software_table;
+
+ if( $SoftwareCounter > 0 ) {
+	$out .=file_get_contents(DRUPAL_ROOT . '/sites/default/modules/checkout/download_instructions.html');
+ }
+ return $out;
+}
+
+
+
+
+
+function insertAnonymousDownloadEntry($order) {
+	$pdf_password = createRandomPassword();
+	/*<cfoutput>$pdf_password</cfoutput>*/
+	/* insert this password into the PDFdownloads if Session.contact_id is NOT set*/
+		/* Order_I is the auto-increment value for the ORDERS table */
+	$today = time();
+	$download_query="INSERT INTO downloads (Order_ID, productid, password, entry_time) VALUES({$order['Order_ID']},{$order['i']},'{$pdf_password}','{$today}')";
+	if( !mysql_query( $download_query ) ) {
+		//echo "There was an error processing your order.";
+		tail("INSERTING into the downloads table failed.<br />Query: {$download_query}\nError: ".mysql_error(),__FILE__);
+	}//if
+	$last_insert_id = mysql_insert_id();
+	return $last_insert_id;
+}
+
+
+function insertDownloadEntry($lineItem,$uid)
+{
+	$today = time();
+	/* Order_I is the auto-increment value for the ORDERS table */
+	$download_query="INSERT INTO downloads (Order_ID, memberid, productid, entry_time) VALUES({$lineItem['Order_ID']},'$uid',{$lineItem['i']},{$today})";						
+	if( !mysql_query( $download_query ) ) {
+		$msg = "INSERTING into the downloads table failed.<br />Query: {$download_query}\nError: ".mysql_error();
+		print $msg;
+		tail($msg,__FILE__);
+	}
+	$last_insert_id = mysql_insert_id();
+	return $last_insert_id;
+}
+
+
+function getDownloadInfo($lineItem,$uid)
+{
+	global $download_product_types;
+	$software_table = '';
+	if ( $lineItem["Category"]=="Materials" )
+	{
+		//query for the seminar name
+
+		$get_seminar_name = "SELECT title FROM seminars WHERE i=(SELECT i FROM catalog WHERE fm_parent_id={$lineItem['fm_child_id']} LIMIT 1)";
+		$seminar_name_exec = mysql_query( $get_seminar_name );
+		$seminar_name_arr = mysql_fetch_assoc( $seminar_name_exec );
+		$seminar_name = $seminar_name_arr["title"];
+	}
+
+	$today = time();
+	/**
+	 * Non-members who purchase a download won't have a contact_id
+	 * 	+ in which case we need to generate a password for them
+	 * 	+ that isn't related to their contact id
+	 * if the user is not a member then generate a random password that can be assigned to this electronic document
+	 *
+	 */
+	if(empty($uid))
+	{
+		if ($lineItem['NonMemberPurchase'] == 'no')
+		{
+			$software_table .= "<div class='downloaditem' style='width:500px;'>Error: This item is only for purchase by OCDLA members: {$lineItem['Item']}</div>";
+		}
+		else
+		{
+			$last_insert_id = insertAnonymousDownloadEntry($lineItem);
+		}
+	}
+	else
+	{
+		$last_insert_id = insertDownloadEntry($lineItem,$uid);
+	}
+
+	if( !empty( $uid ) && $lineItem["SoftwareType"] == "zip")
+	{
+		if( time() > strtotime( $lineItem['ReadyDate'] ) && $lineItem['Category'] == "Seminars")
+		{
+			$software_table .= "<div class='downloaditem' style='width:500px;'>Ready Now:&nbsp;&nbsp;<a target='OCDLA Download' href='//members.ocdla.org/my-downloads'>Written materials for {$lineItem['Item']} - Zip Archive</a></div>";
+		}
+		elseif( time() > strtotime( $lineItem['ReadyDate'] ) && $lineItem['Category'] != "Seminars")
+		{
+			$software_table .= "<div class='downloaditem' style='width:500px;'>Ready Now:&nbsp;&nbsp;<a target='OCDLA Download' href='//members.ocdla.org/my-downloads'>{$lineItem['Item']} - Zip Archive</a></div>";
+		}
+		else
+		{
+			$software_table .= "<div class='downloaditem'>Ready on ".date('F j, Y',strtotime($lineItem['ReadyDate'])).":&nbsp;&nbsp;{$lineItem['Item']} - Zip Archive<!--<a href='//members.ocdla.org/my-downloads'>{$lineItem['Item']} - Zip Archive</a>--></div>";
+		}
+	}
+	elseif( empty( $uid ) && $lineItem['SoftwareType'] == "zip" && $lineItem['Category'] == "Materials" ) {
+		$software_table .= "<div class='downloaditem'>$seminar_name: {$lineItem['Item']} - Zip Archive</div><div class='downloaditem'>The link for this download will be emailed to you within two business days.</div>";
+	}
+	elseif( !empty( $uid ) && $lineItem['SoftwareType'] == "zip" && $lineItem['Category'] == "Seminars") {
+		$software_table .= "<div class='downloaditem'>Written materials for {$lineItem['Item']} - Zip Archive<br /><b>The link for this download will be emailed to you within two business days.</b></div>";
+	}
+	elseif( !empty( $uid ) && $lineItem['SoftwareType'] == "zip" && $lineItem['Category'] != "Seminars") {
+		$software_table .= "<div class='downloaditem'>{$lineItem['Item']} - Zip Archive<br /><b>The link for this download will be emailed to you within two business days.</b></div>";
+	}
+	elseif( $lineItem['SoftwareType'] == "pdf" ) {
+		$software_table .= "<div class='downloaditem'>Within ten minutes, you will receive an email containing a link to download  {$lineItem['Item']}.</div>";
+	}
+	return $software_table;
+}

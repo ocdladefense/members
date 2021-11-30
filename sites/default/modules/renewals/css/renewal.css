@@ -1,0 +1,214 @@
+
+
+.renewal-form-page {
+	background-color:blue;/*rgb(69,150,153);*/
+	text-align:center;
+}
+
+.renewal-form {
+	background-color:#fff;
+	margin: 0 auto;
+	text-align:left;
+	width:90%;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.no-print {
+	display:none;
+}
+
+@page {
+	size:8.5in 11in; margin:0.5;
+	margin-top:12px;
+	margin-bottom:12px;
+}
+
+.intro {
+	width:35%;
+}
+
+/*
+ul.leaders {
+max-width: 40em;
+padding: 0;
+overflow-x: hidden;
+list-style: none
+}
+*/
+.table span {
+	background-color:#fff;
+}
+
+li.no-leader:before {
+	float:none;
+	content: "";
+}
+
+
+ul.row > li:first-of-type {
+	width:75%;
+}	
+
+.table li.first:before {
+float: left;
+width: 0;
+white-space: nowrap;
+content:
+". . . . . . . . . . . . . . . . . . . . "
+". . . . . . . . . . . . . . . . . . . . "
+". . . . . . . . . . . . . . . . . . . . "
+". . . . . . . . . . . . . . . . . . . . "
+}
+
+
+
+div.margin-left,
+div.margin-right {
+/*	background-color:rgba(0,153,153,1.0);*/
+	background-color:rgba(63,245,206); 
+}
+
+.write-in {
+	line-height:18px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.title-section {
+	width:100%;
+	text-align:center;
+}
+
+.bottom-fold {
+	position:relative;
+	margin-top:0px;
+}
+
+#envelope-window {
+  position:absolute;
+  bottom:2px;
+  left:75px;
+  padding:7px;
+}
+
+#callout {
+	position:absolute;
+	top:25px;
+	left:75px;
+	text-align:center;
+}
+
+.renewal-form {
+	font-family:Garamond;
+	font-size:14px;
+	margin-bottom:30px;
+	border-bottom:3px dashed #000;
+}
+
+.cell, .row li {
+	display: table-cell;
+}
+
+.row {
+	display: table-row;
+}
+
+
+
+.table {
+	display: table;
+	width:100%;
+}
+
+.renewal-form h2 {
+	font-size:14px;
+	color:blue;/*rgb(0,153,153);*/
+	margin-top:-1px;
+	margin-bottom:-3px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.content h1 {
+	font-size:18px;
+}
+
+.bottom-fold {
+	height:275px;
+}
+
+.bottom-fold-left {
+	width:54%;
+	display:inline-block;
+	height:100%;
+}
+
+.bottom-fold-right {
+	width:44%;
+	display:inline-block;
+	height:100%;
+}
+
+#wrapper #center {
+	width: 100%;
+	float: none;
+}
+
+
+footer {
+	font-size:10px;
+	text-align:center;
+	margin-top:15px;
+}
+
+
+
+#left {
+	display:none;
+}
+
+.renewal-form	{
+	display: block; page-break-before: always;
+}
+
+#center .content { 
+	padding:0px !important;
+}
+
+
+
+
+
+
+@media print {
+	.no-print {
+		display:none;
+	}
+	#footer {
+		display:none;
+	}
+
+	#masthead {
+		display:none;	
+	}
+	#topnav {
+		display:none;
+	}
+	.renewal-form {
+		margin-bottom:0px;
+		border-bottom:0px;
+	}
+
+	#left {
+		display:none;
+	}
+	.renewal-form	{
+		display: block; page-break-before: always;
+	}
+	#center .content { 
+		padding:0px !important;
+	}
+}

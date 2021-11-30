@@ -1,0 +1,299 @@
+<cfset checkCustomerLoginForRedirect=True>
+<cfset redirectToLogin=False><!--- set to false, initially --->
+<cfset loginaction="do_nothing">
+<cfset is_member=False>
+<!---
+This routine searches for a given item ID #. It finds it in the database and displays
+it on a screen with the price and asks for a quantity to put into the shopping cart.
+--->
+
+<cfif isdefined('contact_id')>
+	<cfset cid=#contact_id#>
+<cfelse>
+	<cfset cid=0>
+</cfif>
+
+
+
+
+
+<cfinclude template="detail_newocdla_controller.cfm">
+
+
+
+<!--- run a program to check if the user needs to be logged-in to purchase this product or to initially prompt the user to login before continuing shopping 
+Set redirectToLogin = True
+<cfset Caller.redirectToLogin=True>
+--->
+<cfif checkCustomerLoginForRedirect>
+	<CFMODULE template="forceLogin.cfm" sessionLookup=#sessionLookup# non_member_purchase=#store.NonMemberPurchase# mod_product_id=#store.i# mod_parent_i=#store.i#>
+</cfif>
+
+
+<!-- set the number of product options in this group -->
+<CFSET num_products=#Fromcat.RecordCount#>
+
+
+<!-- display the price of the selected product -->
+<CFOUTPUT QUERY="Store" GROUP="ID">
+<cfset available=1>
+	<cfquery name="getNoNonMembers" datasource="#Application.dsn#">
+		SELECT i FROM catalog WHERE NonMemberPurchase = 'no';
+	</cfquery>
+	<cfset NoNonMembers = "">
+	<cfloop query="getNoNonMembers">
+		<cfset NoNonMembers = ListAppend(NoNonMembers,"|#getNoNonMembers.i#|",",")>
+	</cfloop>
+
+	<CFIF #available# eq 1>
+	  <CFSET output_price = RegularPrice>
+	  <CFSET regular_price = Price>
+
+
+		<h3>#Replace(ProdName,'&trade','&trade;','ALL')#</h3>
+		<p><strong>#Edition#</strong></p>
+		
+	  	<p><!---<strong>Edition: 2008---><br />
+	  	
+		<!--- only display the member/non-member prices if there are no options --->
+		<CFIF num_products eq 1>
+		
+			<cfif Category eq "Donations">
+					<span class="style2">Donation Amount:</span>$#LittlePrice#<br />
+		
+			<CFelseIF Fromcat.RecordCount gt 1>
+					<span class="style2">Member Price</span><br />
+				<cfif not NoNonMembers contains "|#i#|">
+					<span class="style2">(Non-Member Price)</span><br />
+				<cfelse>
+					<span class="style2">Members Only</span><br />
+				</cfif>
+			<CFELSE>
+					<span class="style2">Member Price:</span>$#LittlePrice#<br />
+				<cfif not NoNonMembers contains "|#i#|">
+					<span class="style2">Non-Member Price: </span>$#LittleRegularPrice#<br />
+				<cfelse>
+					<span class="style2">Members Only</span><br />
+				</cfif>
+			</CFIF>
+		</CFIF>
+		<!---</strong>---></p>
+	</CFIF>
+ 
+</CFOUTPUT><!-- end of OUTPUT query STORE -->
+
+
+
+
+
+
+<!--- double-check the login requirements for this product and user --->
+<cfoutput>
+	<cfif redirectToLogin>
+		<cfset ref = URLEncodedFormat(#cgi.path_info# & '?' & #cgi.query_string#)>
+		<form action="https://auth.ocdla.org/login?ref=#ref#" method="post" onsubmit="return checkForm();">
+		<input type="hidden" name="is_member" value="#is_member#" />
+		<input type="hidden" name="form_id" value="ocdla_add_to_cart_form" />
+		<input type="hidden" name="loginaction" value="#loginaction#" />
+		<input type="hidden" name="script_name" value="/cart/detail_newocdla.cfm" />		
+	<cfelse>
+		<form action="https://members.ocdla.org/cart/add" method="post" onsubmit="return checkForm();">
+		<input type="hidden" name="form_id" value="ocdla_add_to_cart_form" />
+		<input type="hidden" name="script_name" value="/cart/detail_newocdla.cfm" />		
+	</cfif>
+	
+	<input type="hidden" name="parent_i" value="#Fromcat.parent_i#" />
+</cfoutput>
+
+
+	<!-- if there is only one product to display -->
+	<CFIF num_products eq 1>
+		<CFOUTPUT QUERY="Fromcat"> 
+			<input type="hidden" name="itemid[]" value="#Ucase(i)#" />
+		</CFOUTPUT>
+		
+		
+	<!-- otherwise, display product options -->
+	<CFELSE>
+		<table width="500" border="0" cellspacing="4px" cellpadding="0">
+			<tr>
+				<td align="left" valign="top"><strong>QTY</strong></td>
+				<td align="left" valign="top"><strong>MEDIA</strong></td>
+				<td valign="top"><strong>Member</strong></td>
+				<td valign="top"><strong>Non-member</strong></td>
+			</tr>
+				<cfset xcounter=1>
+					<CFOUTPUT QUERY="Fromcat">
+			<tr>
+						<CFIF LittlePrice neq LittleRegularPrice>
+								<td>
+
+										<input name="itemid[]" type="hidden" value="#Ucase(Fromcat.i)#" />
+										<input name="quantity[]" type="text" size="2"/>		
+
+								</td>
+								<td valign="middle">
+									#SubName#
+								</td>
+								<td valign="middle" align="center">
+									$#LittlePrice#
+								</td>
+								<td valign="middle" align="center">
+									<cfif NoNonMembers contains "|#i#|">
+										N/A
+									<cfelse>
+										$#LittleRegularPrice#
+									</cfif>
+								</td>
+						<CFELSE>
+								<td>
+									<input name="itemid[]" type="hidden" value="#Ucase(Fromcat.i)#" />
+									<input name="quantity[]" type="text" size="2"/>		
+								</td>
+								<td valign="middle">
+									#SubName#
+								</td>
+								<td valign="middle" align="center">
+									$#LittlePrice#
+									</td>
+								<td valign="middle" align="center">
+									<cfif NoNonMembers contains "|#i#|"> N/A<cfelse>$#LittleRegularPrice#</cfif>
+								</td>
+						</CFIF>
+			</tr>
+						<cfset xcounter=xcounter+1>
+					</CFOUTPUT>
+		</table>
+	</CFIF>
+
+
+				<CFIF num_products eq 1>
+					<table width="500" border="0" cellspacing="0px" cellpadding="0px">
+						<tr>
+						<td valign="bottom" style="padding:0px; margin:0px;">
+							Quantity:&nbsp;<input type="text" name="quantity[]" value="1" size="2" />
+						</td>
+						</tr>
+					</table>
+				</CFIF>
+				
+				
+					<table width="500" border="0" cellspacing="0px" cellpadding="0px">
+						<tr>
+						<td>
+				<input type="hidden" name="newocdla" value="newocdla" />
+				
+				<input type="image" src="/images/images-buttons/icon-addtocart.gif" style="margin:0px; padding:0px; vertical-align:bottom;" />
+
+				<a href="/cart/createmore.cfm" style="margin:0px; padding:0px; border:0px; vertical-align:bottom;">
+					<img src="/images/images-buttons/icon-continueshopping.gif" alt="Continue Shopping" style="vertical-align:bottom; border:none;padding:0px;margin:0px;" width="111" height="20" />
+				</a>
+				<a href="/cart/viewcart_newocdla.cfm" style="margin:0px; padding:0px; border:0px; vertical-align:bottom;">
+					<img src="/images/images-buttons/icon-viewcart.gif" alt="View Cart" style="vertical-align:bottom; border:none;" width="85" height="20" />
+				</a>
+						</td>
+					</tr>
+					</table>
+					
+					
+					
+</form>
+  
+
+
+
+
+<CFOUTPUT QUERY="Store" GROUP="ID"> 
+	
+	<!-- ListImages is the name of the query that returns the filenames in the images directory
+		and compares each to the image name for this item record retrieved in the store query -->
+	<cfdirectory action="list" directory="#ExpandPath('../images/images-products')#" name="ListImages">
+	<cfset ListOfImages = "">
+	<cfloop query="ListImages">
+		<cfset ListOfImages = ListAppend(ListOfImages,ListImages.Name)>
+	</cfloop>
+	<CFIF #Image# EQ '' or not ListOfImages contains Image>
+		<CFSET #PicName#="NOART.jpg">
+	<CFELSE>
+		<CFSET #PicName#=#image#>
+	</CFIF>
+	
+	<p><img class="imgRight" src="/images/images-products/#PicName#" <cfif PicName eq "NOART.jpg">width="200px" height="75px"<cfelse>width="150px" height="192px"</cfif> border="0" alt="Photo" /></p>
+			  
+						<CFOUTPUT> 
+							<!--- Edition was removed from the cfloop list --->
+							<cfloop list="Author_Editor,Description2,Binding" index="thiscolumn">
+								<CFIF evaluate("store.#thiscolumn#") neq "">
+									<CFIF #thiscolumn# eq "Author_Editor">
+									<p><i>#replace(thiscolumn,'_','/')#:&nbsp;#evaluate("store.#thiscolumn#")#</i></p>
+									<CFELSEIF #thiscolumn# eq "Description2">
+									#evaluate("store.#thiscolumn#")#
+									<CFELSE>
+										#replace(thiscolumn,'_','/')#:&nbsp;#evaluate("store.#thiscolumn#")#
+									</CFIF>
+								</CFIF>
+							</cfloop>
+ <p>&nbsp;</p>
+						</CFOUTPUT> 
+
+	
+</CFOUTPUT>
+
+
+
+
+
+<CFSET MainCodeFlag = 1> 
+
+<br />
+
+<cfinclude template="footer.cfm">
+
+
+
+
+      <!-- InstanceEndEditable --></div><!-- end content -->
+    </div><!-- end center -->
+    
+
+
+	
+	
+    <div id="right">
+		<div class="content"><!-- InstanceBeginEditable name="SidebarRight" -->
+		
+		
+
+			<cfinclude template="dispcart_mini_newocdla.cfm">
+	<h1>&nbsp;</h1>
+	<cfoutput>
+	
+	<cfif isdefined('store.RightColumn')>#store.RightColumn#</cfif></cfoutput>
+
+	</div>
+	
+	</div><!-- end right div -->
+
+
+  
+  </div><!-- end column-wrapper -->
+  
+
+	
+	
+				<cfinclude template="checkout/pl2_cart_global_footer.cfm">
+
+
+
+</div><!-- end body wrapper -->
+
+<script type="text/javascript">
+<!--
+clearForm();
+-->
+</script>
+
+</body>
+
+
+<!-- InstanceEnd --></html>

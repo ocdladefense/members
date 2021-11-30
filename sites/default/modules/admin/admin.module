@@ -1,0 +1,87 @@
+<?php
+
+
+use Ocdla\Member;
+
+function admin_menu()
+{
+	$items = array();
+
+	$items['admin'] = array(
+		'title' => 'Administrative Areas',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'adminAreas',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => 'AdminController'
+	);
+	
+	$items['directory-menu'] = array(
+		'title' => 'Administrative Areas',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'adminAreasPageOutput',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => '\Clickpdx\Core\Output\MenuPage',
+		'routeArguments' => array(
+			'directory/members' => 'A Sample Directory of Members',
+			'object' => 'Salesforce Object Info',
+			'objects' => 'Multiple Salesforce Object Info',
+			'directory/start' => 'Directory Start Page'
+		)
+	);
+	
+	$items['new-template'] = array(
+		'title' => 'New Template',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'adminAreasPageOutput',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => '\Clickpdx\Core\Output\HtmlPage',
+		'routeArguments' => 'sites/default/modules/admin/templates/ocdla.html',
+		'output handler' => 'html-file'
+	);
+	
+	
+	
+	$items['test-email-notification'] = array(
+		'title' => 'Test Error Message',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'testError',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => 'AdminController'
+	);
+
+	$items['test-email'] = array(
+		'title' => 'Test Sending Email',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'testEmail',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => 'AdminController'
+	);
+	
+	$items['test-exception'] = array(
+		'title' => 'Test Error Message',
+		'access' => 'user_has_role',
+		'access arguments' => array('admin'),
+		'page callback' => 'testException',
+		'files' => array(
+			'includes/AdminController.php'
+		),
+		'routeClass' => 'AdminController'
+	);
+	
+	return $items;
+}

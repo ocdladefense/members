@@ -1,0 +1,6 @@
+TAP version 13
+ok 1 - EmailTest::testCanBeCreatedFromValidEmailAddress
+ok 2 - EmailTest::testCannotBeCreatedFromInvalidEmailAddress
+ok 3 - EmailTest::testCanBeUsedAsString
+not ok 4 - Error: EmailTest::testFoobar
+1..4

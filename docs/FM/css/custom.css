@@ -1,0 +1,27 @@
+.confluenceTable {
+	display:none;
+}
+#main-header {
+	display:none;
+}
+li a {
+	font-size:inherit;
+}
+li {
+	font-size:12px;
+}
+ul {
+	padding-left:0px;
+}
+.tree ul li ul {
+	padding-left:8px;
+}
+
+.tree li.parent > a {
+	font-size:14px;
+	font-weight:bold;
+}
+
+.pageSectionHeader {
+	display:none;
+}

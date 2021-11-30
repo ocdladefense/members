@@ -1,0 +1,154 @@
+<?php
+
+use Clickpdx\OAuth\OAuthGrantTypes;
+use Clickpdx\SfRestApiRequestTypes;
+use Clickpdx\Http\HttpRequest;
+use Clickpdx\ResourceLoader;
+
+
+function salesforce_menu() {
+	$items = array();
+
+	
+	$items['force/backup/%sfObject'] = array(
+		'name' => 'memdir',
+		'title' => 'Import All Records',
+		'page callback' => 'importSalesforceObjectRecords',
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(2),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+	);
+	
+	
+	$items['force/backup/%sfObject/deleted'] = array(
+		'name' => 'memdir',
+		'title' => 'Show deleted records',
+		'page callback' => 'importDeletedObjectRecords',
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(2),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+	);
+	
+	$items['force/show/%sfObject/deleted'] = array(
+		'name' => 'memdir',
+		'title' => 'Show deleted records',
+		'page callback' => 'showDeleted',
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(2),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+	);
+	
+	$items['force/backup/%sfObject/%field/%date'] = array(
+		'name' => 'memdir',
+		'title' => 'Import All Records',
+		'page callback' => 'importSalesforceObjectRecordsByField',
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(2,3,4),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+	);
+	
+	
+	
+	
+	$items['force/backup/%sfObject/recent'] = array(
+		'name' => 'memdir',
+		'title' => 'Import All Records',
+		'page callback' => 'importRecentSalesforceObjectRecords',
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(2),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+	);
+
+
+	
+	$items['object/%obj/%field'] = array(
+		'page callback' => 'getPicklistValues',
+		'title' => 'Category Browse',
+		'access' => true,
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(1,2),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+		'theme' => 'ocdla2',
+	);
+	
+
+	
+	
+	$items['object/%sfObjectName'] = array(
+		'name' => 'memdir',
+		'page callback' => 'renderObjectInfo',
+		'title' => 'Salesforce Object Info',
+		'access' => true,//'user_has_role',
+		'access arguments' => array('admin'),
+		'files' => array(
+			'controller' => 'includes/SalesforceController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'SalesforceController',
+		'routeArguments' => array(1),
+	);	
+
+	
+	$items['objects'] = array(
+		'name' => 'memdir',
+		'page callback' => 'objects',
+		'title' => 'Salesforce Object Info',
+		'access' => true,
+		'theme' => 'ocdla',
+	);	
+	
+	return $items;
+}
+
+
+function salesforce_preprocess_page(&$vars) {}
+
+
+/**
+ * 
+ * @method salesforce_init
+ *
+ * @description
+ *		Initializes system resources provided by this module.  The module system
+ *		automatically includes() autoload.php and resources.php.
+ *
+ * @return void
+ *
+ */
+function salesforce_init()
+{
+	ResourceLoader::initResources();
+	ResourceLoader::addLoader('oauthService','oauthServiceLoader');
+	ResourceLoader::addLoader('sfRestApi','sfRestApiServiceLoader');
+}
+
+
+function objects()
+{	
+	//return "<pre>".print_r(sfObjectsInfo(),true)."</pre>";
+	$ret='';
+	$objs=sfObjectsInfo()['sobjects'];
+	foreach($objs as $f)
+	{
+		$ret .="{$f['name']}<br />";
+	}
+	return $ret;
+
+}

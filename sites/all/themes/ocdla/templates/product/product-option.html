@@ -1,0 +1,18 @@
+{# pass value `option` is of type OcdlaProduct #}
+
+<tr>
+	<td align="middle">
+		<input type="hidden" name="itemid[]" value="{{ option.getProductId }}" />
+		<input type="text" size="2" value="" />
+		{{ option.getProductId }}
+	</td>
+	<td align="middle">
+		{{ option.getProductName }}
+	</td>
+	<td align="middle">
+		{{ option.getMemberPrice }}
+	</td>
+	<td align="middle">
+		{{ option.getNonMemberPrice }}	
+	</td>
+</tr>

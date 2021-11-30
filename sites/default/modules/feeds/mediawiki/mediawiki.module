@@ -1,0 +1,78 @@
+<?php
+// https://libraryofdefense.ocdla.org/Blog:Case_Reviews?feed=rss
+define('MEDIAWIKI_FEED_URL','https://libraryofdefense.ocdla.org/Blog:Case_Reviews?feed=rss');
+define('MEDIAWIKI_CACHE_DIR', CACHE_DIR . '/mediawiki');
+define('MEDIAWIKI_TEASER_LENGTH', null);
+
+function mediawiki_menu() {
+	$items = array();
+
+	$items['feeds/mediawiki/lod'] = array(
+		'name' => 'foo',
+		'page callback' => 'mediawiki_cron',
+		'title' => 'Library of Defense Feed',
+		'access' => true,
+		'#theme' => 'ocdla',
+		'output_handler' => 'html',
+	);
+	
+	$items['mediawiki/homepagefeed'] = array(
+		'name' => 'foo',
+		'page callback' => 'mediawiki_homepagefeed',
+		'title' => 'Library of Defense Feed',
+		'access' => true,
+		'#theme' => 'ocdla',
+		'output handler' => 'jsonp',
+	);
+	return $items;
+}
+
+
+function mediawiki_homepagefeed()
+{
+	return array('callback'=>$_GET['callback'],'json'=>array(
+		'markup' => file_get_contents(DRUPAL_ROOT.'/sites/default/files/cache/mediawiki/lod-feed.html')
+	));
+}
+
+function mediawiki_cron( $useSSL = true )
+{
+	$output = '';
+	$index = 0;
+	$items = array();
+	$feed = new Curl(MEDIAWIKI_FEED_URL, $useSSL );
+	$reflect = new ReflectionClass('Curl');
+	$xml = $feed->exec()->toString();
+ 	
+ 	$feed = new DomDocument();
+ 	$feed->formatOutput = true;
+ 	$feed->preserveWhiteSpace = false;
+ 	$feed->loadXML( $xml );
+ 	
+ 	$entries = $feed->getElementsByTagName('item');
+ 	
+ 	foreach( $entries AS $entry ) {
+ 		if(++$index > 2) break;
+ 		$title = $entry->getElementsByTagName('title')->item(0)->nodeValue;
+ 		$link = $entry->getElementsByTagName('link')->item(0)->nodeValue;
+ 		$date = $entry->getElementsByTagName('pubDate')->item(0)->nodeValue;
+ 		$description = $entry->getElementsByTagName('description')->item(0)->nodeValue;
+ 		$description = StringWrapper::getWords( $description, 0, MEDIAWIKI_TEASER_LENGTH );
+ 		$author = $entry->getElementsByTagNameNS('http://purl.org/dc/elements/1.1/','creator')->item(0)->nodeValue;
+ 		$items []= array(
+ 			'title' 				=> $title,
+ 			'link' 					=> $link,
+ 			'date' 					=> $date,
+ 			'description' 	=> $description,
+ 			'author' 				=> $author,
+ 		);
+ 	}
+ 	$output = theme('lod-feed', array('items'=>$items));
+ 	
+ 	$reflect = new ReflectionClass('CacheFile');
+ 	// print $reflect->getFileName();
+	/* save main and sidebar twitter feeds in HTML files */
+	$io1 = new CacheFile(MEDIAWIKI_CACHE_DIR . '/lod-feed.html') and $io1->load( $output)->saveFile();
+ 	
+ 	return $output;
+}

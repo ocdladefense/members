@@ -1,0 +1,100 @@
+/**
+ * Setup abs position for toggle view.
+ *
+ * By default we position the content panes absolutely.
+ */
+.project-content
+{
+	position:relative;
+	overflow-y:hidden;
+	margin-bottom:25px;
+	border:1px solid #666;
+	padding-left:6px;
+	padding-right:6px;
+	background-color:#fff;
+	width:100%;
+	z-index:2;
+}	
+.content-container
+{
+	position:relative;
+	left:5px;
+	top:10px;
+}
+.content-box-inserted
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.content-box
+{
+	background-color:#fff;
+}
+
+
+
+
+.toggle
+{
+	width: auto;
+	cursor: pointer;
+	display:block;
+	float:left;
+	background-color:#eee;
+	margin-bottom:-1px;
+	position:relative;
+	left:10px;
+	z-index:0;
+	padding-left:8px;
+	padding-right:8px;
+	margin-right:6px;
+	color:#999;
+	font-weight:normal;
+	margin-top:5px;
+	font-size:12px;
+	padding:6px;
+	border-top:1px solid #aaa;
+	border-left:1px solid #aaa;
+	border-right:1px solid #aaa;
+}
+.toggle:hover
+{
+	color:#666;
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+}
+.toggle-active
+{
+	background-color:#fff;
+	z-index:10;
+	border-top:1px solid #666;
+	border-left:1px solid #666;
+	border-right:1px solid #666;
+	color:#666;
+}
+
+/**
+ * Hide projects.
+ *
+ * By default, we hide the projects tab,
+ * since the "Responsibilities" tab is visible by default.
+ * The print-friendly view shouldn't hide anything but 
+ * instead provide an alternate stylesheet/layout for
+ * ensuring all of the sections print.
+ */
+.content-box-invisible
+{
+	display:none;
+}
+
+.content-box-inactive
+{
+	z-index:1;
+}
+
+.content-box-active
+{
+	z-index:9;
+}

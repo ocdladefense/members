@@ -1,0 +1,89 @@
+<?php
+
+
+function renewals_menu()
+{
+	$items = array();
+	
+
+	$items['membership-renewal'] = array(
+		'title' => '2018-2019 Membership Renewal Form',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_renewal',
+		'files' => array(
+			'dependency' => '/sites/default/modules/salesforce/includes/SalesforceController.php',
+			'controller' => 'includes/RenewalsController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'RenewalsController'
+	);
+
+
+	$items['username-update/%contactId'] = array(
+		'title' => 'Update username',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'updateUsername',
+		'routeArguments' => array(1),
+		'files' => array(
+			'dependency' => '/sites/default/modules/salesforce/includes/SalesforceController.php',
+			'controller' => 'includes/RenewalsController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'RenewalsController'
+	);
+	
+	$items['username-update/%contactId/test'] = array(
+		'title' => 'Update username',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'updateUsernameTest',
+		'routeArguments' => array(1),
+		'files' => array(
+			'dependency' => '/sites/default/modules/salesforce/includes/SalesforceController.php',
+			'controller' => 'includes/RenewalsController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'RenewalsController'
+	);
+
+
+	$items['membership-renewal/%contactId'] = array(
+		'title' => '2018-2019 Membership Renewal Form',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_member_renewal',
+		'routeArguments' => array(1),
+		'files' => array(
+			'dependency' => '/sites/default/modules/salesforce/includes/SalesforceController.php',
+			'controller' => 'includes/RenewalsController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'RenewalsController'
+	);
+
+
+
+	$items['membership-renewal/page/%page'] = array(
+		'title' => '2020-2021 Membership Renewal Form',
+		'comment' => 'Base router/loader for Saleforce directory.',
+		// 'access' => 'user_is_authenticated',
+		// 'access arguments' => array('admin'),
+		'page callback' => 'show_renewal',
+		'routeArguments' => array(2),
+		'files' => array(
+			'dependency' => '/sites/default/modules/salesforce/includes/SalesforceController.php',
+			'controller' => 'includes/RenewalsController.php'
+		),
+		'theme' => 'ocdla2',
+		'routeClass' => 'RenewalsController'
+	);	
+
+	
+	return $items;
+}

@@ -1,0 +1,19 @@
+.dinner-menu-item {
+	margin-top:15px;
+}
+
+
+.dinner-type {
+	font-family:Helvetica;
+	font-weight:bold;
+	display:block;
+}
+
+.dinner-title {
+	display:block;
+}
+
+
+.dinner-description {
+	display:block;
+}

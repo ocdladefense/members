@@ -1,0 +1,62 @@
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	margin: 0px 20px;
+	padding: 0;
+	background-color: #ddd;
+}
+#masthead
+{
+	color: #999999;
+	padding: 0px;
+	margin: 0;
+	background-image: url(/sites/default/files/images/images-stylesheets/masthead-new-logo.png);
+	background-repeat: no-repeat;
+	height: 100px;
+}
+#topnav
+{
+	color: #999999;
+	padding: 0px 14px 0px 0px;
+	margin: 0px;
+	background-image: url(/sites/default/files/images/images-stylesheets/background-purple.png);
+	background-repeat: repeat-y;
+	height: 24px;
+}
+#wrapper
+{
+	width: 903px;
+	margin: 0 auto;
+	background-image: url(/sites/default/files/images/images-stylesheets/background-white_2col.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+.clearfloat
+{
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+#center
+{
+	width: 725px;
+	float: left;
+}
+#left
+{
+	width: 156px;
+	float: left;
+	padding-left: 6px;
+	padding-top: 36px;
+	font-size: 95%;
+}
+#right
+{
+	display:none;
+	width: 5px;
+	float: right;
+	font-size: 95%;
+}

@@ -1,0 +1,63 @@
+#feed-control-right {
+	height:115px;
+	width:280px;
+	margin-left:0px;
+	margin-top:21px;
+}
+
+#feed-control-right p {
+	display:block;
+	width:100%;
+	font-size:11px;
+	height:1.6em;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	padding-left:15px;
+	margin-left:3px;
+	padding-bottom:4px;
+	background-image:url('garrow.png');
+	background-position:0px 5px;
+	background-repeat:no-repeat;
+}
+
+#feed-control-left {
+	height:100px;
+	width:165px;
+	margin-left:25px;
+}
+
+#feed-control-left p {
+	display:block;
+	font-size:11px !important;
+	height:1.4em;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	padding-left:12px;
+	background-image:url('garrow.png');
+	background-position:0px 2px;
+	background-repeat:no-repeat;
+}
+
+
+
+
+#feed-control-left h2 a {
+	color:#6699CC !important;
+	font-size:16px;
+}
+
+#feed-control-left a,
+#feed-control-right a {
+	text-decoration:none;
+}
+
+
+#latest_news a {
+	color:#6699CC !important;
+}
+
+.tweet.odd {
+	background-color:#eeeeee;
+}

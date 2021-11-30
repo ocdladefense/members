@@ -1,0 +1,65 @@
+<?php
+
+class TwitterFeed {
+
+	private $feed;
+	const REST_URL = "http://twitter.com/statuses/user_timeline.xml?screen_name=";
+	const FEED_URL = "http://twitter.com/Willamalane/statuses/";
+	private $screen_name;
+	private $feed_count;
+	private $dom;
+	
+	public function __construct( $screen_name, $feed_count = 10 ) {
+	
+		if( !isset($screen_name) ) throw new Exception('TwitterFeed error: no screenname found.');
+		else $this->screen_name = $screen_name;
+		$this->feed_count = 5;
+		$this->feed_length = isset($_GET["feed_length"]) ? $_GET["feed_length"] : 41;
+		
+		$tmp = self::REST_URL . $this->screen_name;
+		$ch = curl_init( $tmp );
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		//print_r($post);
+		//curl_setopt($ch, CURLOPT_POST, 1);
+		//curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$this->feed = curl_exec($ch);      
+		curl_close($ch);	
+	}//constructor
+
+	//echo "<h2>$was_dir</h2>";
+	//chdir('\sites\single17\willamalane\webroot\twitter\lib');
+	//statuses/user_timeline/44831623.rss
+	
+	public function getRawXML() {
+		return $this->feed;
+	}
+	
+	public function parseXML() {
+		
+		$this->dom = new DomDocument();
+		$this->dom->preserveWhiteSpace = true;
+		$this->dom->loadXML($this->feed);
+	}//parseXML
+	
+	public function getHTMLOutput() {
+		$this->parseXML();
+		$timeline = $this->dom->getElementsByTagName("text");
+		$dates = $this->dom->getElementsByTagName("created_at");
+		$IDs = $this->dom->getElementsByTagName("id");
+		$tmp = "";
+		for ($idx = 0, $feedid=0; $idx < $this->feed_count; $idx++, $feedid+=2) {
+				$zebra = $idx%2 ? "odd" : "even";
+				$tmp .= "<p class=\"tweet {$zebra}\"><a href=\"".self::FEED_URL . 
+				$IDs->item($feedid)->nodeValue . "\">" . substr($timeline->item($idx)->nodeValue,0,$_GET["feed_length"]) .
+				"...</a></p>\n";
+		}//for
+		
+		$tpl = file_get_contents('twitter.tpl.html');
+		
+		$tpl = preg_replace( '/{{twitter_feed}}/', $tmp, $tpl );
+		if( $tpl == NULL ) throw new Exception('There was an error reading the TwitterFeed template file.');
+		return $tpl;
+	}//method getHTMLOutput
+	
+}//class TwitterFeed
