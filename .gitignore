@@ -110,7 +110,11 @@ phplog
 
 
 # Ignore modules managed by Composer
-sites/default/modules/attendees
+sites/default/modules/admin
+sites/default/modules/attendees-BAK
+sites/all/modules/cart
+sites/default/modules/ccauthorize
+sites/default/modules/console
 sites/default/modules/checkout
 sites/default/modules/directory
 sites/default/modules/event
@@ -118,5 +122,6 @@ sites/default/modules/experts
 sites/default/modules/salesforce
 sites/default/modules/search
 sites/default/modules/wordpress
-sites/force.com/assets
+# sites/force.com is not in the repo and "assets" is not a legacy repository
+sites/force.com/assets 
 sites/all/modules/cart
