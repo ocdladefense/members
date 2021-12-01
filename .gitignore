@@ -117,6 +117,8 @@ sites/default/modules/ccauthorize
 sites/default/modules/console
 sites/default/modules/checkout
 sites/default/modules/directory
+sites/default/modules/donate
+
 sites/default/modules/event
 sites/default/modules/experts
 sites/default/modules/salesforce
