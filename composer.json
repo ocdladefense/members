@@ -27,7 +27,12 @@
         "ocdladefense/legacy-experts": "dev-main",
         "ocdladefense/legacy-feeds": "dev-main",
         "ocdladefense/legacy-fonteva": "dev-main",
-        "ocdladefense/legacy-force-api": "dev-main"
+        "ocdladefense/legacy-force-api": "dev-main",
+        "ocdladefense/legacy-home": "dev-main",
+        "ocdladefense/legacy-list-view": "dev-main",
+        "ocdladefense/legacy-login": "dev-main",
+        "ocdladefense/legacy-mailman":"dev-main",
+        "ocdladefense/legacy-mycart":"dev-main"
     },
     "config":{
         "preferred-install":{

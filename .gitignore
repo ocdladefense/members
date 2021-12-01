@@ -126,6 +126,12 @@ sites/default/modules/experts
 sites/default/modules/feeds
 sites/default/modules/fonteva
 sites/default/modules/forceApi
+sites/default/modules/home
+sites/default/modules/listView
+sites/default/modules/login
+sites/default/modules/mailman
+sites/default/modules/mycart
+
 
 
 
