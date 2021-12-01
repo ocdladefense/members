@@ -17,7 +17,9 @@
         "ocdladefense/legacy-cart":"dev-main",
         "ocdladefense/legacy-ccauthorize": "dev-main",
         "ocdladefense/legacy-console": "dev-main",
-        "ocdladefense/legacy-checkout": "dev-main"
+        "ocdladefense/legacy-checkout": "dev-main",
+        "ocdladefense/legacy-directory": "dev-main",
+        "ocdladefense/legacy-donate": "dev-main"
     },
     "config":{
         "preferred-install":{
