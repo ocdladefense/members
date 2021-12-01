@@ -34,7 +34,14 @@
         "ocdladefense/legacy-mailman":"dev-main",
         "ocdladefense/legacy-mycart":"dev-main",
         "ocdladefense/legacy-ocdlamodule":"dev-main",
-        "ocdladefense/legacy-orders":"dev-main"
+        "ocdladefense/legacy-orders":"dev-main",
+        "ocdladefense/legacy-paidoffice":"dev-main",
+        "ocdladefense/legacy-password":"dev-main",
+        "ocdladefense/legacy-pdf-download":"dev-main",
+        "ocdladefense/legacy-portfolio":"dev-main",
+        "ocdladefense/legacy-product":"dev-main",
+        "ocdladefense/legacy-profile":"dev-main",
+        "ocdladefense/legacy-projects":"dev-main"
     },
     "config":{
         "preferred-install":{

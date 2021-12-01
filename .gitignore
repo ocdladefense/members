@@ -133,6 +133,13 @@ sites/default/modules/mailman
 sites/default/modules/mycart
 sites/default/modules/ocdlamodule
 sites/default/modules/orders
+sites/default/modules/paidoffice
+sites/default/modules/password
+sites/default/modules/pdfDownload
+sites/default/modules/portfolio
+sites/default/modules/product
+sites/default/modules/profile
+sites/default/modules/projects
 
 
 
