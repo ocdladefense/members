@@ -53,8 +53,7 @@
         "ocdladefense/legacy-store": "dev-main",
         "ocdladefense/legacy-wiki-api":"dev-main",
         "ocdladefense/legacy-wordpress": "dev-main",
-        "ocdladefense/legacy-zip-download":"dev-main",
-        "ocdladefense/legacy-force-assets":"dev-main"
+        "ocdladefense/legacy-zip-download":"dev-main"
     },
     "config":{
         "preferred-install":{
@@ -101,11 +100,10 @@
             "sites/default/modules/skeleton":["ocdladefense/legacy-skeleton"],
             "sites/default/modules/sso":["ocdladefense/legacy-sso"],
             "sites/default/modules/stage":["ocdladefense/legacy-stage"],
-            "sites/default/modules/store":["ocdladefense/legacy-store"],
             "sites/default/modules/wikiApi":["ocdladefense/legacy-wiki-api"],
             "sites/default/modules/wordpress":["ocdladefense/legacy-wordpress"],
             "sites/default/modules/zipDownload":["ocdladefense/legacy-zip-download"],
-            "sites/force.com/modules/assets":["ocdladefense/legacy-force-assets"]
+            "sites/force.com/assets":["ocdladefense/legacy-store"]
         }
     }
 }
