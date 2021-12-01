@@ -152,7 +152,4 @@ sites/default/modules/store
 sites/default/modules/wikiApi
 sites/default/modules/wordpress
 sites/default/modules/zipDownload
-
-
-# sites/force.com is not in the repo and "assets" is not a legacy repository
-sites/force.com/assets 
+sites/force.com/modules/assets 

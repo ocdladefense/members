@@ -53,7 +53,8 @@
         "ocdladefense/legacy-store": "dev-main",
         "ocdladefense/legacy-wiki-api":"dev-main",
         "ocdladefense/legacy-wordpress": "dev-main",
-        "ocdladefense/legacy-zip-download":"dev-main"
+        "ocdladefense/legacy-zip-download":"dev-main",
+        "ocdladefense/legacy-force-assets":"dev-main"
     },
     "config":{
         "preferred-install":{
@@ -103,7 +104,8 @@
             "sites/default/modules/store":["ocdladefense/legacy-store"],
             "sites/default/modules/wikiApi":["ocdladefense/legacy-wiki-api"],
             "sites/default/modules/wordpress":["ocdladefense/legacy-wordpress"],
-            "sites/default/modules/zipDownload":["ocdladefense/legacy-zip-download"]
+            "sites/default/modules/zipDownload":["ocdladefense/legacy-zip-download"],
+            "sites/force.com/modules/assets":["ocdladefense/legacy-force-assets"]
         }
     }
 }
