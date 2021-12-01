@@ -19,7 +19,12 @@
         "ocdladefense/legacy-console": "dev-main",
         "ocdladefense/legacy-checkout": "dev-main",
         "ocdladefense/legacy-directory": "dev-main",
-        "ocdladefense/legacy-donate": "dev-main"
+        "ocdladefense/legacy-donate": "dev-main",
+        "ocdladefense/legacy-edit": "dev-main",
+        "ocdladefense/legacy-email": "dev-main",
+        "ocdladefense/legacy-event": "dev-main",
+        "ocdladefense/legacy-event-manager": "dev-main",
+        "ocdladefense/legacy-experts": "dev-main"
     },
     "config":{
         "preferred-install":{
