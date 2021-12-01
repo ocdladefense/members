@@ -123,6 +123,12 @@ sites/default/modules/email
 sites/default/modules/event-BAK
 sites/default/modules/eventManager
 sites/default/modules/experts
+sites/default/modules/feeds
+sites/default/modules/fonteva
+sites/default/modules/forceApi
+
+
+
 sites/default/modules/salesforce
 sites/default/modules/search
 sites/default/modules/wordpress

@@ -24,7 +24,10 @@
         "ocdladefense/legacy-email": "dev-main",
         "ocdladefense/legacy-event": "dev-main",
         "ocdladefense/legacy-event-manager": "dev-main",
-        "ocdladefense/legacy-experts": "dev-main"
+        "ocdladefense/legacy-experts": "dev-main",
+        "ocdladefense/legacy-feeds": "dev-main",
+        "ocdladefense/legacy-fonteva": "dev-main",
+        "ocdladefense/legacy-force-api": "dev-main"
     },
     "config":{
         "preferred-install":{
