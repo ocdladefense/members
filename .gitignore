@@ -118,12 +118,18 @@ sites/default/modules/console
 sites/default/modules/checkout
 sites/default/modules/directory
 sites/default/modules/donate
-
-sites/default/modules/event
+sites/default/modules/edit
+sites/default/modules/email
+sites/default/modules/event-BAK
+sites/default/modules/eventManager
 sites/default/modules/experts
 sites/default/modules/salesforce
 sites/default/modules/search
 sites/default/modules/wordpress
+
+sites/all/modules/cart
+
+
+
 # sites/force.com is not in the repo and "assets" is not a legacy repository
 sites/force.com/assets 
-sites/all/modules/cart
