@@ -142,6 +142,13 @@ sites/default/modules/profile
 sites/default/modules/projects
 sites/default/modules/renewals
 sites/default/modules/resume
+sites/default/modules/salesforce
+sites/default/modules/salesorder
+sites/default/modules/search
+sites/default/modules/skeleton
+sites/default/modules/sso
+sites/default/modules/stage
+sites/default/modules/store
 
 
 

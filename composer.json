@@ -43,7 +43,17 @@
         "ocdladefense/legacy-profile":"dev-main",
         "ocdladefense/legacy-projects":"dev-main",
         "ocdladefense/legacy-renewals":"dev-main",
-        "ocdladefense/legacy-resume":"dev-main"
+        "ocdladefense/legacy-resume":"dev-main",
+        "ocdladefense/legacy-salesforce": "dev-main",
+        "ocdladefense/legacy-salesorder":"dev-main",
+        "ocdladefense/legacy-search": "dev-main",
+        "ocdladefense/legacy-skeleton":"dev-main",
+        "ocdladefense/legacy-sso":"dev-main",
+        "ocdladefense/legacy-stage":"dev-main",
+        "ocdladefense/legacy-store": "dev-main",
+        "ocdladefense/legacy-wiki-api":"dev-main",
+        "ocdladefense/legacy-wordpress": "dev-main",
+        "ocdladefense/legacy-zip-download":"dev-main"
     },
     "config":{
         "preferred-install":{
@@ -87,7 +97,7 @@
             "sites/default/modules/salesforce":["ocdladefense/legacy-salesforce"],
             "sites/default/modules/salesOrder":["ocdladefense/legacy-salesorder"],
             "sites/default/modules/search":["ocdladefense/legacy-search"],
-            "sites/default/modules/skeleton":["ocdladefense/legacy-skeletoh"],
+            "sites/default/modules/skeleton":["ocdladefense/legacy-skeleton"],
             "sites/default/modules/sso":["ocdladefense/legacy-sso"],
             "sites/default/modules/stage":["ocdladefense/legacy-stage"],
             "sites/default/modules/store":["ocdladefense/legacy-store"],
