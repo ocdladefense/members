@@ -149,16 +149,9 @@ sites/default/modules/skeleton
 sites/default/modules/sso
 sites/default/modules/stage
 sites/default/modules/store
-
-
-
-
-sites/default/modules/salesforce
-sites/default/modules/search
+sites/default/modules/wikiApi
 sites/default/modules/wordpress
-
-sites/all/modules/cart
-
+sites/default/modules/zipDownload
 
 
 # sites/force.com is not in the repo and "assets" is not a legacy repository
