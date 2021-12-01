@@ -111,7 +111,7 @@ phplog
 
 # Ignore modules managed by Composer
 sites/default/modules/admin
-sites/default/modules/attendees-BAK
+sites/default/modules/attendees
 sites/all/modules/cart
 sites/default/modules/ccauthorize
 sites/default/modules/console
@@ -120,14 +120,14 @@ sites/default/modules/directory
 sites/default/modules/donate
 sites/default/modules/edit
 sites/default/modules/email
-sites/default/modules/event-BAK
-sites/default/modules/eventManager
+sites/default/modules/event
+sites/default/modules/event-manager
 sites/default/modules/experts
 sites/default/modules/feeds
 sites/default/modules/fonteva
-sites/default/modules/forceApi
+sites/default/modules/force_api
 sites/default/modules/home
-sites/default/modules/listView
+sites/default/modules/list-view
 sites/default/modules/login
 sites/default/modules/mailman
 sites/default/modules/mycart
@@ -135,7 +135,7 @@ sites/default/modules/ocdlamodule
 sites/default/modules/orders
 sites/default/modules/paidoffice
 sites/default/modules/password
-sites/default/modules/pdfDownload
+sites/default/modules/pdf_download
 sites/default/modules/portfolio
 sites/default/modules/product
 sites/default/modules/profile
@@ -149,7 +149,7 @@ sites/default/modules/skeleton
 sites/default/modules/sso
 sites/default/modules/stage
 sites/default/modules/store
-sites/default/modules/wikiApi
+sites/default/modules/wiki_api
 sites/default/modules/wordpress
-sites/default/modules/zipDownload
+sites/default/modules/zip_download
 sites/force.com/assets 

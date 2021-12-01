@@ -1,17 +1,12 @@
 {
-    "name": "clickpdx/clickpdxdev",
-    "description": "Clickpdx routing files.",
-    "require-dev": {
-        "phpunit/phpunit": "^4"
-    },
     "require": {
-        "composer/installers":"~1.0",
         "doctrine/orm": "*",
         "clickpdx/core": "1.0.1",
         "clickpdx/services": "~1.0",
         "clickpdx/ocdla": "~0.0.1",
         "twig/twig": "~1.0",
 		"authorizenet/authorizenet": "1.9.2",
+        "composer/installers":"~1.0",
         "ocdladefense/legacy-admin": "dev-main",
         "ocdladefense/legacy-attendees": "dev-main",
         "ocdladefense/legacy-cart":"dev-main",
@@ -55,6 +50,11 @@
         "ocdladefense/legacy-wordpress": "dev-main",
         "ocdladefense/legacy-zip-download":"dev-main"
     },
+        "name": "clickpdx/clickpdxdev",
+        "description": "Clickpdx routing files.",
+    "require-dev": {
+        "phpunit/phpunit": "^4"
+    },
     "config":{
         "preferred-install":{
             "ocdladefense/*": "source"
@@ -63,7 +63,7 @@
     "extra":{
         "installer-paths":{
             "sites/default/modules/admin":["ocdladefense/legacy-admin"],
-            "sites/default/modules/attendees-BAK":["ocdladefense/legacy-attendees"],
+            "sites/default/modules/attendees":["ocdladefense/legacy-attendees"],
             "sites/all/modules/cart":["ocdladefense/legacy-cart"],
             "sites/default/modules/ccauthorize":["ocdladefense/legacy-ccauthorize"],
             "sites/default/modules/console":["ocdladefense/legacy-console"],
@@ -72,22 +72,22 @@
             "sites/default/modules/donate":["ocdladefense/legacy-donate"],
             "sites/default/modules/edit":["ocdladefense/legacy-edit"],
             "sites/default/modules/email":["ocdladefense/legacy-email"],
-            "sites/default/modules/event-BAK":["ocdladefense/legacy-event"],
-            "sites/default/modules/eventManager":["ocdladefense/legacy-event-manager"],
+            "sites/default/modules/event":["ocdladefense/legacy-event"],
+            "sites/default/modules/event-manager":["ocdladefense/legacy-event-manager"],
             "sites/default/modules/experts":["ocdladefense/legacy-experts"],
             "sites/default/modules/feeds":["ocdladefense/legacy-feeds"],
             "sites/default/modules/fonteva":["ocdladefense/legacy-fonteva"],
-            "sites/default/modules/forceApi":["ocdladefense/legacy-force-api"],
+            "sites/default/modules/force_api":["ocdladefense/legacy-force-api"],
             "sites/default/modules/home":["ocdladefense/legacy-home"],
-            "sites/default/modules/listView":["ocdladefense/legacy-list-view"],
+            "sites/default/modules/list-view":["ocdladefense/legacy-list-view"],
             "sites/default/modules/login":["ocdladefense/legacy-login"],
             "sites/default/modules/mailman":["ocdladefense/legacy-mailman"],
             "sites/default/modules/mycart":["ocdladefense/legacy-mycart"],
-            "sites/default/modules/ocdlaModule":["ocdladefense/legacy-ocdlamodule"],
+            "sites/default/modules/ocdlamodule":["ocdladefense/legacy-ocdlamodule"],
             "sites/default/modules/orders":["ocdladefense/legacy-orders"],
-            "sites/default/modules/paidOffice":["ocdladefense/legacy-paidoffice"],
+            "sites/default/modules/paidoffice":["ocdladefense/legacy-paidoffice"],
             "sites/default/modules/password":["ocdladefense/legacy-password"],
-            "sites/default/modules/pdfDownload":["ocdladefense/legacy-pdf-download"],
+            "sites/default/modules/pdf_download":["ocdladefense/legacy-pdf-download"],
             "sites/default/modules/portfolio":["ocdladefense/legacy-portfolio"],
             "sites/default/modules/product":["ocdladefense/legacy-product"],
             "sites/default/modules/profile":["ocdladefense/legacy-profile"],
@@ -95,15 +95,15 @@
             "sites/default/modules/renewals":["ocdladefense/legacy-renewals"],
             "sites/default/modules/resume":["ocdladefense/legacy-resume"],
             "sites/default/modules/salesforce":["ocdladefense/legacy-salesforce"],
-            "sites/default/modules/salesOrder":["ocdladefense/legacy-salesorder"],
+            "sites/default/modules/salesorder":["ocdladefense/legacy-salesorder"],
             "sites/default/modules/search":["ocdladefense/legacy-search"],
             "sites/default/modules/skeleton":["ocdladefense/legacy-skeleton"],
             "sites/default/modules/sso":["ocdladefense/legacy-sso"],
             "sites/default/modules/stage":["ocdladefense/legacy-stage"],
-            "sites/default/modules/wikiApi":["ocdladefense/legacy-wiki-api"],
+            "sites/force.com/assets":["ocdladefense/legacy-store"],
+            "sites/default/modules/wiki_api":["ocdladefense/legacy-wiki-api"],
             "sites/default/modules/wordpress":["ocdladefense/legacy-wordpress"],
-            "sites/default/modules/zipDownload":["ocdladefense/legacy-zip-download"],
-            "sites/force.com/assets":["ocdladefense/legacy-store"]
+            "sites/default/modules/zip_download":["ocdladefense/legacy-zip-download"]
         }
     }
 }
