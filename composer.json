@@ -41,7 +41,9 @@
         "ocdladefense/legacy-portfolio":"dev-main",
         "ocdladefense/legacy-product":"dev-main",
         "ocdladefense/legacy-profile":"dev-main",
-        "ocdladefense/legacy-projects":"dev-main"
+        "ocdladefense/legacy-projects":"dev-main",
+        "ocdladefense/legacy-renewals":"dev-main",
+        "ocdladefense/legacy-resume":"dev-main"
     },
     "config":{
         "preferred-install":{
