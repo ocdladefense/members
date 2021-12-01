@@ -5,8 +5,6 @@
 1. In the "www" directory, clone the repository. (https://github.com/ocdladefense/members.git) 
 2. Change the name of the directory to "membertest"
 2. cd into the "membertest" directory and check out the branch you want to use.
-3. Install the "zip extension"
-4. sudo apt-cache search zip
 5. sudo apt-get install zip unzip
 6. run "composer update"
 7. set up a virtual host "use the 
