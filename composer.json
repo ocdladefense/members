@@ -32,7 +32,9 @@
         "ocdladefense/legacy-list-view": "dev-main",
         "ocdladefense/legacy-login": "dev-main",
         "ocdladefense/legacy-mailman":"dev-main",
-        "ocdladefense/legacy-mycart":"dev-main"
+        "ocdladefense/legacy-mycart":"dev-main",
+        "ocdladefense/legacy-ocdlamodule":"dev-main",
+        "ocdladefense/legacy-orders":"dev-main"
     },
     "config":{
         "preferred-install":{
