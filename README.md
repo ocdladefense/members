@@ -3,13 +3,13 @@
 
 # Installation instructions
 1. In the "www" directory, clone the repository. (https://github.com/ocdladefense/members.git) 
-2. Change the name of the directory to "membertest"
-2. cd into the "membertest" directory and check out the branch you want to use.
-5. sudo apt-get install zip unzip
-6. run "composer update"
-7. set up a virtual host "use the 
-8. Set up the htaccess file. (use the "htaccess-example" file)
-9. untart the "sites" tarbal
+2. Change the name of the directory to "membertest".
+3. cd into the "membertest" directory and check out the branch you want to use.
+4. Run "sudo apt-get install zip unzip".
+5. Run "composer update".
+6. set up a virtual host.  (ex. "examples/members-example.conf")
+7. Set up the htaccess file. (ex. "examples/htaccess-example")
+8. untar the "sites.tar.gz" tarbal.
 
 
 
