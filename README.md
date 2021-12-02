@@ -10,6 +10,7 @@
 6. set up a virtual host.  (ex. "examples/members-example.conf")
 7. Set up the htaccess file. (ex. "examples/htaccess-example")
 8. untar the "sites.tar.gz" tarbal.
+9. Install the database. (use: data/ocdla_db_backup.sql)
 
 
 
@@ -19,3 +20,13 @@ tar --exclude='sites/default/files/downloads' --exclude='sites/default/files/upl
 
 ## Untar
 tar -xvf sites.tar.gz
+
+#### Restart Apache
+sudo service apache2 restart
+
+
+#### dump database
+mysqldump -u [uname] -p db_name > db_backup.sql
+
+#### upload database
+
