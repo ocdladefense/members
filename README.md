@@ -10,7 +10,8 @@
 6. set up a virtual host.  (ex. "examples/members-example.conf")
 7. Set up the htaccess file. (ex. "examples/htaccess-example")
 8. untar the "sites.tar.gz" tarbal.
-9. Install the database. (use: data/ocdla_db_backup.sql)
+9. Set up the config.  Copy config-example.php to config.php.
+10. Install the database. (use: data/ocdla_db_backup.sql)
 
 ## things to keep in mind
 1. The "settings-default.php" file is in the tarball, so you may have to set some configurations in that file.
